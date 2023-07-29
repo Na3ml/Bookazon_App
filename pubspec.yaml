@@ -30,9 +30,13 @@ environment:
 dependencies:
   another_flushbar: ^1.12.30
   cupertino_icons: ^1.0.2
+  dio: ^5.3.0
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   flutter_screenutil: ^5.8.4
+  intl: ^0.18.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -75,3 +79,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true
+  arb_dir: lib/resources/localization/l10n
+  output_dir: lib/resources/localization/generated
