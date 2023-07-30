@@ -4,6 +4,9 @@ const String baseUrl = " ";
 
 class EndPoints {
   EndPoints._();
+
+  static const String login = "/login";
+  static const String register = "/register";
 }
 
 class Headers {
