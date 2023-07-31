@@ -199,6 +199,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Don't worry it happens,please enter \n your email address`
+  String get describe_forget_password {
+    return Intl.message(
+      'Don\'t worry it happens,please enter \n your email address',
+      name: 'describe_forget_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

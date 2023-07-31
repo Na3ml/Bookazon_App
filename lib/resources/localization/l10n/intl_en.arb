@@ -13,5 +13,7 @@
     "username": "UserName",
     "hint_username": "enter your name",
     "confirm_password": "Confirm Password",
-    "already_have_account": "Already have an account"
+    "already_have_account": "Already have an account",
+    "describe_forget_password": "Don't worry it happens,please enter \n your email address",
+    "send": "Send"
 }

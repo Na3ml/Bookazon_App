@@ -40,7 +40,7 @@ class SignupPage extends StatelessWidget {
                   child: PublicText(txt: S.of(context).email,color: Colors.blue,)),
               SizedBox(
                 width: 350.w,
-                child: PublicTextFormField(hint: S.of(context).hint_email, controller: usernameController, validator: (e){},
+                child: PublicTextFormField(hint: S.of(context).hint_email, controller: emailController, validator: (e){},
 
                 ),
               ),

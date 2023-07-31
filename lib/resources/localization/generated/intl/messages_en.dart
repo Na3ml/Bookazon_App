@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Already have an account"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "describe_forget_password": MessageLookupByLibrary.simpleMessage(
+            "Don\'t worry it happens,please enter \n your email address"),
         "dont_have_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -39,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "or": MessageLookupByLibrary.simpleMessage("OR"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Signup"),
         "test": MessageLookupByLibrary.simpleMessage("test"),
         "title_login":
