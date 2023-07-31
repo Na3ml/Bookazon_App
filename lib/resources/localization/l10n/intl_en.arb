@@ -1,6 +1,17 @@
 {
     "test": "test",
+    "title_login": "Login to  your account",
     "login": "Login",
-    "email": "email",
-    "password": "password"
+    "email": "Email",
+    "hint_email": "enter your email",
+    "hint_password": "enter your password",
+    "password": "Password",
+    "forget_password": "Forget Password?",
+    "or": "OR",
+    "dont_have_account": "Don't have an account",
+    "signup": "Signup",
+    "username": "UserName",
+    "hint_username": "enter your name",
+    "confirm_password": "Confirm Password",
+    "already_have_account": "Already have an account"
 }

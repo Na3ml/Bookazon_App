@@ -1,5 +1,6 @@
 import 'package:bookazon/resources/localization/generated/l10n.dart';
-import 'package:bookazon/view/screens/loginPage.dart';
+import 'package:bookazon/view/screens/login_page.dart';
+import 'package:bookazon/view/screens/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return  MaterialApp(
-          locale: const Locale("en", "US"),
+          locale: const Locale("en"),
           localizationsDelegates: const [
             S.delegate,
             GlobalMaterialLocalizations.delegate,
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home:  LoginPage(),//MyHomePage(title: S.of(context).test),
+          home:  SignupPage(),//MyHomePage(title: S.of(context).test),
         );
       },
     );
