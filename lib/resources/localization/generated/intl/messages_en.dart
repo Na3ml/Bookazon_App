@@ -26,11 +26,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Already have an account"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "describe_email_verification": MessageLookupByLibrary.simpleMessage(
+            "Please type OTP code that we given you"),
         "describe_forget_password": MessageLookupByLibrary.simpleMessage(
             "Don\'t worry it happens,please enter \n your email address"),
         "dont_have_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "email_verification":
+            MessageLookupByLibrary.simpleMessage("Email Verification"),
         "forget_password":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "hint_email": MessageLookupByLibrary.simpleMessage("enter your email"),
@@ -46,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "test": MessageLookupByLibrary.simpleMessage("test"),
         "title_login":
             MessageLookupByLibrary.simpleMessage("Login to  your account"),
-        "username": MessageLookupByLibrary.simpleMessage("UserName")
+        "username": MessageLookupByLibrary.simpleMessage("UserName"),
+        "verify": MessageLookupByLibrary.simpleMessage("Verify")
       };
 }

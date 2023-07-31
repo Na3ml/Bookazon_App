@@ -219,6 +219,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Email Verification`
+  String get email_verification {
+    return Intl.message(
+      'Email Verification',
+      name: 'email_verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please type OTP code that we given you`
+  String get describe_email_verification {
+    return Intl.message(
+      'Please type OTP code that we given you',
+      name: 'describe_email_verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify`
+  String get verify {
+    return Intl.message(
+      'Verify',
+      name: 'verify',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

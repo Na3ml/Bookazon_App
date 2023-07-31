@@ -15,5 +15,8 @@
     "confirm_password": "Confirm Password",
     "already_have_account": "Already have an account",
     "describe_forget_password": "Don't worry it happens,please enter \n your email address",
-    "send": "Send"
+    "send": "Send",
+    "email_verification": "Email Verification",
+    "describe_email_verification": "Please type OTP code that we given you",
+    "verify": "Verify"
 }

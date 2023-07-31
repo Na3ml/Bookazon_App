@@ -1,4 +1,5 @@
 import 'package:bookazon/resources/localization/generated/l10n.dart';
+import 'package:bookazon/view/screens/email_verification_page.dart';
 import 'package:bookazon/view/screens/forgetpassword_page.dart';
 import 'package:bookazon/view/screens/login_page.dart';
 import 'package:bookazon/view/screens/signup_page.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home:  ForgetPasswordPage(),//MyHomePage(title: S.of(context).test),
+          home:  EmailVerificationPage(),//MyHomePage(title: S.of(context).test),
         );
       },
     );
