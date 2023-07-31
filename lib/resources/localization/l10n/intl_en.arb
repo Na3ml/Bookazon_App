@@ -18,5 +18,10 @@
     "send": "Send",
     "email_verification": "Email Verification",
     "describe_email_verification": "Please type OTP code that we given you",
-    "verify": "Verify"
+    "verify": "Verify",
+    "reset_password": "Reset Password",
+    "describe_reset_password":"Enter your new password and confirm it",
+    "new_password": "New Password",
+    "hint_new_password": "enter new password",
+    "submit": "Submit"
 }

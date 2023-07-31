@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please type OTP code that we given you"),
         "describe_forget_password": MessageLookupByLibrary.simpleMessage(
             "Don\'t worry it happens,please enter \n your email address"),
+        "describe_reset_password": MessageLookupByLibrary.simpleMessage(
+            "Enter your new password and confirm it"),
         "dont_have_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -38,15 +40,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "forget_password":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "hint_email": MessageLookupByLibrary.simpleMessage("enter your email"),
+        "hint_new_password":
+            MessageLookupByLibrary.simpleMessage("enter new password"),
         "hint_password":
             MessageLookupByLibrary.simpleMessage("enter your password"),
         "hint_username":
             MessageLookupByLibrary.simpleMessage("enter your name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
         "or": MessageLookupByLibrary.simpleMessage("OR"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "reset_password":
+            MessageLookupByLibrary.simpleMessage("Reset Password"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Signup"),
+        "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "test": MessageLookupByLibrary.simpleMessage("test"),
         "title_login":
             MessageLookupByLibrary.simpleMessage("Login to  your account"),

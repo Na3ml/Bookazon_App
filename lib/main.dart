@@ -2,6 +2,7 @@ import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/view/screens/email_verification_page.dart';
 import 'package:bookazon/view/screens/forgetpassword_page.dart';
 import 'package:bookazon/view/screens/login_page.dart';
+import 'package:bookazon/view/screens/reset_password_page.dart';
 import 'package:bookazon/view/screens/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home:  EmailVerificationPage(),//MyHomePage(title: S.of(context).test),
+          home:  ResetPasswordPage(),//MyHomePage(title: S.of(context).test),
         );
       },
     );
