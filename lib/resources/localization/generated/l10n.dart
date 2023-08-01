@@ -59,6 +59,246 @@ class S {
       args: [],
     );
   }
+
+  /// `Login to  your account`
+  String get title_login {
+    return Intl.message(
+      'Login to  your account',
+      name: 'title_login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `enter your email`
+  String get hint_email {
+    return Intl.message(
+      'enter your email',
+      name: 'hint_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `enter your password`
+  String get hint_password {
+    return Intl.message(
+      'enter your password',
+      name: 'hint_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget Password?`
+  String get forget_password {
+    return Intl.message(
+      'Forget Password?',
+      name: 'forget_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OR`
+  String get or {
+    return Intl.message(
+      'OR',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account`
+  String get dont_have_account {
+    return Intl.message(
+      'Don\'t have an account',
+      name: 'dont_have_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Signup`
+  String get signup {
+    return Intl.message(
+      'Signup',
+      name: 'signup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `UserName`
+  String get username {
+    return Intl.message(
+      'UserName',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `enter your name`
+  String get hint_username {
+    return Intl.message(
+      'enter your name',
+      name: 'hint_username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account`
+  String get already_have_account {
+    return Intl.message(
+      'Already have an account',
+      name: 'already_have_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't worry it happens,please enter \n your email address`
+  String get describe_forget_password {
+    return Intl.message(
+      'Don\'t worry it happens,please enter \n your email address',
+      name: 'describe_forget_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email Verification`
+  String get email_verification {
+    return Intl.message(
+      'Email Verification',
+      name: 'email_verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please type OTP code that we given you`
+  String get describe_email_verification {
+    return Intl.message(
+      'Please type OTP code that we given you',
+      name: 'describe_email_verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify`
+  String get verify {
+    return Intl.message(
+      'Verify',
+      name: 'verify',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Password`
+  String get reset_password {
+    return Intl.message(
+      'Reset Password',
+      name: 'reset_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your new password and confirm it`
+  String get describe_reset_password {
+    return Intl.message(
+      'Enter your new password and confirm it',
+      name: 'describe_reset_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get new_password {
+    return Intl.message(
+      'New Password',
+      name: 'new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `enter new password`
+  String get hint_new_password {
+    return Intl.message(
+      'enter new password',
+      name: 'hint_new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Submit`
+  String get submit {
+    return Intl.message(
+      'Submit',
+      name: 'submit',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

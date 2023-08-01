@@ -1,3 +1,27 @@
 {
-    "test": "test"
+    "test": "test",
+    "title_login": "Login to  your account",
+    "login": "Login",
+    "email": "Email",
+    "hint_email": "enter your email",
+    "hint_password": "enter your password",
+    "password": "Password",
+    "forget_password": "Forget Password?",
+    "or": "OR",
+    "dont_have_account": "Don't have an account",
+    "signup": "Signup",
+    "username": "UserName",
+    "hint_username": "enter your name",
+    "confirm_password": "Confirm Password",
+    "already_have_account": "Already have an account",
+    "describe_forget_password": "Don't worry it happens,please enter \n your email address",
+    "send": "Send",
+    "email_verification": "Email Verification",
+    "describe_email_verification": "Please type OTP code that we given you",
+    "verify": "Verify",
+    "reset_password": "Reset Password",
+    "describe_reset_password":"Enter your new password and confirm it",
+    "new_password": "New Password",
+    "hint_new_password": "enter new password",
+    "submit": "Submit"
 }

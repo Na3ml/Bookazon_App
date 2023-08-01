@@ -68,14 +68,15 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
         iconColor: AppColors.blue,
         filled: true,
         hintText: widget.hint,
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(widget.borderRadius),
-          borderSide: const BorderSide(color: AppColors.blue, width: 0.5),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(widget.borderRadius),
-          borderSide: const BorderSide(color: AppColors.blue, width: 0.5),
-        ),
+        // enabledBorder: OutlineInputBorder(
+        //
+        //  // borderRadius: BorderRadius.circular(widget.borderRadius),
+        //  // borderSide: const BorderSide(color: AppColors.blue, width: 0.5),
+        // ),
+        // focusedBorder: OutlineInputBorder(
+        //   borderRadius: BorderRadius.circular(widget.borderRadius),
+        //   borderSide: const BorderSide(color: AppColors.blue, width: 0.5),
+        // ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(widget.borderRadius),
           borderSide: const BorderSide(color: Colors.red, width: 0.5),
