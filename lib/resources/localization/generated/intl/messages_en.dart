@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email Verification"),
         "forget_password":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
+        "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "hint_email": MessageLookupByLibrary.simpleMessage("enter your email"),
         "hint_new_password":
             MessageLookupByLibrary.simpleMessage("enter new password"),
@@ -48,12 +49,26 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("enter your name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "onboardingSubtitle1": MessageLookupByLibrary.simpleMessage(
+            "Discover and Book Your Perfect Getaway"),
+        "onboardingSubtitle2": MessageLookupByLibrary.simpleMessage(
+            "Sign Up to Access Exclusive Deals and Manage Bookings"),
+        "onboardingSubtitle3": MessageLookupByLibrary.simpleMessage(
+            "Find Your Ideal Accommodation and Start Your Adventure"),
+        "onboardingTitle1":
+            MessageLookupByLibrary.simpleMessage("Welcome to Bookazon!"),
+        "onboardingTitle2":
+            MessageLookupByLibrary.simpleMessage("Create Your Account"),
+        "onboardingTitle3":
+            MessageLookupByLibrary.simpleMessage("Explore Amazing Properties"),
         "or": MessageLookupByLibrary.simpleMessage("OR"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Signup"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "test": MessageLookupByLibrary.simpleMessage("test"),
         "title_login":

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
+import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/screens/login_page.dart';
 import 'package:flutter/material.dart';
@@ -23,13 +24,9 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _goNext() {
-    Navigator.pushReplacement(
+    Navigator.pushReplacementNamed(
       context,
-      MaterialPageRoute(
-        builder: (context) {
-          return LoginPage();
-        },
-      ),
+      AppRoutes.onBoarding,
     );
   }
 
@@ -48,24 +45,25 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColors.white,
-        body: Center(
-          child: Column(
-            children: [
-              303.ph,
-              Image.asset(
-                AppImages.logo,
-                width: 297.w,
-                height: 88.h,
-              ),
-              360.ph,
-              Lottie.asset(
-                AppJson.loading,
-                width: 120.w,
-                height: 120.w,
-              ),
-            ],
-          ),
-        ));
+      backgroundColor: AppColors.white,
+      body: Center(
+        child: Column(
+          children: [
+            303.ph,
+            Image.asset(
+              Assets.imageLogo,
+              width: 297.w,
+              height: 88.h,
+            ),
+            360.ph,
+            Lottie.asset(
+              Assets.jsonLoading,
+              width: 120.w,
+              height: 120.w,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

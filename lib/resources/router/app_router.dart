@@ -1,4 +1,5 @@
 import 'package:bookazon/view/screens/forgetpassword_page.dart';
+import 'package:bookazon/view/screens/onboarding/onboarding_page.dart';
 import 'package:bookazon/view/screens/signup_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,10 @@ class RouteGenerate {
       case AppRoutes.splash:
         return MaterialPageRoute(
           builder: (_) => const SplashPage(),
+        );
+      case AppRoutes.onBoarding:
+        return MaterialPageRoute(
+          builder: (_) => const OnboardingPage(),
         );
 
       /// Auth
