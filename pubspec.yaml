@@ -19,6 +19,7 @@ dependencies:
     sdk: flutter
   flutter_native_splash: ^2.3.1
   flutter_screenutil: ^5.8.4
+  flutter_svg: ^2.0.7
   internet_connection_checker: ^1.0.0+1
   intl: ^0.18.0
   lottie: ^2.5.0
@@ -32,9 +33,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-  - assets/images/
-  - assets/icons/
-  - assets/json/
+    - assets/image/
+    - assets/icon/
+    - assets/json/
 
 flutter_intl:
   enabled: true
@@ -44,3 +45,9 @@ flutter_intl:
 flutter_native_splash:
   color: "#ffffff"
   image: assets/images/logo750.png
+
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/resources/constants/
+  filename: app_assets.dart
+  field_prefix: null

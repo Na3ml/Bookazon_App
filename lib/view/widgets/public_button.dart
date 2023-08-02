@@ -8,7 +8,7 @@ import 'public_text.dart';
 class PublicButton extends StatelessWidget {
   final String title;
   final void Function()? onPressed;
-  final double width;
+  final double? width;
   final double borderRadius;
   final double? titleSize;
   final Color titleColor;
@@ -20,17 +20,17 @@ class PublicButton extends StatelessWidget {
     required this.onPressed,
     this.titleSize,
     this.title = "",
-    this.width = double.infinity,
+    this.width,
     this.borderRadius = 12,
     this.titleColor = Colors.white,
-    this.backgroundColor = AppColors.blue,
+    this.backgroundColor = AppColors.purple,
     this.verticalpadding,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width,
+      width: width ?? 306.w,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -40,12 +40,12 @@ class PublicButton extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: verticalpadding ?? 10.h),
+          padding: EdgeInsets.symmetric(vertical: verticalpadding ?? 16.h),
           child: PublicText(
             txt: title,
-            size: titleSize ?? 18.sp,
+            size: titleSize ?? 22.sp,
             color: titleColor,
-            fw: FontWeight.bold,
+            fw: FontWeight.w600, // semi bold
           ),
         ),
       ),

@@ -20,8 +20,17 @@
     "describe_email_verification": "Please type OTP code that we given you",
     "verify": "Verify",
     "reset_password": "Reset Password",
-    "describe_reset_password":"Enter your new password and confirm it",
+    "describe_reset_password": "Enter your new password and confirm it",
     "new_password": "New Password",
     "hint_new_password": "enter new password",
-    "submit": "Submit"
+    "submit": "Submit",
+    "onboardingTitle1": "Welcome to Bookazon!",
+    "onboardingSubtitle1": "Discover and Book Your Perfect Getaway",
+    "onboardingTitle2": "Create Your Account",
+    "onboardingSubtitle2": "Sign Up to Access Exclusive Deals and Manage Bookings",
+    "onboardingTitle3": "Explore Amazing Properties",
+    "onboardingSubtitle3": "Find Your Ideal Accommodation and Start Your Adventure",
+    "skip": "Skip",
+    "next": "Next",
+    "getStarted":"Get Started"
 }

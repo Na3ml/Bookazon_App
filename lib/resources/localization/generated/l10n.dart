@@ -299,6 +299,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome to Bookazon!`
+  String get onboardingTitle1 {
+    return Intl.message(
+      'Welcome to Bookazon!',
+      name: 'onboardingTitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discover and Book Your Perfect Getaway`
+  String get onboardingSubtitle1 {
+    return Intl.message(
+      'Discover and Book Your Perfect Getaway',
+      name: 'onboardingSubtitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Your Account`
+  String get onboardingTitle2 {
+    return Intl.message(
+      'Create Your Account',
+      name: 'onboardingTitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up to Access Exclusive Deals and Manage Bookings`
+  String get onboardingSubtitle2 {
+    return Intl.message(
+      'Sign Up to Access Exclusive Deals and Manage Bookings',
+      name: 'onboardingSubtitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explore Amazing Properties`
+  String get onboardingTitle3 {
+    return Intl.message(
+      'Explore Amazing Properties',
+      name: 'onboardingTitle3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find Your Ideal Accommodation and Start Your Adventure`
+  String get onboardingSubtitle3 {
+    return Intl.message(
+      'Find Your Ideal Accommodation and Start Your Adventure',
+      name: 'onboardingSubtitle3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Started`
+  String get getStarted {
+    return Intl.message(
+      'Get Started',
+      name: 'getStarted',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -307,6 +397,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
     ];
   }
 
