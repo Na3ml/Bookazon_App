@@ -4,7 +4,7 @@ import 'package:bookazon/view/screens/signup_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
-import '../../view/screens/login_page.dart';
+import '../../view/screens/login/login_page.dart';
 import '../../view/screens/reset_password_page.dart';
 
 class AppRoutes {

@@ -2,7 +2,7 @@ import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/view/screens/email_verification_page.dart';
 import 'package:bookazon/view/screens/forgetpassword_page.dart';
-import 'package:bookazon/view/screens/login_page.dart';
+import 'package:bookazon/view/screens/login/login_page.dart';
 import 'package:bookazon/view/screens/reset_password_page.dart';
 import 'package:bookazon/view/screens/signup_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: const SplashPage(),
+            home: SignupPage(),//const SplashPage(),
           ),
         );
       },

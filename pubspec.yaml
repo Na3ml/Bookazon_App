@@ -34,7 +34,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/image/
-    - assets/icon/
+
     - assets/json/
 
 flutter_intl:
