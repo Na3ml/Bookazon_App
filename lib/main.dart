@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: SignupPage(),//const SplashPage(),
+            home: ResetPasswordPage(),//const SplashPage(),
           ),
         );
       },

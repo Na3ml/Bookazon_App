@@ -1,3 +1,6 @@
+import 'package:bookazon/resources/constants/app_assets.dart';
+import 'package:bookazon/resources/extensions/extensions.dart';
+import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:bookazon/view/widgets/public_text_form_field.dart';
@@ -14,27 +17,39 @@ class ForgetPasswordPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 300.h,),
-              // title foget password
-              PublicText(txt: S.of(context).forget_password,fw: FontWeight.bold,color: Colors.blue,size: 20.sp,),
-              SizedBox(height: 10.h,),
-              PublicText(txt: S.of(context).describe_forget_password,color: Colors.blue,align: TextAlign.center),
-              SizedBox(height: 15.h,),
+              //logo
+              61.ph,
+
+              Image.asset(
+                Assets.imageLogo,
+                width: 174.w,
+                height: 53.h,
+              ),
+              54.ph,
+              //img
+              Image.asset(
+                Assets.imageImgForgetpassword,
+                width: 386.w,
+                height: 356.h,
+              ),
+              // title forget password
+              19.ph,
+              PublicText(txt: S.of(context).forget_password,fw: FontWeight.bold,color: AppColors.black,size: 25.sp,),
+              29.ph,
+              PublicText(txt: S.of(context).describe_forget_password,color: AppColors.grey,fw: FontWeight.w400,align: TextAlign.center),
+              41.ph,
               //email
               Align(
                   alignment: Alignment.centerLeft,
-                  child: PublicText(txt: S.of(context).email,color: Colors.blue,)),
-              SizedBox(
-                width: 350.w,
-                child: PublicTextFormField(hint: S.of(context).hint_email, controller: emailController, validator: (e){},
+                  child: PublicText(txt: S.of(context).email,color: AppColors.black,fw: FontWeight.w500,)),
+              PublicTextFormField(hint: S.of(context).hint_email, controller: emailController, validator: (e){},
 
-                ),
               ),
-              SizedBox(height: 20.h,),
+              41.ph,
               // button send
               PublicButton(title: S.of(context).send,width: 350.w,onPressed: (){}),
             ],

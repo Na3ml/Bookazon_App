@@ -1,6 +1,30 @@
 class Assets {
   Assets._();
   
+  /// Assets for imageApple
+  /// assets/image/apple.png
+  static const String imageApple = "assets/image/apple.png";
+
+  /// Assets for imageFacebook
+  /// assets/image/facebook.png
+  static const String imageFacebook = "assets/image/facebook.png";
+
+  /// Assets for imageGoogle
+  /// assets/image/google.png
+  static const String imageGoogle = "assets/image/google.png";
+
+  /// Assets for imageImgForgetpassword
+  /// assets/image/imgForgetpassword.png
+  static const String imageImgForgetpassword = "assets/image/imgForgetpassword.png";
+
+  /// Assets for imageImgResrt
+  /// assets/image/imgResrt.png
+  static const String imageImgResrt = "assets/image/imgResrt.png";
+
+  /// Assets for imageImgVerification
+  /// assets/image/imgVerification.png
+  static const String imageImgVerification = "assets/image/imgVerification.png";
+
   /// Assets for imageLogo
   /// assets/image/Logo.png
   static const String imageLogo = "assets/image/Logo.png";
@@ -9,9 +33,9 @@ class Assets {
   /// assets/image/Logo750.png
   static const String imageLogo750 = "assets/image/Logo750.png";
 
-  /// Assets for imageOnboarding
-  /// assets/image/onboarding.png
-  static const String imageOnboarding1 = "assets/image/onboarding.png";
+  /// Assets for imageOnboarding1
+  /// assets/image/onboarding1.png
+  static const String imageOnboarding1 = "assets/image/onboarding1.png";
 
   /// Assets for imageOnboarding2
   /// assets/image/onboarding2.png
