@@ -56,7 +56,7 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 374.w,
-      height: 47.h,
+      //height: 57.h,
       child: TextFormField(
         textCapitalization: TextCapitalization.none,
         maxLines: 1,

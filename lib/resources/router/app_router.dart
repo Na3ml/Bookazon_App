@@ -1,11 +1,11 @@
-import 'package:bookazon/view/screens/forgetpassword_page.dart';
+import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
 import 'package:bookazon/view/screens/onboarding/onboarding_page.dart';
-import 'package:bookazon/view/screens/signup_page.dart';
+import 'package:bookazon/view/screens/signup/signup_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../view/screens/login/login_page.dart';
-import '../../view/screens/reset_password_page.dart';
+import '../../view/screens/reset password/reset_password_page.dart';
 
 class AppRoutes {
   AppRoutes._private();
