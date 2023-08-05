@@ -1,6 +1,3 @@
-import 'package:bookazon/resources/constants/app_assets.dart';
-import 'package:bookazon/resources/extensions/extensions.dart';
-import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:flutter/material.dart';
@@ -19,49 +16,45 @@ class EmailVerificationPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              //logo
-              61.ph,
-              Image.asset(
-                Assets.imageLogo,
-                width: 174.w,
-                height: 53.h,
+              SizedBox(
+                height: 300.h,
               ),
-              54.ph,
-              //img
-              Image.asset(
-                Assets.imageImgVerification,
-                width: 386.w,
-                height: 356.h,
-              ),
-              19.ph,
               // title email verification
               PublicText(
                 txt: S.of(context).email_verification,
-                fw: FontWeight.bold,color: AppColors.black,size: 25.sp,
+                fw: FontWeight.bold,
+                color: Colors.blue,
+                size: 20.sp,
               ),
-              29.ph,
+              SizedBox(
+                height: 10.h,
+              ),
               PublicText(
                   txt: S.of(context).describe_email_verification,
-                  color: AppColors.grey,fw: FontWeight.w400,align: TextAlign.center),
-              46.ph,
+                  color: Colors.blue,
+                  align: TextAlign.center),
+              SizedBox(
+                height: 15.h,
+              ),
               //otp text field
               OTPTextField(
                 length: 4,
-                width:364.w,
-                fieldWidth: 82.w,
+                width: 270.w,
+                fieldWidth: 45.w,
                 style: TextStyle(
-                  fontSize: 35.sp,
-                  fontWeight: FontWeight.w400
+                  fontSize: 20.sp,
                 ),
                 textFieldAlignment: MainAxisAlignment.spaceAround,
                 controller: otpFieldController,
                 fieldStyle: FieldStyle.box,
               ),
-              44.ph,
+              SizedBox(
+                height: 20.h,
+              ),
               // button send
               PublicButton(
                   title: S.of(context).verify, width: 350.w, onPressed: () {}),

@@ -23,7 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "already_have_account":
-            MessageLookupByLibrary.simpleMessage("Already have an account?"),
+            MessageLookupByLibrary.simpleMessage("Already have an account"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "describe_email_verification": MessageLookupByLibrary.simpleMessage(
@@ -33,7 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "describe_reset_password": MessageLookupByLibrary.simpleMessage(
             "Enter your new password and confirm it"),
         "dont_have_account":
-            MessageLookupByLibrary.simpleMessage("Don’t have an account yet?"),
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_verification":
             MessageLookupByLibrary.simpleMessage("Email Verification"),
@@ -62,7 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create Your Account"),
         "onboardingTitle3":
             MessageLookupByLibrary.simpleMessage("Explore Amazing Properties"),
-        "or": MessageLookupByLibrary.simpleMessage("or sign in with"),
+        "or": MessageLookupByLibrary.simpleMessage("OR"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
@@ -72,9 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "test": MessageLookupByLibrary.simpleMessage("test"),
         "title_login":
-            MessageLookupByLibrary.simpleMessage("Login to your account"),
-        "title_signup":
-            MessageLookupByLibrary.simpleMessage("Create a new account"),
+            MessageLookupByLibrary.simpleMessage("Login to  your account"),
         "username": MessageLookupByLibrary.simpleMessage("UserName"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify")
       };

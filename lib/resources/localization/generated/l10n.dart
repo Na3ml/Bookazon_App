@@ -60,21 +60,11 @@ class S {
     );
   }
 
-  /// `Login to your account`
+  /// `Login to  your account`
   String get title_login {
     return Intl.message(
-      'Login to your account',
+      'Login to  your account',
       name: 'title_login',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Create a new account`
-  String get title_signup {
-    return Intl.message(
-      'Create a new account',
-      name: 'title_signup',
       desc: '',
       args: [],
     );
@@ -140,20 +130,20 @@ class S {
     );
   }
 
-  /// `or sign in with`
+  /// `OR`
   String get or {
     return Intl.message(
-      'or sign in with',
+      'OR',
       name: 'or',
       desc: '',
       args: [],
     );
   }
 
-  /// `Don’t have an account yet?`
+  /// `Don't have an account`
   String get dont_have_account {
     return Intl.message(
-      'Don’t have an account yet?',
+      'Don\'t have an account',
       name: 'dont_have_account',
       desc: '',
       args: [],
@@ -200,10 +190,10 @@ class S {
     );
   }
 
-  /// `Already have an account?`
+  /// `Already have an account`
   String get already_have_account {
     return Intl.message(
-      'Already have an account?',
+      'Already have an account',
       name: 'already_have_account',
       desc: '',
       args: [],

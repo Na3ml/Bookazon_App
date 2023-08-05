@@ -34,8 +34,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/image/
+    - assets/icon/
     - assets/json/
-    - lib/resources/constants/app_assets.dart
 
 flutter_intl:
   enabled: true
