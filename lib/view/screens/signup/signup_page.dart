@@ -1,3 +1,7 @@
+import 'package:bookazon/resources/constants/app_assets.dart';
+import 'package:bookazon/resources/extensions/extensions.dart';
+import 'package:bookazon/resources/style/app_colors.dart';
+import 'package:bookazon/view/screens/login/components/icons_box.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:bookazon/view/widgets/public_text_form_field.dart';
@@ -41,85 +45,73 @@ class _SignupPageState extends State<SignupPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
-                height: 155.h,
+              61.ph,
+              // logo
+              Image.asset(
+                Assets.imageLogo,
+                width: 174.w,
+                height: 53.h,
               ),
+              49.ph,
+              // creat a new account
+              PublicText(txt:S.of(context).title_signup,size: 28.sp,fw: FontWeight.w600,color: AppColors.purple,),
+              43.ph,
               //username
               Align(
                   alignment: Alignment.centerLeft,
                   child: PublicText(
                     txt: S.of(context).username,
-                    color: Colors.blue,
+                    color: AppColors.black,fw: FontWeight.w500,
                   )),
-              SizedBox(
-                width: 350.w,
-                child: PublicTextFormField(
-                  hint: S.of(context).hint_username,
-                  controller: _usernameController,
-                  validator: (e) {},
-                ),
+              PublicTextFormField(
+                hint: S.of(context).hint_username,
+                controller: _usernameController,
+                validator: (e) {},
               ),
-              SizedBox(
-                height: 20.h,
-              ),
+              21.ph,
               //email
               Align(
                   alignment: Alignment.centerLeft,
                   child: PublicText(
                     txt: S.of(context).email,
-                    color: Colors.blue,
+                    color: AppColors.black,fw: FontWeight.w500,
                   )),
-              SizedBox(
-                width: 350.w,
-                child: PublicTextFormField(
-                  hint: S.of(context).hint_email,
-                  controller: _emailController,
-                  validator: (e) {},
-                ),
+              PublicTextFormField(
+                hint: S.of(context).hint_email,
+                controller: _emailController,
+                validator: (e) {},
               ),
-              SizedBox(
-                height: 20.h,
-              ),
+              21.ph,
               //password
               Align(
                   alignment: Alignment.centerLeft,
                   child: PublicText(
                     txt: S.of(context).password,
-                    color: Colors.blue,
+                    color: AppColors.black,fw: FontWeight.w500,
                   )),
-              SizedBox(
-                width: 350.w,
-                child: PublicTextFormField(
-                  hint: S.of(context).hint_password,
-                  controller: _passwordController,
-                  validator: (e) {},
-                ),
+              PublicTextFormField(
+                hint: S.of(context).hint_password,
+                controller: _passwordController,
+                validator: (e) {},
               ),
-              SizedBox(
-                height: 20.h,
-              ),
+              21.ph,
               //confirm password
               Align(
                   alignment: Alignment.centerLeft,
                   child: PublicText(
                     txt: S.of(context).confirm_password,
-                    color: Colors.blue,
+                    color: AppColors.black,fw: FontWeight.w500,
                   )),
-              SizedBox(
-                width: 350.w,
-                child: PublicTextFormField(
-                  hint: S.of(context).hint_password,
-                  controller: _passwordConfirmController,
-                  validator: (e) {},
-                ),
+              PublicTextFormField(
+                hint: S.of(context).hint_password,
+                controller: _passwordConfirmController,
+                validator: (e) {},
               ),
-              SizedBox(
-                height: 25.h,
-              ),
+              88.ph,
               //button signup
               PublicButton(
                   title: S.of(context).signup, width: 350.w, onPressed: () {}),
@@ -128,16 +120,18 @@ class _SignupPageState extends State<SignupPage> {
                 height: 15.h,
               ),
               PublicText(txt: S.of(context).or, color: Colors.grey),
+              15.ph,
               SizedBox(
-                height: 15.h,
-              ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.facebook),
-                  Icon(Icons.mail),
-                  Icon(Icons.apple),
-                ],
+                width: 251.w,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                  children: [
+                    IconsBox(),
+                    IconsBox(),
+                    IconsBox(),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 10.h,
@@ -148,14 +142,13 @@ class _SignupPageState extends State<SignupPage> {
                 children: [
                   PublicText(
                     txt: S.of(context).already_have_account,
-                    size: 13.sp,
+                    size: 13.sp,fw: FontWeight.bold,
                   ),
                   TextButton(
                     onPressed: () {},
                     child: PublicText(
                       txt: S.of(context).login,
-                      size: 14.sp,
-                      color: Colors.blue,
+                      fw: FontWeight.bold,size: 13.sp,color: AppColors.purple,
                     ),
                   )
                 ],
