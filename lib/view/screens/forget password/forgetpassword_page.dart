@@ -8,13 +8,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 
-class ForgetPasswordPage extends StatelessWidget {
-   ForgetPasswordPage({super.key});
-  TextEditingController emailController=TextEditingController();
+class ForgetPasswordPage extends StatefulWidget {
+  const ForgetPasswordPage({super.key});
+
+  @override
+  State<ForgetPasswordPage> createState() => _ForgetPasswordPageState();
+}
+
+class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
+  late final TextEditingController emailController;
+
+  @override
+  void initState() {
+    super.initState();
+    emailController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -38,20 +57,36 @@ class ForgetPasswordPage extends StatelessWidget {
               ),
               // title forget password
               19.ph,
-              PublicText(txt: S.of(context).forget_password,fw: FontWeight.bold,color: AppColors.black,size: 25.sp,),
+              PublicText(
+                txt: S.of(context).forget_password,
+                fw: FontWeight.bold,
+                color: AppColors.black,
+                size: 25.sp,
+              ),
               29.ph,
-              PublicText(txt: S.of(context).describe_forget_password,color: AppColors.grey,fw: FontWeight.w400,align: TextAlign.center),
+              PublicText(
+                  txt: S.of(context).describe_forget_password,
+                  color: AppColors.grey,
+                  fw: FontWeight.w400,
+                  align: TextAlign.center),
               41.ph,
               //email
               Align(
                   alignment: Alignment.centerLeft,
-                  child: PublicText(txt: S.of(context).email,color: AppColors.black,fw: FontWeight.w500,)),
-              PublicTextFormField(hint: S.of(context).hint_email, controller: emailController, validator: (e){},
-
+                  child: PublicText(
+                    txt: S.of(context).email,
+                    color: AppColors.black,
+                    fw: FontWeight.w500,
+                  )),
+              PublicTextFormField(
+                hint: S.of(context).hint_email,
+                controller: emailController,
+                validator: (e) {},
               ),
               41.ph,
               // button send
-              PublicButton(title: S.of(context).send,width: 350.w,onPressed: (){}),
+              PublicButton(
+                  title: S.of(context).send, width: 350.w, onPressed: () {}),
             ],
           ),
         ),
