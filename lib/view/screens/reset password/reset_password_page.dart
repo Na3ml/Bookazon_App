@@ -9,7 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 
 class ResetPasswordPage extends StatefulWidget {
-   ResetPasswordPage({super.key});
+   const ResetPasswordPage({super.key});
 
   @override
   State<ResetPasswordPage> createState() => _ResetPasswordPageState();
@@ -25,6 +25,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Form(
           key:_formKey ,
