@@ -2,7 +2,7 @@ import 'package:booking_app/const/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'booking_screen.dart';
+import '../booking/booking_screen.dart';
 import 'notifications_screen.dart';
 import 'home_screen.dart';
 import 'profile_screen.dart';

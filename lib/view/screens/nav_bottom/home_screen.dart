@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../const/colors.dart';
+import '../../../resources/constants/colors.dart';
+import '../../widgets/custom_containe_sections_services.dart';
+import '../../widgets/public_text_form_field.dart';
 
-import '../widgets/custom_containe_sections_services.dart';
-import '../widgets/custom_textfield.dart';
+
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -107,10 +109,9 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         SizedBox(
                           width: 320,
-                          child: TextFormfiled(
-                            hintTxet: "1room . 2adults . 0children",
-                            bottomLeft: Radius.circular(0),
-                            bottomRight: Radius.circular(0),
+                          child: PublicTextFormField(
+                            hint: "1room . 2adults . 0children",
+                        
                             enabledBorderColor: Colors.white,
                             focusedBorderColor: Colors.white,
                             maxLines: 1,
