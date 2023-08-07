@@ -90,6 +90,26 @@ class S {
     );
   }
 
+  /// `Remember me`
+  String get remember_me {
+    return Intl.message(
+      'Remember me',
+      name: 'remember_me',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I have read and accepted the terms of use\nand privacy policy `
+  String get privacy_policy {
+    return Intl.message(
+      'I have read and accepted the terms of use\nand privacy policy ',
+      name: 'privacy_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Email`
   String get email {
     return Intl.message(

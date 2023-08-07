@@ -64,6 +64,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Explore Amazing Properties"),
         "or": MessageLookupByLibrary.simpleMessage("or sign in with"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "privacy_policy": MessageLookupByLibrary.simpleMessage(
+            "I have read and accepted the terms of use\nand privacy policy "),
+        "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),

@@ -3,6 +3,8 @@
     "title_login": "Login to your account",
     "title_signup": "Create a new account",
     "login": "Login",
+    "remember_me":"Remember me",
+    "privacy_policy": "I have read and accepted the terms of use\nand privacy policy ",
     "email": "Email",
     "hint_email": "enter your email",
     "hint_password": "enter your password",

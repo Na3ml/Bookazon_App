@@ -3,6 +3,7 @@ import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/screens/login/components/icons_box.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
+import 'package:bookazon/view/widgets/public_divider.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:bookazon/view/widgets/public_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -111,7 +112,15 @@ class _SignupPageState extends State<SignupPage> {
                 controller: _passwordConfirmController,
                 validator: (e) {},
               ),
-              88.ph,
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+
+                children: [
+                  Checkbox(value: false, onChanged: (value) => value,),
+                  PublicText(txt: S.of(context).privacy_policy,align: TextAlign.center,fw: FontWeight.w500,size: 14.sp,)
+                ],
+              ),
+              31.ph,
               //button signup
               PublicButton(
                   title: S.of(context).signup, width: 350.w, onPressed: () {}),
@@ -119,17 +128,24 @@ class _SignupPageState extends State<SignupPage> {
               SizedBox(
                 height: 15.h,
               ),
-              PublicText(txt: S.of(context).or, color: Colors.grey),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  PublicDivider(),
+                  PublicText(txt: S.of(context).or, color: Colors.grey),
+                  PublicDivider(),
+                ],
+              ),
               15.ph,
               SizedBox(
                 width: 251.w,
-                child: const Row(
+                child:  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
 
                   children: [
-                    IconsBox(),
-                    IconsBox(),
-                    IconsBox(),
+                    IconsBox(imge: Image.asset(Assets.imageFacebook,height: 30.h,width: 30.w,)),
+                    IconsBox(imge: Image.asset(Assets.imageGoogle,height: 30.h,width: 30.w,),),
+                    IconsBox(imge: Image.asset(Assets.imageApple,height: 30.h,width: 30.w,),),
                   ],
                 ),
               ),

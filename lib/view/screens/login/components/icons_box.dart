@@ -25,7 +25,7 @@ class IconsBox extends StatelessWidget {
           )
         ]
       ),
-      child: imge,
+      child: Center(child: imge),
     );
   }
 }

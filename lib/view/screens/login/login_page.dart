@@ -4,6 +4,7 @@ import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/screens/login/components/icons_box.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
+import 'package:bookazon/view/widgets/public_divider.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/view/widgets/public_text_form_field.dart';
@@ -38,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -102,14 +103,28 @@ class _LoginPageState extends State<LoginPage> {
                 showSuffixIcon: true,
               ),
               //forget password
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                    onPressed: () {},
-                    child: PublicText(
-                      txt: S.of(context).forget_password,
-                      size: 14.sp,
-                    )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Checkbox(
+                        value: false,
+                        onChanged: (value) => value,
+                      ),
+                      PublicText(
+                          txt: S.of(context).remember_me,
+                          size: 15.sp,
+                          fw: FontWeight.w500),
+                    ],
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: PublicText(
+                        txt: S.of(context).forget_password,
+                        size: 14.sp,
+                      )),
+                ],
               ),
               63.ph,
               // button login
@@ -120,16 +135,40 @@ class _LoginPageState extends State<LoginPage> {
               ),
               // login with facebook or gmail
               63.ph,
-              PublicText(txt: S.of(context).or, color: Colors.grey),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const PublicDivider(),
+                  PublicText(txt: S.of(context).or, color: Colors.grey),
+                  const PublicDivider(),
+                ],
+              ),
               38.ph,
               SizedBox(
                 width: 251.w,
-                child: const Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    IconsBox(),
-                    IconsBox(),
-                    IconsBox(),
+                    IconsBox(
+                        imge: Image.asset(
+                      Assets.imageFacebook,
+                      height: 30.h,
+                      width: 30.w,
+                    )),
+                    IconsBox(
+                      imge: Image.asset(
+                        Assets.imageGoogle,
+                        height: 30.h,
+                        width: 30.w,
+                      ),
+                    ),
+                    IconsBox(
+                      imge: Image.asset(
+                        Assets.imageApple,
+                        height: 30.h,
+                        width: 30.w,
+                      ),
+                    ),
                   ],
                 ),
               ),
