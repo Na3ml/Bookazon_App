@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "576791943179",
+    "project_id": "bookazon-29fc5",
+    "storage_bucket": "bookazon-29fc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576791943179:android:5bac607c560d5af8b48f0e",
+        "android_client_info": {
+          "package_name": "com.example.bookazon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576791943179-j1ep1ukinrmo631k8f1j7egcjp5fg6me.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqTJ8LVdSEIL1zEMJfV1vM7B5Nq_Vqloo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576791943179-j1ep1ukinrmo631k8f1j7egcjp5fg6me.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
