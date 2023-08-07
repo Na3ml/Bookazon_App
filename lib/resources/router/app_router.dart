@@ -1,3 +1,4 @@
+import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
 import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
 import 'package:bookazon/view/screens/onboarding/onboarding_page.dart';
 import 'package:bookazon/view/screens/signup/signup_page.dart';
@@ -5,7 +6,7 @@ import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../view/screens/login/login_page.dart';
-import '../../view/screens/reset password/reset_password_page.dart';
+import '../../view/screens/reset_password/reset_password_page.dart';
 
 class AppRoutes {
   AppRoutes._private();
@@ -18,9 +19,12 @@ class AppRoutes {
   static const String login = "login";
   static const String signUp = "signUp";
   static const String forgotPassword = "forgot password";
-  static const String verifyCode = "verify code";
+  static const String emailVerify = "email verify";
   static const String resetPassword = "reset password";
   static const String confirmPassword = "confirm password";
+
+  /// main pages
+  static const String homePage = "home page";
 }
 
 class RouteGenerate {
@@ -39,7 +43,7 @@ class RouteGenerate {
       /// Auth
       case AppRoutes.login:
         return MaterialPageRoute(
-          builder: (_) => LoginPage(),
+          builder: (_) => const LoginPage(),
         );
       case AppRoutes.signUp:
         return MaterialPageRoute(
@@ -47,11 +51,19 @@ class RouteGenerate {
         );
       case AppRoutes.forgotPassword:
         return MaterialPageRoute(
-          builder: (_) => ForgetPasswordPage(),
+          builder: (_) => const ForgetPasswordPage(),
+        );
+      case AppRoutes.emailVerify:
+        return MaterialPageRoute(
+          builder: (_) => EmailVerificationPage(
+            email: routeSettings.arguments as String,
+          ),
         );
       case AppRoutes.resetPassword:
         return MaterialPageRoute(
-          builder: (_) => ResetPasswordPage(),
+          builder: (_) => ResetPasswordPage(
+            email: routeSettings.arguments as String,
+          ),
         );
 
       /// Main

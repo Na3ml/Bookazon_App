@@ -1,3 +1,4 @@
+import 'package:bookazon/data/models/auth_requests_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
@@ -14,26 +15,30 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../../resources/router/app_router.dart';
 import '../../widgets/public_snack_bar.dart';
 
-class ForgetPasswordPage extends StatefulWidget {
-  const ForgetPasswordPage({super.key});
+class ResetPasswordPage extends StatefulWidget {
+  final String email;
+  const ResetPasswordPage({super.key, required this.email});
 
   @override
-  State<ForgetPasswordPage> createState() => _ForgetPasswordPageState();
+  State<ResetPasswordPage> createState() => _ResetPasswordPageState();
 }
 
-class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
-  late final TextEditingController emailController;
+class _ResetPasswordPageState extends State<ResetPasswordPage> {
+  late final TextEditingController newPasswordController;
+  late final TextEditingController confirmPasswordController;
   final _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
     super.initState();
-    emailController = TextEditingController();
+    newPasswordController = TextEditingController();
+    confirmPasswordController = TextEditingController();
   }
 
   @override
   void dispose() {
-    emailController.dispose();
+    newPasswordController.dispose();
+    confirmPasswordController.dispose();
     super.dispose();
   }
 
@@ -42,13 +47,13 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
     final cubit = AuthCubit.get(context);
     return BlocConsumer<AuthCubit, AuthState>(
       listenWhen: (_, current) {
-        return (current is ForgotPasswordState || current is AuthnErrorState);
+        return (current is ResetPasswordState || current is AuthnErrorState);
       },
       buildWhen: (_, current) {
-        return (current is ForgotPasswordState || current is AuthnErrorState);
+        return (current is ResetPasswordState || current is AuthnErrorState);
       },
       listener: (context, state) {
-        if (state is ForgotPasswordLoadingState) {
+        if (state is ResetPasswordLoadingState) {
           cubit.changeSnipper();
         } else {
           if (cubit.spinner) {
@@ -57,79 +62,109 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
           if (state is AuthnErrorState) {
             MySnackBar.error(
                 message: state.error, color: Colors.red, context: context);
-          } else if (state is ForgotPasswordSuccessState) {
-            Navigator.pushNamed(context, AppRoutes.emailVerify,
-                arguments: emailController.text);
+          } else if (state is ResetPasswordSuccessState) {
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              AppRoutes.login,
+              (_) => false,
+            );
           }
         }
       },
       builder: (context, state) {
-        if (state is! ForgotPasswordSuccessState) {
+        if (state is! ResetPasswordSuccessState) {
           return ModalProgressHUD(
             inAsyncCall: cubit.spinner,
             child: Scaffold(
               backgroundColor: Colors.white,
               body: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Form(
-                    key: _formKey,
+                child: Form(
+                  key: _formKey,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         //logo
                         61.ph,
-
                         Image.asset(
                           Assets.imageLogo,
                           width: 174.w,
                           height: 53.h,
                         ),
-                        54.ph,
+                        29.ph,
                         //img
                         Image.asset(
-                          Assets.imageImgForgetpassword,
+                          Assets.imageImgResrt,
                           width: 386.w,
                           height: 356.h,
                         ),
-                        // title forget password
                         19.ph,
+                        // title reset password
                         PublicText(
-                          txt: S.of(context).forget_password,
+                          txt: S.of(context).reset_password,
                           fw: FontWeight.bold,
                           color: AppColors.black,
                           size: 25.sp,
                         ),
-                        29.ph,
+                        28.ph,
                         PublicText(
-                            txt: S.of(context).describe_forget_password,
+                            txt: S.of(context).describe_reset_password,
                             color: AppColors.grey,
                             fw: FontWeight.w400,
                             align: TextAlign.center),
-                        41.ph,
-                        //email
+                        42.ph,
+                        //new password
                         Align(
                             alignment: Alignment.centerLeft,
                             child: PublicText(
-                              txt: S.of(context).email,
+                              txt: S.of(context).new_password,
                               color: AppColors.black,
                               fw: FontWeight.w500,
                             )),
                         PublicTextFormField(
-                          hint: S.of(context).hint_email,
-                          controller: emailController,
-                          validator: (e) {},
+                          hint: S.of(context).hint_new_password,
+                          controller: newPasswordController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter some text';
+                            }
+                            return null;
+                          },
                         ),
-                        41.ph,
+                        22.ph,
+                        Align(
+                            alignment: Alignment.centerLeft,
+                            child: PublicText(
+                              txt: S.of(context).confirm_password,
+                              color: AppColors.black,
+                              fw: FontWeight.w500,
+                            )),
+                        PublicTextFormField(
+                          hint: S.of(context).hint_new_password,
+                          controller: confirmPasswordController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter some text';
+                            }
+                            return null;
+                          },
+                        ),
+                        30.ph,
                         // button send
                         PublicButton(
-                          title: S.of(context).send,
+                          title: S.of(context).submit,
                           width: 350.w,
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
+                              final request = ResetPasswordRequest(
+                                email: widget.email,
+                                password: newPasswordController.text,
+                                token: "",
+                              );
                               // To dismiss keyboard
                               FocusScope.of(context).unfocus();
-                              cubit.forgotPassword(emailController.text);
+                              cubit.resetPassword(request);
                             }
                           },
                         ),

@@ -1,7 +1,7 @@
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/resources/router/app_router.dart';
-import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
-import 'package:bookazon/view/screens/reset%20password/reset_password_page.dart';
+// import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
+// import 'package:bookazon/view/screens/reset%20password/reset_password_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:bookazon/view_model/onboarding/onboarding_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -11,8 +11,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'firebase_options.dart';
-import 'view/screens/email verification/email_verification_page.dart';
-import 'view/screens/signup/signup_page.dart';
+// import 'view/screens/email verification/email_verification_page.dart';
+// import 'view/screens/signup/signup_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: const SignupPage(),
+            home: const SplashPage(),
           ),
         );
       },
