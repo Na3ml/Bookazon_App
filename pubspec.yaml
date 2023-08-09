@@ -25,6 +25,7 @@ dependencies:
   lottie: ^2.5.0
   otp_text_field: ^1.1.3
   font_awesome_flutter: ^10.5.0
+  image_picker: ^1.0.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0

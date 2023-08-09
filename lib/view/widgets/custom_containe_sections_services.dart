@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
 
-import '../../const/colors.dart';
+import '../../resources/constants/colors.dart';
 
-class ContainerServices extends StatelessWidget {
+
+
+// ignore: must_be_immutable
+class ContainerServices extends StatefulWidget {
    ContainerServices({super.key ,required this.nameAsset,required this.nameServices});
   String nameAsset;
   String nameServices;
+
+  @override
+  State<ContainerServices> createState() => _ContainerServicesState();
+}
+
+class _ContainerServicesState extends State<ContainerServices> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,9 +32,9 @@ class ContainerServices extends StatelessWidget {
         shadowColor: Colors.grey,
         child: Column(
           children: [
-            Image.asset(nameAsset),
+            Image.asset(widget.nameAsset),
             Text(
-           nameServices,
+           widget.nameServices,
               style: TextStyle(color: themColor),
             )
           ],
