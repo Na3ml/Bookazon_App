@@ -17,7 +17,11 @@ class AuthRepositoryImpl extends AuthRepository {
   final NetworkInfo _networkInfo;
   final ApiService _apiService;
 
-  AuthRepositoryImpl(this._networkInfo, this._apiService);
+  AuthRepositoryImpl({
+    required NetworkInfo networkInfo,
+    required ApiService apiService,
+  })  : _networkInfo = networkInfo,
+        _apiService = apiService;
 
   @override
   Future<bool> login(LoginRequest request) async {

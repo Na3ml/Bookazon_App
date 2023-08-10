@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
+import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../../resources/router/app_router.dart';
 import '../../widgets/public_snack_bar.dart';
@@ -108,16 +109,27 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                         41.ph,
                         //email
                         Align(
-                            alignment: Alignment.centerLeft,
-                            child: PublicText(
-                              txt: S.of(context).email,
-                              color: AppColors.black,
-                              fw: FontWeight.w500,
-                            )),
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).email,
+                            color: AppColors.black,
+                            fw: FontWeight.w500,
+                          ),
+                        ),
                         PublicTextFormField(
                           hint: S.of(context).hint_email,
                           controller: emailController,
-                          validator: (e) {},
+                          validator: (email) {
+                            if (email == null || email.isEmpty) {
+                              return S.of(context).message_null_email;
+                            } else {
+                              if (email.isEmailValid()) {
+                                return null;
+                              } else {
+                                return S.of(context).title_error_email;
+                              }
+                            }
+                          },
                         ),
                         41.ph,
                         // button send

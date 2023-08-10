@@ -118,7 +118,13 @@ class _SignupPageState extends State<SignupPage> {
                         PublicTextFormField(
                           hint: S.of(context).hint_username,
                           controller: _usernameController,
-                          validator: (e) {},
+                          validator: (username) {
+                            if (username == null || username.length < 3) {
+                              return S.of(context).message_null_username;
+                            } else {
+                              return null;
+                            }
+                          },
                         ),
                         21.ph,
                         //email
@@ -132,7 +138,15 @@ class _SignupPageState extends State<SignupPage> {
                         PublicTextFormField(
                           hint: S.of(context).hint_email,
                           controller: _emailController,
-                          validator: (e) {},
+                          validator: (email) {
+                            if (email == null || email.isEmpty) {
+                              return S.of(context).message_null_email;
+                            } else if (email.isEmailValid()) {
+                              return null;
+                            } else {
+                              return S.of(context).title_error_email;
+                            }
+                          },
                         ),
                         21.ph,
                         //password
@@ -146,7 +160,17 @@ class _SignupPageState extends State<SignupPage> {
                         PublicTextFormField(
                           hint: S.of(context).hint_password,
                           controller: _passwordController,
-                          validator: (e) {},
+                          validator: (password) {
+                            if (password == null || password.isEmpty) {
+                              return S.of(context).message_null_password;
+                            } else {
+                              if (password.isPassValid()) {
+                                return null;
+                              } else {
+                                return S.of(context).title_error_password;
+                              }
+                            }
+                          },
                         ),
                         21.ph,
                         //confirm password
@@ -160,7 +184,17 @@ class _SignupPageState extends State<SignupPage> {
                         PublicTextFormField(
                           hint: S.of(context).hint_password,
                           controller: _passwordConfirmController,
-                          validator: (e) {},
+                          validator: (confirmPassword) {
+                            if (confirmPassword == null ||
+                                confirmPassword.isEmpty) {
+                              return S.of(context).message_null_password;
+                            } else if (confirmPassword !=
+                                _passwordController.text) {
+                              return S.of(context).title_error_confirmPassword;
+                            } else {
+                              return null;
+                            }
+                          },
                         ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
