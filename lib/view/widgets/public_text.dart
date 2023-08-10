@@ -1,6 +1,7 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PublicText extends StatelessWidget {
   final String txt;
@@ -34,7 +35,7 @@ class PublicText extends StatelessWidget {
         color: color,
         fontSize: size ?? 16.sp,
         height: 1.32,
-        fontFamily: ff,
+        fontFamily: ff ??GoogleFonts.roboto().fontFamily ,
         fontWeight: fw ?? FontWeight.normal,
         decoration:
             under == true ? TextDecoration.underline : TextDecoration.none,

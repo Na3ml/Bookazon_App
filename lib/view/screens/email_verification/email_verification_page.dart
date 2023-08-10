@@ -19,117 +19,140 @@ import '../../widgets/public_snack_bar.dart';
 class EmailVerificationPage extends StatelessWidget {
   final String email;
   EmailVerificationPage({super.key, required this.email});
+  OtpFieldController otpFieldController=OtpFieldController();
+   String otp='' ;
 
-  String otp = '';
 
   @override
   Widget build(BuildContext context) {
-    final cubit = AuthCubit.get(context);
-    return BlocConsumer<AuthCubit, AuthState>(
-      listenWhen: (_, current) {
-        return (current is VerifyEmailState || current is AuthnErrorState);
-      },
-      buildWhen: (_, current) {
-        return (current is VerifyEmailState || current is AuthnErrorState);
-      },
-      listener: (context, state) {
-        if (state is VerifyEmailLoadingState) {
-          cubit.changeSnipper();
-        } else {
-          if (cubit.spinner) {
-            cubit.changeSnipper();
-          }
-          if (state is AuthnErrorState) {
-            MySnackBar.error(
-                message: state.error, color: Colors.red, context: context);
-          } else if (state is VerifyEmailSuccessState) {
-            Navigator.pushNamed(
-              context,
-              AppRoutes.resetPassword,
-              arguments: email,
-            );
-          }
-        }
-      },
-      builder: (context, state) {
-        if (state is! VerifyEmailSuccessState) {
-          return ModalProgressHUD(
-            inAsyncCall: cubit.spinner,
-            child: Scaffold(
-              backgroundColor: Colors.white,
-              body: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      //logo
-                      61.ph,
-                      Image.asset(
-                        Assets.imageLogo,
-                        width: 174.w,
-                        height: 53.h,
-                      ),
-                      54.ph,
-                      //img
-                      Image.asset(
-                        Assets.imageImgVerification,
-                        width: 386.w,
-                        height: 356.h,
-                      ),
-                      19.ph,
-                      // title email verification
-                      PublicText(
-                        txt: S.of(context).email_verification,
-                        fw: FontWeight.bold,
-                        color: AppColors.black,
-                        size: 25.sp,
-                      ),
-                      29.ph,
-                      PublicText(
-                          txt: S.of(context).describe_email_verification,
-                          color: AppColors.grey,
-                          fw: FontWeight.w400,
-                          align: TextAlign.center),
-                      46.ph,
-                      //otp text field
-                      OTPTextField(
-                        length: 4,
-                        width: 364.w,
-                        fieldWidth: 82.w,
-                        style: TextStyle(
-                            fontSize: 35.sp, fontWeight: FontWeight.w400),
-                        textFieldAlignment: MainAxisAlignment.spaceAround,
-                        fieldStyle: FieldStyle.box,
-                        onCompleted: (otp) {
-                          this.otp = otp;
-                        },
-                      ),
-                      44.ph,
-                      // button send
-                      PublicButton(
-                        title: S.of(context).verify,
-                        width: 350.w,
-                        onPressed: () {
-                          if (otp.length > 3) {
-                            final request = VerifyEmailRequest(
-                              email: email,
-                              otp: otp,
-                            );
-                            cubit.verifyEmail(request);
-                          }
-                        },
-                      ),
-                    ],
-                  ),
-                ),
+    // final cubit = AuthCubit.get(context);
+    // return BlocConsumer<AuthCubit, AuthState>(
+    //   listenWhen: (_, current) {
+    //     return (current is VerifyEmailState || current is AuthnErrorState);
+    //   },
+    //   buildWhen: (_, current) {
+    //     return (current is VerifyEmailState || current is AuthnErrorState);
+    //   },
+    //   listener: (context, state) {
+    //     if (state is VerifyEmailLoadingState) {
+    //       cubit.changeSnipper();
+    //     } else {
+    //       if (cubit.spinner) {
+    //         cubit.changeSnipper();
+    //       }
+    //       if (state is AuthnErrorState) {
+    //         MySnackBar.error(
+    //             message: state.error, color: Colors.red, context: context);
+    //       } else if (state is VerifyEmailSuccessState) {
+    //         Navigator.pushNamed(
+    //           context,
+    //           AppRoutes.resetPassword,
+    //           arguments: email,
+    //         );
+    //       }
+    //     }
+    //   },
+    //   builder: (context, state) {
+    //     if (state is! VerifyEmailSuccessState) {
+    //       return ModalProgressHUD(
+    //         inAsyncCall: cubit.spinner,
+    //         child:
+    //       );
+    //     } else {
+    //       return const SizedBox();
+    //     }
+    //   },
+    // );
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              //logo
+              61.ph,
+              Image.asset(
+                Assets.imageLogo,
+                width: 174.w,
+                height: 53.h,
               ),
-            ),
-          );
-        } else {
-          return const SizedBox();
-        }
-      },
+              54.ph,
+              //img
+              Image.asset(
+                Assets.imageImgVerification,
+                width: 386.w,
+                height: 356.h,
+              ),
+              19.ph,
+              // title email verification
+              PublicText(
+                txt: S.of(context).email_verification,
+                fw: FontWeight.bold,
+                color: AppColors.black,
+                size: 25.sp,
+              ),
+              29.ph,
+              PublicText(
+                  txt: S.of(context).describe_email_verification,
+                  color: AppColors.grey,
+                  fw: FontWeight.w400,
+                  align: TextAlign.center),
+              46.ph,
+              //otp text field
+              OTPTextField(
+                length: 4,
+                width: 364.w,
+                fieldWidth: 82.w,
+
+                style: TextStyle(
+                    fontSize: 35.sp, fontWeight: FontWeight.w400),
+                textFieldAlignment: MainAxisAlignment.spaceAround,
+                fieldStyle: FieldStyle.box,
+                controller:otpFieldController ,
+                onChanged: (otp) {
+                  this.otp = otp;
+                  print(this.otp);
+                },
+                // onCompleted: (otp) {
+                //    this.otp = otp;
+                //   print(this.otp);
+                // },
+
+              ),
+              44.ph,
+              // button send
+              PublicButton(
+                title: S.of(context).verify,
+                width: 350.w,
+                onPressed: () {
+                  print(otp);
+                  if(otp.isEmpty){
+                    print(otp);
+                    ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+
+                            backgroundColor: Colors.red,
+                            content: PublicText(txt: S.of(context).message_error_otp,color: Colors.white,))
+                    );
+                  }
+                  else{
+                    if (otp.length > 3) {
+                      final request = VerifyEmailRequest(
+                        email: email,
+                        otp: otp,
+                      );
+                      //cubit.verifyEmail(request);
+                    }
+                  }
+
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

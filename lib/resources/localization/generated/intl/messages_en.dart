@@ -48,6 +48,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "hint_username":
             MessageLookupByLibrary.simpleMessage("enter your name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "message_error_email": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid email address, such as name@example.com."),
+        "message_error_otp":
+            MessageLookupByLibrary.simpleMessage("Please enter OTP code"),
+        "message_error_password": MessageLookupByLibrary.simpleMessage(
+            "Password must be at least 8 characters long and include a mix of uppercase and lowercase letters,numbers,and special character"),
+        "message_null_email":
+            MessageLookupByLibrary.simpleMessage("Please enter email"),
+        "message_null_password":
+            MessageLookupByLibrary.simpleMessage("Please enter password"),
+        "message_null_username":
+            MessageLookupByLibrary.simpleMessage("Please enter name"),
         "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "onboardingSubtitle1": MessageLookupByLibrary.simpleMessage(
@@ -74,6 +86,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "test": MessageLookupByLibrary.simpleMessage("test"),
+        "title_error_confirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Confirm password must match Password field"),
+        "title_error_email": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid email address"),
+        "title_error_password": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid password"),
         "title_login":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "title_signup":
