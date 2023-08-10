@@ -15,6 +15,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'firebase_options.dart';
+import 'resources/service_locator/service_locator.dart';
 // import 'view/screens/email verification/email_verification_page.dart';
 // import 'view/screens/signup/signup_page.dart';
 
@@ -27,6 +28,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  initModule();
 
   runApp(const MyApp());
 }
@@ -46,7 +49,9 @@ class MyApp extends StatelessWidget {
             BlocProvider(
               create: (context) => OnboardingCubit(),
             ),
-
+            BlocProvider(
+              create: (context) => authModule(),
+            ),
           ],
           child: MaterialApp(
             locale: const Locale("en"),

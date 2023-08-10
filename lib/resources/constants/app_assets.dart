@@ -26,12 +26,12 @@ class Assets {
   static const String imageImgVerification = "assets/image/imgVerification.png";
 
   /// Assets for imageLogo
-  /// assets/image/Logo.png
-  static const String imageLogo = "assets/image/Logo.png";
+  /// assets/image/logo.png
+  static const String imageLogo = "assets/image/logo.png";
 
   /// Assets for imageLogo750
-  /// assets/image/Logo750.png
-  static const String imageLogo750 = "assets/image/Logo750.png";
+  /// assets/image/logo750.png
+  static const String imageLogo750 = "assets/image/logo750.png";
 
   /// Assets for imageOnboarding1
   /// assets/image/onboarding1.png
