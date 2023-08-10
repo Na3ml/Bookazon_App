@@ -39,130 +39,122 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
 
   @override
   Widget build(BuildContext context) {
-    // final cubit = AuthCubit.get(context);
-    // return BlocConsumer<AuthCubit, AuthState>(
-    //   listenWhen: (_, current) {
-    //     return (current is ForgotPasswordState || current is AuthnErrorState);
-    //   },
-    //   buildWhen: (_, current) {
-    //     return (current is ForgotPasswordState || current is AuthnErrorState);
-    //   },
-    //   listener: (context, state) {
-    //     if (state is ForgotPasswordLoadingState) {
-    //       cubit.changeSnipper();
-    //     } else {
-    //       if (cubit.spinner) {
-    //         cubit.changeSnipper();
-    //       }
-    //       if (state is AuthnErrorState) {
-    //         MySnackBar.error(
-    //             message: state.error, color: Colors.red, context: context);
-    //       } else if (state is ForgotPasswordSuccessState) {
-    //         Navigator.pushNamed(context, AppRoutes.emailVerify,
-    //             arguments: emailController.text);
-    //       }
-    //     }
-    //   },
-    //   builder: (context, state) {
-    //     if (state is! ForgotPasswordSuccessState) {
-    //       return ModalProgressHUD(
-    //         inAsyncCall: cubit.spinner,
-    //         child:
-    //       );
-    //     } else {
-    //       return const SizedBox();
-    //     }
-    //   },
-    // );
+    final cubit = AuthCubit.get(context);
+    return BlocConsumer<AuthCubit, AuthState>(
+      listenWhen: (_, current) {
+        return (current is ForgotPasswordState || current is AuthnErrorState);
+      },
+      buildWhen: (_, current) {
+        return (current is ForgotPasswordState || current is AuthnErrorState);
+      },
+      listener: (context, state) {
+        if (state is ForgotPasswordLoadingState) {
+          cubit.changeSnipper();
+        } else {
+          if (cubit.spinner) {
+            cubit.changeSnipper();
+          }
+          if (state is AuthnErrorState) {
+            MySnackBar.error(
+                message: state.error, color: Colors.red, context: context);
+          } else if (state is ForgotPasswordSuccessState) {
+            Navigator.pushNamed(context, AppRoutes.emailVerify,
+                arguments: emailController.text);
+          }
+        }
+      },
+      builder: (context, state) {
+        if (state is! ForgotPasswordSuccessState) {
+          return ModalProgressHUD(
+            inAsyncCall: cubit.spinner,
+            child: Scaffold(
+              backgroundColor: Colors.white,
+              body: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        //logo
+                        61.ph,
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                //logo
-                61.ph,
-
-                Image.asset(
-                  Assets.imageLogo,
-                  width: 174.w,
-                  height: 53.h,
+                        Image.asset(
+                          Assets.imageLogo,
+                          width: 174.w,
+                          height: 53.h,
+                        ),
+                        54.ph,
+                        //img
+                        Image.asset(
+                          Assets.imageImgForgetpassword,
+                          width: 386.w,
+                          height: 356.h,
+                        ),
+                        // title forget password
+                        19.ph,
+                        PublicText(
+                          txt: S.of(context).forget_password,
+                          fw: FontWeight.bold,
+                          color: AppColors.black,
+                          size: 25.sp,
+                        ),
+                        29.ph,
+                        PublicText(
+                            txt: S.of(context).describe_forget_password,
+                            color: AppColors.grey,
+                            fw: FontWeight.w400,
+                            align: TextAlign.center),
+                        41.ph,
+                        //email
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).email,
+                            color: AppColors.black,
+                            fw: FontWeight.w500,
+                          ),
+                        ),
+                        PublicTextFormField(
+                          hint: S.of(context).hint_email,
+                          controller: emailController,
+                          validator: (email) {
+                            if (email == null || email.isEmpty) {
+                              return S.of(context).message_null_email;
+                            } else {
+                              if (email.isEmailValid()) {
+                                return null;
+                              } else {
+                                return S.of(context).title_error_email;
+                              }
+                            }
+                          },
+                        ),
+                        41.ph,
+                        // button send
+                        PublicButton(
+                          title: S.of(context).send,
+                          width: 350.w,
+                          onPressed: () {
+                            if (_formKey.currentState!.validate()) {
+                              // To dismiss keyboard
+                              FocusScope.of(context).unfocus();
+                              cubit.forgotPassword(emailController.text);
+                            }
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                54.ph,
-                //img
-                Image.asset(
-                  Assets.imageImgForgetpassword,
-                  width: 386.w,
-                  height: 356.h,
-                ),
-                // title forget password
-                19.ph,
-                PublicText(
-                  txt: S.of(context).forget_password,
-                  fw: FontWeight.bold,
-                  color: AppColors.black,
-                  size: 25.sp,
-                ),
-                29.ph,
-                PublicText(
-                    txt: S.of(context).describe_forget_password,
-                    color: AppColors.grey,
-                    fw: FontWeight.w400,
-                    align: TextAlign.center),
-                41.ph,
-                //email
-                Align(
-                    alignment: Alignment.centerLeft,
-                    child: PublicText(
-                      txt: S.of(context).email,
-                      color: AppColors.black,
-                      fw: FontWeight.w500,
-                    )),
-                PublicTextFormField(
-                  hint: S.of(context).hint_email,
-                  controller: emailController,
-                  validator: (email) {
-                    if (email == null || email.isEmpty) {
-                      return S.of(context).message_null_email;
-                    }
-                    else{
-                      if (email!.isEmailValid()) {
-                        return null;
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-
-                                backgroundColor: Colors.red,
-                                content: PublicText(txt: S.of(context).message_error_email,color: Colors.white,))
-                        );
-                        return S.of(context).title_error_email;
-                      }
-                    }
-                  },
-                ),
-                41.ph,
-                // button send
-                PublicButton(
-                  title: S.of(context).send,
-                  width: 350.w,
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      // To dismiss keyboard
-                      FocusScope.of(context).unfocus();
-                      //cubit.forgotPassword(emailController.text);
-                    }
-                  },
-                ),
-              ],
+              ),
             ),
-          ),
-        ),
-      ),
+          );
+        } else {
+          return const SizedBox();
+        }
+      },
     );
   }
 }
