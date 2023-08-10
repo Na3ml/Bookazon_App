@@ -12,6 +12,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^5.3.0
   equatable: ^2.0.5
+  firebase_core: ^2.15.0
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
@@ -20,12 +21,15 @@ dependencies:
   flutter_native_splash: ^2.3.1
   flutter_screenutil: ^5.8.4
   flutter_svg: ^2.0.7
+  get_it: ^7.6.0
   internet_connection_checker: ^1.0.0+1
   intl: ^0.18.0
   lottie: ^2.5.0
+  modal_progress_hud_nsn: ^0.4.0
   otp_text_field: ^1.1.3
   font_awesome_flutter: ^10.5.0
   image_picker: ^1.0.2
+  google_fonts: ^5.1.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -36,7 +40,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/image/
-    - assets/icon/
     - assets/json/
 
 flutter_intl:
@@ -46,7 +49,7 @@ flutter_intl:
 
 flutter_native_splash:
   color: "#ffffff"
-  image: assets/images/logo750.png
+  image: assets/image/logo750.png
 
 flutter_assets:
   assets_path: assets/

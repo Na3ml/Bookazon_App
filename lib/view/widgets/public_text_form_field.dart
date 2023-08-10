@@ -53,50 +53,54 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      textCapitalization: TextCapitalization.none,
-      maxLines: 1,
-      maxLength: widget.maxlenght,
-      obscureText: widget.isPassword ? showPassword : false,
-      keyboardType: widget.keyboardtype,
-      controller: widget.controller,
-      autovalidateMode: AutovalidateMode.disabled,
-      validator: widget.validator,
-      decoration: InputDecoration(
-        fillColor: AppColors.white,
-        iconColor: AppColors.blue,
-        filled: true,
-        hintText: widget.hint,
-        // enabledBorder: OutlineInputBorder(
-        //
-        //  // borderRadius: BorderRadius.circular(widget.borderRadius),
-        //  // borderSide: const BorderSide(color: AppColors.blue, width: 0.5),
-        // ),
-        // focusedBorder: OutlineInputBorder(
-        //   borderRadius: BorderRadius.circular(widget.borderRadius),
-        //   borderSide: const BorderSide(color: AppColors.blue, width: 0.5),
-        // ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(widget.borderRadius),
-          borderSide: const BorderSide(color: Colors.red, width: 0.5),
+    return SizedBox(
+      width: 374.w,
+      //height: 57.h,
+      child: TextFormField(
+        textCapitalization: TextCapitalization.none,
+        maxLines: 1,
+        maxLength: widget.maxlenght,
+        obscureText: widget.isPassword ? showPassword : false,
+        keyboardType: widget.keyboardtype,
+        controller: widget.controller,
+        autovalidateMode: AutovalidateMode.disabled,
+        validator: widget.validator,
+        decoration: InputDecoration(
+          fillColor: AppColors.white,
+          iconColor: AppColors.blue,
+          filled: true,
+          hintText: widget.hint,
+          hintStyle: TextStyle(color: AppColors.grey, fontSize: 15.sp),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(widget.borderRadius),
+            borderSide: const BorderSide(color: AppColors.black, width: 0.5),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(widget.borderRadius),
+            borderSide: const BorderSide(color: AppColors.blue, width: 0.5),
+          ),
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(widget.borderRadius),
+            borderSide: const BorderSide(color: Colors.red, width: 0.5),
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(widget.borderRadius),
+            borderSide: const BorderSide(color: Colors.red, width: 0.5),
+          ),
+          contentPadding: widget.contentPadding ??
+              EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
+          prefixIcon: widget.showprefixIcon
+              ? Icon(
+                  widget.prefixIcon,
+                  size: 22,
+                  color: AppColors.blue,
+                )
+              : null,
+          suffixIcon: getSuffixIcon(),
         ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(widget.borderRadius),
-          borderSide: const BorderSide(color: Colors.red, width: 0.5),
-        ),
-        contentPadding: widget.contentPadding ??
-            EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
-        prefixIcon: widget.showprefixIcon
-            ? Icon(
-                widget.prefixIcon,
-                size: 22,
-                color: AppColors.blue,
-              )
-            : null,
-        suffixIcon: getSuffixIcon(),
+        onChanged: widget.onChanged,
+        onFieldSubmitted: widget.onSubmitted,
       ),
-      onChanged: widget.onChanged,
-      onFieldSubmitted: widget.onSubmitted,
     );
   }
 

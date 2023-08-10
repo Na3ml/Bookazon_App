@@ -23,7 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "already_have_account":
-            MessageLookupByLibrary.simpleMessage("Already have an account"),
+            MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "describe_email_verification": MessageLookupByLibrary.simpleMessage(
@@ -33,7 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "describe_reset_password": MessageLookupByLibrary.simpleMessage(
             "Enter your new password and confirm it"),
         "dont_have_account":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account"),
+            MessageLookupByLibrary.simpleMessage("Don’t have an account yet?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_verification":
             MessageLookupByLibrary.simpleMessage("Email Verification"),
@@ -48,6 +48,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "hint_username":
             MessageLookupByLibrary.simpleMessage("enter your name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "message_error_email": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid email address, such as name@example.com."),
+        "message_error_otp":
+            MessageLookupByLibrary.simpleMessage("Please enter OTP code"),
+        "message_error_password": MessageLookupByLibrary.simpleMessage(
+            "Password must be at least 8 characters long and include a mix of uppercase and lowercase letters,numbers,and special character"),
+        "message_null_email":
+            MessageLookupByLibrary.simpleMessage("Please enter email"),
+        "message_null_password":
+            MessageLookupByLibrary.simpleMessage("Please enter password"),
+        "message_null_username":
+            MessageLookupByLibrary.simpleMessage("Please enter name"),
         "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "onboardingSubtitle1": MessageLookupByLibrary.simpleMessage(
@@ -62,8 +74,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create Your Account"),
         "onboardingTitle3":
             MessageLookupByLibrary.simpleMessage("Explore Amazing Properties"),
-        "or": MessageLookupByLibrary.simpleMessage("OR"),
+        "or": MessageLookupByLibrary.simpleMessage("or sign in with"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "privacy_policy": MessageLookupByLibrary.simpleMessage(
+            "I have read and accepted the terms of use\nand privacy policy "),
+        "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
@@ -71,8 +86,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "test": MessageLookupByLibrary.simpleMessage("test"),
+        "title_error_confirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Confirm password must match Password field"),
+        "title_error_email": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid email address"),
+        "title_error_password": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid password"),
         "title_login":
-            MessageLookupByLibrary.simpleMessage("Login to  your account"),
+            MessageLookupByLibrary.simpleMessage("Login to your account"),
+        "title_signup":
+            MessageLookupByLibrary.simpleMessage("Create a new account"),
         "username": MessageLookupByLibrary.simpleMessage("UserName"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify")
       };

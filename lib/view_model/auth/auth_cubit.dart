@@ -68,16 +68,21 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
+  String otp = '';
   Future<void> verifyEmail(VerifyEmailRequest request) async {
-    emit(VerifyEmailLoadingState());
-    try {
-      if (await _repo.verifyEmail(request)) {
-        emit(VerifyEmailSuccessState());
+    if (request.otp.length == 4) {
+      emit(VerifyEmailLoadingState());
+      try {
+        if (await _repo.verifyEmail(request)) {
+          emit(VerifyEmailSuccessState());
+        }
+      } catch (e) {
+        if (e is CustomException) {
+          emit(AuthnErrorState("Wrong Code, Send Again"));
+        }
       }
-    } catch (e) {
-      if (e is CustomException) {
-        emit(AuthnErrorState("Wrong Code, Send Again"));
-      }
+    } else {
+      emit(AuthnErrorState("Enter 4-digits Code"));
     }
   }
 
