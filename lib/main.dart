@@ -1,5 +1,8 @@
+import 'package:bookazon/data/repository/auth_repository.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/resources/router/app_router.dart';
+import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
+import 'package:bookazon/view/screens/reset_password/reset_password_page.dart';
 // import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
 // import 'package:bookazon/view/screens/reset%20password/reset_password_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
