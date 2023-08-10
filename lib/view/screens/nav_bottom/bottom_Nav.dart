@@ -1,12 +1,13 @@
-import 'package:booking_app/const/colors.dart';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'booking_screen.dart';
-import 'notifications_screen.dart';
-import 'home_screen.dart';
-import 'profile_screen.dart';
-import 'Favourite_screen.dart';
+import '../../../resources/constants/colors.dart';
+import '../booking/booking_screen.dart';
+import '../notifications/notifications_screen.dart';
+import '../home/home_screen.dart';
+import '../profile/profile_screen.dart';
+import '../favourite/Favourite_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

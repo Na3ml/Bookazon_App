@@ -1,18 +1,16 @@
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/resources/router/app_router.dart';
-import 'package:bookazon/view/screens/email_verification_page.dart';
-import 'package:bookazon/view/screens/forgetpassword_page.dart';
-import 'package:bookazon/view/screens/login_page.dart';
-import 'package:bookazon/view/screens/reset_password_page.dart';
-import 'package:bookazon/view/screens/signup_page.dart';
-import 'package:bookazon/view/screens/splash/splash_page.dart';
-import 'package:bookazon/view_model/auth/auth_cubit.dart';
+
 import 'package:bookazon/view_model/onboarding/onboarding_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
+import 'view/screens/home/home_screen.dart';
+
 
 void main() {
   // fro testing splash
@@ -39,6 +37,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
           child: MaterialApp(
+            debugShowCheckedModeBanner: false,
             locale: const Locale("en"),
             localizationsDelegates: const [
               S.delegate,
@@ -53,7 +52,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: const SplashPage(),
+            home: HomeScreen(),
           ),
         );
       },
