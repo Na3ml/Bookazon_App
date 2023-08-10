@@ -60,11 +60,21 @@ class S {
     );
   }
 
-  /// `Login to  your account`
+  /// `Login to your account`
   String get title_login {
     return Intl.message(
-      'Login to  your account',
+      'Login to your account',
       name: 'title_login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create a new account`
+  String get title_signup {
+    return Intl.message(
+      'Create a new account',
+      name: 'title_signup',
       desc: '',
       args: [],
     );
@@ -75,6 +85,26 @@ class S {
     return Intl.message(
       'Login',
       name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember me`
+  String get remember_me {
+    return Intl.message(
+      'Remember me',
+      name: 'remember_me',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I have read and accepted the terms of use\nand privacy policy `
+  String get privacy_policy {
+    return Intl.message(
+      'I have read and accepted the terms of use\nand privacy policy ',
+      name: 'privacy_policy',
       desc: '',
       args: [],
     );
@@ -130,20 +160,20 @@ class S {
     );
   }
 
-  /// `OR`
+  /// `or sign in with`
   String get or {
     return Intl.message(
-      'OR',
+      'or sign in with',
       name: 'or',
       desc: '',
       args: [],
     );
   }
 
-  /// `Don't have an account`
+  /// `Don’t have an account yet?`
   String get dont_have_account {
     return Intl.message(
-      'Don\'t have an account',
+      'Don’t have an account yet?',
       name: 'dont_have_account',
       desc: '',
       args: [],
@@ -190,10 +220,10 @@ class S {
     );
   }
 
-  /// `Already have an account`
+  /// `Already have an account?`
   String get already_have_account {
     return Intl.message(
-      'Already have an account',
+      'Already have an account?',
       name: 'already_have_account',
       desc: '',
       args: [],

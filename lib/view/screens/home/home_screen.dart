@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   hint: "hint",
                    validator: (value) {
                      
-                   },),
+                   }, controller: null,),
              const     SizedBox(
                     height: 8,
                   ),
@@ -104,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                         child: PublicTextFormField(
                          
                            hint: '',
-                            validator: (String? value) {  },
+                            validator: (String? value) {  }, controller: null,
                          
                         ),
                       ),

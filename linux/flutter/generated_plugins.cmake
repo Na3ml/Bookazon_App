@@ -3,7 +3,11 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+<<<<<<< HEAD
   file_selector_linux
+=======
+  modal_progress_hud_nsn
+>>>>>>> f4dd799cf1b84c8c87df4333c9d9409fefd92033
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

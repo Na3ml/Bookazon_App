@@ -1,21 +1,33 @@
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/resources/router/app_router.dart';
 
+
+
 import 'package:bookazon/view_model/onboarding/onboarding_cubit.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:firebase_core/firebase_core.dart';
 
 import 'view/screens/home/home_screen.dart';
 
 
-void main() {
+import 'firebase_options.dart';
+// import 'view/screens/email verification/email_verification_page.dart';
+// import 'view/screens/signup/signup_page.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   // fro testing splash
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(const MyApp());
 }
