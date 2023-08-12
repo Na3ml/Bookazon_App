@@ -1,4 +1,6 @@
+import 'package:bookazon/data/data_source/local/app_prefs.dart';
 import 'package:bookazon/data/repository/auth_repository.dart';
+import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -6,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import '../../data/error_handler/error_handler.dart';
 import '../../data/models/auth_requests_model.dart';
+import '../../resources/service_locator/service_locator.dart';
 
 part 'auth_state.dart';
 
@@ -28,11 +31,29 @@ class AuthCubit extends Cubit<AuthState> {
     _spinner = !_spinner;
   }
 
+  /// checkboxes
+  bool rememberMe = false;
+  bool acceptTerms = false;
+
+  void changeRememberMe() {
+    rememberMe = !rememberMe;
+    emit(ChangeRememberMeState(rememberMe));
+  }
+
+  void changeAcceptTerms() {
+    acceptTerms = !acceptTerms;
+    emit(ChangeAcceptTermsState(acceptTerms));
+  }
+
   /// Auth
+  final appPrefs = getIt<AppPrefs>();
   Future<void> login(LoginRequest request) async {
     emit(LoginLoadingState());
     try {
       if (await _repo.login(request)) {
+        if (rememberMe) {
+          appPrefs.setUserLoggedIn();
+        }
         emit(LoginSuccessState());
       }
     } catch (e) {
@@ -43,15 +64,20 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   Future<void> register(RegisterRequest request) async {
-    emit(RegisterLoadingState());
-    try {
-      if (await _repo.register(request)) {
-        emit(RegisterSuccessState());
+    if (acceptTerms) {
+      emit(RegisterLoadingState());
+      try {
+        if (await _repo.register(request)) {
+          appPrefs.setUserLoggedIn();
+          emit(RegisterSuccessState());
+        }
+      } catch (e) {
+        if (e is CustomException) {
+          emit(AuthnErrorState(e.message));
+        }
       }
-    } catch (e) {
-      if (e is CustomException) {
-        emit(AuthnErrorState(e.message));
-      }
+    } else {
+      emit(AuthnErrorState(S.current.acceptTermsErrorMessage));
     }
   }
 

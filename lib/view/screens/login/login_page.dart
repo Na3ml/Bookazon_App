@@ -150,9 +150,14 @@ class _LoginPageState extends State<LoginPage> {
                           children: [
                             Row(
                               children: [
-                                Checkbox(
-                                  value: false,
-                                  onChanged: (value) => value,
+                                BlocBuilder<AuthCubit, AuthState>(
+                                  buildWhen: (_,current) => current is ChangeRememberMeState,
+                                  builder: (context, state) {
+                                    return Checkbox(
+                                      value: cubit.rememberMe,
+                                      onChanged: (_) => cubit.changeRememberMe(),
+                                    );
+                                  },
                                 ),
                                 PublicText(
                                     txt: S.of(context).remember_me,

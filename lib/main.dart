@@ -14,6 +14,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'data/data_source/local/app_prefs.dart';
 import 'firebase_options.dart';
 import 'resources/service_locator/service_locator.dart';
 // import 'view/screens/email verification/email_verification_page.dart';
@@ -29,8 +30,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  initModule();
-
+  await initModule();
   runApp(const MyApp());
 }
 
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
               create: (context) => OnboardingCubit(),
             ),
             BlocProvider(
-              create: (context) => authModule(),
+              create: (context) => AuthCubit(repo: getIt()),
             ),
           ],
           child: MaterialApp(
@@ -74,4 +74,6 @@ class MyApp extends StatelessWidget {
       },
     );
   }
+
+
 }

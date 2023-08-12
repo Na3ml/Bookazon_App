@@ -109,12 +109,13 @@ class _SignupPageState extends State<SignupPage> {
                         43.ph,
                         //username
                         Align(
-                            alignment: Alignment.centerLeft,
-                            child: PublicText(
-                              txt: S.of(context).username,
-                              color: AppColors.black,
-                              fw: FontWeight.w500,
-                            )),
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).username,
+                            color: AppColors.black,
+                            fw: FontWeight.w500,
+                          ),
+                        ),
                         PublicTextFormField(
                           hint: S.of(context).hint_username,
                           controller: _usernameController,
@@ -199,15 +200,27 @@ class _SignupPageState extends State<SignupPage> {
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Checkbox(
-                              value: false,
-                              onChanged: (value) => value,
+                            BlocBuilder<AuthCubit, AuthState>(
+                              buildWhen: (_, current) =>
+                                  current is ChangeAcceptTermsState,
+                              builder: (context, state) {
+                                return Checkbox(
+                                  value: cubit.acceptTerms,
+                                  onChanged: (_) => cubit.changeAcceptTerms(),
+                                );
+                              },
                             ),
-                            PublicText(
-                              txt: S.of(context).privacy_policy,
-                              align: TextAlign.center,
-                              fw: FontWeight.w500,
-                              size: 14.sp,
+                            InkWell(
+                              onTap: (){
+
+                              },
+                              child: PublicText(
+                                txt: S.of(context).privacy_policy,
+                                align: TextAlign.center,
+                                fw: FontWeight.w500,
+                                size: 14.sp,
+                                color: AppColors.purple,
+                              ),
                             )
                           ],
                         ),
@@ -219,10 +232,11 @@ class _SignupPageState extends State<SignupPage> {
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
                               final request = RegisterRequest(
-                                  name: _usernameController.text,
-                                  email: _emailController.text,
-                                  password: _passwordController.text,
-                                  phone: "");
+                                name: _usernameController.text,
+                                email: _emailController.text,
+                                password: _passwordController.text,
+                                phone: "",
+                              );
                               // To dismiss keyboard
                               FocusScope.of(context).unfocus();
                               cubit.register(request);

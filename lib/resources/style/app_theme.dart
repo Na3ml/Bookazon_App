@@ -7,7 +7,7 @@ class AppTheme {
     return ThemeData(
       /// color theme
       colorScheme: ColorScheme.fromSwatch().copyWith(
-        secondary: AppColors.blue.withOpacity(0.2),
+        secondary: AppColors.orange.withOpacity(0.2),
       ),
 
       /// AppBar theme

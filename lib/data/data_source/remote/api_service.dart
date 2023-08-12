@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-const String baseUrl = " ";
+const String baseUrl = "https://jsonplaceholder.typicode.com";
 
 class EndPoints {
   EndPoints._();
