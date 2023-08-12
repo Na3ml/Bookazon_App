@@ -35,5 +35,6 @@
     "onboardingSubtitle3": "Find Your Ideal Accommodation and Start Your Adventure",
     "skip": "Skip",
     "next": "Next",
-    "getStarted":"Get Started"
+    "getStarted":"Get Started",
+    "acceptTermsErrorMessage":"You have to accept terms of use and privacy policy before you sign up"
 }

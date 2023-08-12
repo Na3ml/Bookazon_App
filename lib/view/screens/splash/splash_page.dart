@@ -9,6 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 
+import '../../../data/data_source/local/app_prefs.dart';
+import '../../../resources/service_locator/service_locator.dart';
+
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
@@ -24,10 +27,25 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _goNext() {
-    Navigator.pushReplacementNamed(
-      context,
-      AppRoutes.onBoarding,
-    );
+    AppPrefs appPrefs = getIt<AppPrefs>();
+    if (appPrefs.isOnBoardingViewed()) {
+      if (appPrefs.isUserLoggedIn()) {
+        Navigator.pushReplacementNamed(
+          context,
+          AppRoutes.homePage,
+        );
+      } else {
+        Navigator.pushReplacementNamed(
+          context,
+          AppRoutes.login,
+        );
+      }
+    } else {
+      Navigator.pushReplacementNamed(
+        context,
+        AppRoutes.onBoarding,
+      );
+    }
   }
 
   @override

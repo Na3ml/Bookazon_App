@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "acceptTermsErrorMessage": MessageLookupByLibrary.simpleMessage(
+            "You have to accept terms of use and privacy policy before you sign up"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "confirm_password":
