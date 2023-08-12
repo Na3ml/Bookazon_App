@@ -111,29 +111,35 @@ class _LoginPageState extends State<LoginPage> {
                           hint: S.of(context).hint_email,
                           controller: emailController,
                           validator: (email) {
-                            if (email!.isEmailValid()) {
+                            if (email == null || email.isEmpty) {
+                              return S.of(context).message_null_email;
+                            } else if (email.isEmailValid()) {
                               return null;
                             } else {
-                              return null;
+                              return S.of(context).title_error_email;
                             }
                           },
                         ),
                         21.ph,
                         //password
                         Align(
-                            alignment: Alignment.centerLeft,
-                            child: PublicText(
-                              txt: S.of(context).password,
-                              color: AppColors.black,
-                            )),
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).password,
+                            color: AppColors.black,
+                          ),
+                        ),
                         PublicTextFormField(
                           hint: S.of(context).hint_password,
                           controller: passwordController,
                           validator: (password) {
-                            if (password!.isPassValid()) {
+                            if (password == null || password.isEmpty) {
+                              return S.of(context).message_null_password;
+                            } else if (password.isPassValid()) {
                               return null;
+                            } else {
+                              return S.of(context).title_error_password;
                             }
-                            return null;
                           },
                           isPassword: true,
                           showSuffixIcon: true,

@@ -109,16 +109,27 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                         41.ph,
                         //email
                         Align(
-                            alignment: Alignment.centerLeft,
-                            child: PublicText(
-                              txt: S.of(context).email,
-                              color: AppColors.black,
-                              fw: FontWeight.w500,
-                            )),
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).email,
+                            color: AppColors.black,
+                            fw: FontWeight.w500,
+                          ),
+                        ),
                         PublicTextFormField(
                           hint: S.of(context).hint_email,
                           controller: emailController,
-                          validator: (e) {},
+                          validator: (email) {
+                            if (email == null || email.isEmpty) {
+                              return S.of(context).message_null_email;
+                            } else {
+                              if (email.isEmailValid()) {
+                                return null;
+                              } else {
+                                return S.of(context).title_error_email;
+                              }
+                            }
+                          },
                         ),
                         41.ph,
                         // button send

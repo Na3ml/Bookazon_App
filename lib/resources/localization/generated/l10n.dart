@@ -429,6 +429,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Please enter email`
+  String get message_null_email {
+    return Intl.message(
+      'Please enter email',
+      name: 'message_null_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid email address, such as name@example.com.`
+  String get message_error_email {
+    return Intl.message(
+      'Please enter a valid email address, such as name@example.com.',
+      name: 'message_error_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid email address`
+  String get title_error_email {
+    return Intl.message(
+      'Please enter a valid email address',
+      name: 'title_error_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter password`
+  String get message_null_password {
+    return Intl.message(
+      'Please enter password',
+      name: 'message_null_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be at least 8 characters long and include a mix of uppercase and lowercase letters,numbers,and special character`
+  String get message_error_password {
+    return Intl.message(
+      'Password must be at least 8 characters long and include a mix of uppercase and lowercase letters,numbers,and special character',
+      name: 'message_error_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid password`
+  String get title_error_password {
+    return Intl.message(
+      'Please enter a valid password',
+      name: 'title_error_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter name`
+  String get message_null_username {
+    return Intl.message(
+      'Please enter name',
+      name: 'message_null_username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password must match Password field`
+  String get title_error_confirmPassword {
+    return Intl.message(
+      'Confirm password must match Password field',
+      name: 'title_error_confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter OTP code`
+  String get message_error_otp {
+    return Intl.message(
+      'Please enter OTP code',
+      name: 'message_error_otp',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

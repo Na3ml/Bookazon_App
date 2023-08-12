@@ -18,9 +18,7 @@ import '../../widgets/public_snack_bar.dart';
 
 class EmailVerificationPage extends StatelessWidget {
   final String email;
-  EmailVerificationPage({super.key, required this.email});
-
-  String otp = '';
+  const EmailVerificationPage({super.key, required this.email});
 
   @override
   Widget build(BuildContext context) {
@@ -101,8 +99,8 @@ class EmailVerificationPage extends StatelessWidget {
                             fontSize: 35.sp, fontWeight: FontWeight.w400),
                         textFieldAlignment: MainAxisAlignment.spaceAround,
                         fieldStyle: FieldStyle.box,
-                        onCompleted: (otp) {
-                          this.otp = otp;
+                        onChanged: (otp) {
+                          cubit.otp = otp;
                         },
                       ),
                       44.ph,
@@ -111,13 +109,11 @@ class EmailVerificationPage extends StatelessWidget {
                         title: S.of(context).verify,
                         width: 350.w,
                         onPressed: () {
-                          if (otp.length > 3) {
-                            final request = VerifyEmailRequest(
-                              email: email,
-                              otp: otp,
-                            );
-                            cubit.verifyEmail(request);
-                          }
+                          final request = VerifyEmailRequest(
+                            email: email,
+                            otp: cubit.otp,
+                          );
+                          cubit.verifyEmail(request);
                         },
                       ),
                     ],

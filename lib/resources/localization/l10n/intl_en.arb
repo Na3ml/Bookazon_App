@@ -36,5 +36,14 @@
     "skip": "Skip",
     "next": "Next",
     "getStarted":"Get Started",
-    "acceptTermsErrorMessage":"You have to accept terms of use and privacy policy before you sign up"
+    "acceptTermsErrorMessage":"You have to accept terms of use and privacy policy before you sign up",
+    "message_null_email": "Please enter email",
+    "message_error_email": "Please enter a valid email address, such as name@example.com.",
+    "title_error_email": "Please enter a valid email address",
+    "message_null_password": "Please enter password",
+    "message_error_password": "Password must be at least 8 characters long and include a mix of uppercase and lowercase letters,numbers,and special character",
+    "title_error_password": "Please enter a valid password",
+    "message_null_username": "Please enter name",
+    "title_error_confirmPassword": "Confirm password must match Password field",
+    "message_error_otp": "Please enter OTP code"
 }
