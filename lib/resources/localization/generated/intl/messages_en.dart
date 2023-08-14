@@ -26,8 +26,20 @@ class MessageLookup extends MessageLookupByLibrary {
             "You have to accept terms of use and privacy policy before you sign up"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "answer_delete_account1": MessageLookupByLibrary.simpleMessage(
+            "I get to many emails from bookzon"),
+        "answer_delete_account2": MessageLookupByLibrary.simpleMessage(
+            "I want to use a different email address\nfor my account"),
+        "answer_delete_account3": MessageLookupByLibrary.simpleMessage(
+            "I want to remove all my data"),
+        "answer_delete_account4":
+            MessageLookupByLibrary.simpleMessage("I have a privacy concern"),
+        "answer_delete_account5": MessageLookupByLibrary.simpleMessage("Other"),
+        "can_you_share": MessageLookupByLibrary.simpleMessage(
+            "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it. "),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "describe_email_verification": MessageLookupByLibrary.simpleMessage(
             "Please type OTP code that we given you"),
         "describe_forget_password": MessageLookupByLibrary.simpleMessage(
@@ -88,6 +100,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "test": MessageLookupByLibrary.simpleMessage("test"),
+        "title_delete_account":
+            MessageLookupByLibrary.simpleMessage("Delete Account"),
         "title_error_confirmPassword": MessageLookupByLibrary.simpleMessage(
             "Confirm password must match Password field"),
         "title_error_email": MessageLookupByLibrary.simpleMessage(
@@ -99,6 +113,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_signup":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
         "username": MessageLookupByLibrary.simpleMessage("UserName"),
-        "verify": MessageLookupByLibrary.simpleMessage("Verify")
+        "verify": MessageLookupByLibrary.simpleMessage("Verify"),
+        "why_delete_account": MessageLookupByLibrary.simpleMessage(
+            "Why do you want to delete your\naccount?")
       };
 }
