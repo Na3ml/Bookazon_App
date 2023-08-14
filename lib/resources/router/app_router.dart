@@ -1,6 +1,7 @@
 import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
 import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
 import 'package:bookazon/view/screens/onboarding/onboarding_page.dart';
+import 'package:bookazon/view/screens/privacy_policy/privacy_policy_page.dart';
 import 'package:bookazon/view/screens/signup/signup_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,7 @@ class AppRoutes {
   static const String emailVerify = "email verify";
   static const String resetPassword = "reset password";
   static const String confirmPassword = "confirm password";
+  static const String privacyPolicy = "privacy password";
 
   /// main pages
   static const String homePage = "home page";
@@ -64,6 +66,10 @@ class RouteGenerate {
           builder: (_) => ResetPasswordPage(
             email: routeSettings.arguments as String,
           ),
+        );
+      case AppRoutes.privacyPolicy:
+        return MaterialPageRoute(
+          builder: (_) => const PrivacyPolicyPage(),
         );
 
       /// Main

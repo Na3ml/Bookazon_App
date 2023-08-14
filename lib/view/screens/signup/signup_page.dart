@@ -1,4 +1,4 @@
-import 'package:bookazon/data/models/auth_requests_model.dart';
+import 'package:bookazon/data/models/requests/auth_requests_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
@@ -83,6 +83,8 @@ class _SignupPageState extends State<SignupPage> {
           return ModalProgressHUD(
             inAsyncCall: cubit.spinner,
             child: Scaffold(
+              backgroundColor: AppColors.white,
+              appBar: AppBar(),
               body: SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -119,6 +121,7 @@ class _SignupPageState extends State<SignupPage> {
                         PublicTextFormField(
                           hint: S.of(context).hint_username,
                           controller: _usernameController,
+                          keyboardtype: TextInputType.name,
                           validator: (username) {
                             if (username == null || username.length < 3) {
                               return S.of(context).message_null_username;
@@ -138,6 +141,7 @@ class _SignupPageState extends State<SignupPage> {
                             )),
                         PublicTextFormField(
                           hint: S.of(context).hint_email,
+                          keyboardtype: TextInputType.emailAddress,
                           controller: _emailController,
                           validator: (email) {
                             if (email == null || email.isEmpty) {
@@ -152,15 +156,19 @@ class _SignupPageState extends State<SignupPage> {
                         21.ph,
                         //password
                         Align(
-                            alignment: Alignment.centerLeft,
-                            child: PublicText(
-                              txt: S.of(context).password,
-                              color: AppColors.black,
-                              fw: FontWeight.w500,
-                            )),
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).password,
+                            color: AppColors.black,
+                            fw: FontWeight.w500,
+                          ),
+                        ),
                         PublicTextFormField(
                           hint: S.of(context).hint_password,
                           controller: _passwordController,
+                          keyboardtype: TextInputType.visiblePassword,
+                          isPassword: true,
+                          showSuffixIcon: true,
                           validator: (password) {
                             if (password == null || password.isEmpty) {
                               return S.of(context).message_null_password;
@@ -176,15 +184,19 @@ class _SignupPageState extends State<SignupPage> {
                         21.ph,
                         //confirm password
                         Align(
-                            alignment: Alignment.centerLeft,
-                            child: PublicText(
-                              txt: S.of(context).confirm_password,
-                              color: AppColors.black,
-                              fw: FontWeight.w500,
-                            )),
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).confirm_password,
+                            color: AppColors.black,
+                            fw: FontWeight.w500,
+                          ),
+                        ),
                         PublicTextFormField(
                           hint: S.of(context).hint_password,
                           controller: _passwordConfirmController,
+                          keyboardtype: TextInputType.visiblePassword,
+                          isPassword: true,
+                          showSuffixIcon: true,
                           validator: (confirmPassword) {
                             if (confirmPassword == null ||
                                 confirmPassword.isEmpty) {
@@ -211,15 +223,16 @@ class _SignupPageState extends State<SignupPage> {
                               },
                             ),
                             InkWell(
-                              onTap: (){
-
+                              onTap: () {
+                                Navigator.pushNamed(context, AppRoutes.privacyPolicy);
                               },
                               child: PublicText(
                                 txt: S.of(context).privacy_policy,
                                 align: TextAlign.center,
                                 fw: FontWeight.w500,
                                 size: 14.sp,
-                                color: AppColors.purple,
+                                color: AppColors.orange,
+                                under: true,
                               ),
                             )
                           ],
@@ -321,7 +334,7 @@ class _SignupPageState extends State<SignupPage> {
                                 txt: S.of(context).login,
                                 fw: FontWeight.bold,
                                 size: 13.sp,
-                                color: AppColors.purple,
+                                color: AppColors.orange,
                               ),
                             )
                           ],

@@ -39,6 +39,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     var cubit = OnboardingCubit.get(context);
     return SafeArea(
       child: Scaffold(
+        backgroundColor: AppColors.white,
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 70.h),
           child: Column(

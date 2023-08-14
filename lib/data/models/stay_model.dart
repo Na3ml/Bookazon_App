@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
@@ -18,7 +17,7 @@ enum RoomType {
   singleBed,
 }
 
-class AccommodationModel extends Equatable {
+class StayModel extends Equatable {
   final String name;
   final String ownerName;
   final int numOfRooms;
@@ -28,7 +27,7 @@ class AccommodationModel extends Equatable {
   final List<RoomModel> rooms;
   final String city;
   final LocationModel location;
-  const AccommodationModel({
+  const StayModel({
     required this.name,
     required this.ownerName,
     required this.numOfRooms,
@@ -39,7 +38,7 @@ class AccommodationModel extends Equatable {
     required this.location,
   });
 
-  AccommodationModel copyWith({
+  StayModel copyWith({
     String? name,
     String? ownerName,
     int? numOfRooms,
@@ -49,7 +48,7 @@ class AccommodationModel extends Equatable {
     String? city,
     LocationModel? location,
   }) {
-    return AccommodationModel(
+    return StayModel(
       name: name ?? this.name,
       ownerName: ownerName ?? this.ownerName,
       numOfRooms: numOfRooms ?? this.numOfRooms,
@@ -74,8 +73,8 @@ class AccommodationModel extends Equatable {
     };
   }
 
-  factory AccommodationModel.fromMap(Map<String, dynamic> map) {
-    return AccommodationModel(
+  factory StayModel.fromMap(Map<String, dynamic> map) {
+    return StayModel(
       name: map['name'] as String,
       ownerName: map['ownerName'] as String,
       numOfRooms: map['numOfRooms'] as int,
@@ -93,8 +92,8 @@ class AccommodationModel extends Equatable {
 
   String toJson() => json.encode(toMap());
 
-  factory AccommodationModel.fromJson(String source) =>
-      AccommodationModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory StayModel.fromJson(String source) =>
+      StayModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   bool get stringify => true;

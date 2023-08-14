@@ -7,6 +7,10 @@ class EndPoints {
 
   static const String login = "/login";
   static const String register = "/register";
+  static const String search = "/search";
+  static const String offer = "/offer";
+  static const String popular = "/popular";
+  
 }
 
 class Headers {

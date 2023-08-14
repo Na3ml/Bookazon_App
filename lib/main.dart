@@ -54,6 +54,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
           child: MaterialApp(
+            debugShowCheckedModeBanner: false,
             locale: const Locale("en"),
             localizationsDelegates: const [
               S.delegate,
@@ -68,7 +69,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: const SplashPage(),
+            home: const SplashPage()
           ),
         );
       },
