@@ -1,9 +1,9 @@
 import 'package:bookazon/data/data_source/remote/api_service.dart';
-import 'package:bookazon/data/models/auth_response_model.dart';
+import 'package:bookazon/data/models/responses/auth_response_model.dart';
 import 'package:bookazon/data/network/network_info.dart';
 
 import '../error_handler/error_handler.dart';
-import '../models/auth_requests_model.dart';
+import '../models/requests/auth_requests_model.dart';
 
 abstract class AuthRepository {
   Future<bool> login(LoginRequest request);
