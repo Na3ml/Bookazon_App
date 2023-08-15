@@ -16,7 +16,8 @@ class AppTheme {
       appBarTheme: const AppBarTheme(
         elevation: 0,
         centerTitle: true,
-        color: Colors.white,
+        backgroundColor: AppColors.white,
+        foregroundColor: AppColors.black,
         iconTheme: IconThemeData(color: Colors.black),
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarIconBrightness: Brightness.dark,

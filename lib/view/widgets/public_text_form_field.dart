@@ -93,7 +93,7 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
               ? Icon(
                   widget.prefixIcon,
                   size: 22,
-                  color: AppColors.blue,
+                  color: AppColors.purple,
                 )
               : null,
           suffixIcon: getSuffixIcon(),
@@ -110,7 +110,7 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
         return Icon(
           widget.suffixIcon,
           size: 22,
-          color: AppColors.blue,
+          color: AppColors.purple,
         );
       }
       return InkWell(
@@ -120,8 +120,8 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
           });
         }),
         child: !showPassword
-            ? const Icon(Icons.visibility)
-            : const Icon(Icons.visibility_off),
+            ? const Icon(Icons.visibility,color: AppColors.purple,)
+            : const Icon(Icons.visibility_off,color: AppColors.purple,),
       );
     }
     return null;

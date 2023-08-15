@@ -420,6 +420,16 @@ class S {
     );
   }
 
+  /// `You have to accept terms of use and privacy policy before you sign up`
+  String get acceptTermsErrorMessage {
+    return Intl.message(
+      'You have to accept terms of use and privacy policy before you sign up',
+      name: 'acceptTermsErrorMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Please enter email`
   String get message_null_email {
     return Intl.message(

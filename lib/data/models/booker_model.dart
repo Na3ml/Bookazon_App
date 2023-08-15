@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
 
-class UserModel extends Equatable {
+class BookerModel extends Equatable {
   final String firstName;
   final String lastName;
   final String email;
@@ -12,7 +12,7 @@ class UserModel extends Equatable {
   final String address;
   final String gender;
 
-  const UserModel({
+  const BookerModel({
     required this.firstName,
     required this.lastName,
     required this.email,
@@ -22,7 +22,7 @@ class UserModel extends Equatable {
     required this.gender,
   });
 
-  UserModel copyWith({
+  BookerModel copyWith({
     String? firstName,
     String? lastName,
     String? email,
@@ -31,7 +31,7 @@ class UserModel extends Equatable {
     String? address,
     String? gender,
   }) {
-    return UserModel(
+    return BookerModel(
       firstName: firstName ?? this.firstName,
       lastName: lastName ?? this.lastName,
       email: email ?? this.email,
@@ -54,8 +54,8 @@ class UserModel extends Equatable {
     };
   }
 
-  factory UserModel.fromMap(Map<String, dynamic> map) {
-    return UserModel(
+  factory BookerModel.fromMap(Map<String, dynamic> map) {
+    return BookerModel(
       firstName: map['firstName'] as String,
       lastName: map['lastName'] as String,
       email: map['email'] as String,
@@ -68,8 +68,8 @@ class UserModel extends Equatable {
 
   String toJson() => json.encode(toMap());
 
-  factory UserModel.fromJson(String source) =>
-      UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory BookerModel.fromJson(String source) =>
+      BookerModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   List<Object> get props {

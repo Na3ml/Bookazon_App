@@ -13,5 +13,7 @@
     "notificaiton": "Notification",
     "favourite": "Favourite",
     "profile": "Profile",
-    "whereWantGo": "Where do you want to go ?"
+    "whereWantGo": "Where do you want to go ?",
+    "acceptTermsErrorMessage": ""
+    
 }
