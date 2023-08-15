@@ -36,7 +36,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("I have a privacy concern"),
         "answer_delete_account5": MessageLookupByLibrary.simpleMessage("Other"),
         "can_you_share": MessageLookupByLibrary.simpleMessage(
-            "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it. "),
+            "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it."),
+        "confirm_Deletion":
+            MessageLookupByLibrary.simpleMessage("Confirm Deletion"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
@@ -115,6 +117,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "username": MessageLookupByLibrary.simpleMessage("UserName"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
         "why_delete_account": MessageLookupByLibrary.simpleMessage(
-            "Why do you want to delete your\naccount?")
+            "Why do you want to delete your\naccount?"),
+        "your_explanation":
+            MessageLookupByLibrary.simpleMessage("Your explanation.....")
       };
 }

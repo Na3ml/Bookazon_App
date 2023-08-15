@@ -600,11 +600,31 @@ class S {
     );
   }
 
-  /// `Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it. `
+  /// `Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it.`
   String get can_you_share {
     return Intl.message(
-      'Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it. ',
+      'Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it.',
       name: 'can_you_share',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your explanation.....`
+  String get your_explanation {
+    return Intl.message(
+      'Your explanation.....',
+      name: 'your_explanation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Deletion`
+  String get confirm_Deletion {
+    return Intl.message(
+      'Confirm Deletion',
+      name: 'confirm_Deletion',
       desc: '',
       args: [],
     );

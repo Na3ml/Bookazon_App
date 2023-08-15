@@ -11,3 +11,17 @@ List listAnswer(context){
   ];
 }
 
+  bool select1=false;
+  bool select2=false;
+  bool select3=false;
+  bool select4=false;
+  bool select5=false;
+List<bool> listSelect=[
+     select1,
+     select2,
+     select3,
+     select4,
+     select5,
+  ];
+
+

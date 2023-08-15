@@ -15,6 +15,7 @@ class PublicTextFormField extends StatefulWidget {
   final bool showprefixIcon;
   final bool showSuffixIcon;
   final int? maxlenght;
+  final int? maxLines;
   final Function()? ontap;
   final Function()? ontapPrefixIcon;
   final Function()? ontapSuffixIcon;
@@ -34,6 +35,7 @@ class PublicTextFormField extends StatefulWidget {
       this.ontap,
       this.keyboardtype = TextInputType.text,
       this.maxlenght,
+      this.maxLines,
       this.prefixIcon = Icons.person,
       this.suffixIcon = Icons.person,
       this.ontapPrefixIcon,
@@ -57,8 +59,9 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
       width: 374.w,
       //height: 57.h,
       child: TextFormField(
+
         textCapitalization: TextCapitalization.none,
-        maxLines: 1,
+        maxLines: widget.maxLines??1,
         maxLength: widget.maxlenght,
         obscureText: widget.isPassword ? showPassword : false,
         keyboardType: widget.keyboardtype,
