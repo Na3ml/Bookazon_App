@@ -7,6 +7,7 @@ import 'package:bookazon/view/screens/reset_password/reset_password_page.dart';
 // import 'package:bookazon/view/screens/reset%20password/reset_password_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:bookazon/view_model/auth/auth_cubit.dart';
+import 'package:bookazon/view_model/home/home_cubit.dart';
 import 'package:bookazon/view_model/onboarding/onboarding_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -52,29 +53,29 @@ class MyApp extends StatelessWidget {
             BlocProvider(
               create: (context) => AuthCubit(repo: getIt()),
             ),
+            BlocProvider(
+              create: (context) => HomeCubit(getIt()),
+            ),
           ],
           child: MaterialApp(
-            debugShowCheckedModeBanner: false,
-            locale: const Locale("en"),
-            localizationsDelegates: const [
-              S.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: S.delegate.supportedLocales,
-            title: 'Bookazon',
-            theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              useMaterial3: true,
-            ),
-            onGenerateRoute: RouteGenerate.getRoute,
-            home: const SplashPage()
-          ),
+              debugShowCheckedModeBanner: false,
+              locale: const Locale("en"),
+              localizationsDelegates: const [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: S.delegate.supportedLocales,
+              title: 'Bookazon',
+              theme: ThemeData(
+                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+                useMaterial3: true,
+              ),
+              onGenerateRoute: RouteGenerate.getRoute,
+              home: const SplashPage()),
         );
       },
     );
   }
-
-
 }

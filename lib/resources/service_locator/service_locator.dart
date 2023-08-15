@@ -1,3 +1,4 @@
+import 'package:bookazon/data/repository/home_repository.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -6,7 +7,6 @@ import '../../data/data_source/local/app_prefs.dart';
 import '../../data/data_source/remote/api_service.dart';
 import '../../data/network/network_info.dart';
 import '../../data/repository/auth_repository.dart';
-import '../../view_model/auth/auth_cubit.dart';
 
 final GetIt getIt = GetIt.instance;
 
@@ -36,5 +36,12 @@ Future<void> initModule() async {
       apiService: getIt(),
     ),
   );
-}
 
+  /// home repository
+  getIt.registerLazySingleton<HomeRepository>(
+    () => HomeRepositoryImpl(
+      networkInfo: getIt(),
+      apiService: getIt(),
+    ),
+  );
+}
