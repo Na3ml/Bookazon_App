@@ -110,7 +110,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                           28.ph,
                           PublicText(
                               txt: S.of(context).describe_reset_password,
-                              color: AppColors.grey,
+                              color: AppColors.hintGrey,
                               fw: FontWeight.w400,
                               align: TextAlign.center),
                           42.ph,

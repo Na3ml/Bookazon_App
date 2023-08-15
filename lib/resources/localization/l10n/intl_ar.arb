@@ -7,6 +7,11 @@
     "onboardingSubtitle3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     "skip": "تخطي",
     "next": "التالي",
-    "getStarted":"بدء"
-    
+    "getStarted": "بدء",
+    "home": "Home",
+    "booking": "Booking",
+    "notificaiton": "Notification",
+    "favourite": "Favourite",
+    "profile": "Profile",
+    "whereWantGo": "Where do you want to go ?"
 }

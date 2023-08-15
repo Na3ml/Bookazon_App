@@ -4,8 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../resources/constants/colors.dart';
 
-class DetailesScreen extends StatelessWidget {
-  const DetailesScreen({super.key});
+class HotelDetailsPage extends StatelessWidget {
+  const HotelDetailsPage({super.key});
 
   @override
   Widget build(BuildContext context) {

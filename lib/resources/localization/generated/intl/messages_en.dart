@@ -22,8 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "adults": MessageLookupByLibrary.simpleMessage("Adults"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "appartment": MessageLookupByLibrary.simpleMessage("Appartment"),
+        "bookNow": MessageLookupByLibrary.simpleMessage("Book now!"),
+        "booking": MessageLookupByLibrary.simpleMessage("Booking"),
+        "children": MessageLookupByLibrary.simpleMessage("Children"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "describe_email_verification": MessageLookupByLibrary.simpleMessage(
@@ -37,9 +42,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_verification":
             MessageLookupByLibrary.simpleMessage("Email Verification"),
+        "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
         "forget_password":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
+        "from": MessageLookupByLibrary.simpleMessage("From"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "glamping": MessageLookupByLibrary.simpleMessage("Glamping"),
+        "goingTo": MessageLookupByLibrary.simpleMessage("Going to"),
         "hint_email": MessageLookupByLibrary.simpleMessage("enter your email"),
         "hint_new_password":
             MessageLookupByLibrary.simpleMessage("enter new password"),
@@ -47,6 +56,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("enter your password"),
         "hint_username":
             MessageLookupByLibrary.simpleMessage("enter your name"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "hotel": MessageLookupByLibrary.simpleMessage("Hotel"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "message_error_email": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid email address, such as name@example.com."),
@@ -62,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter name"),
         "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "notificaiton": MessageLookupByLibrary.simpleMessage("Notifications"),
+        "offer": MessageLookupByLibrary.simpleMessage("Offer"),
         "onboardingSubtitle1": MessageLookupByLibrary.simpleMessage(
             "Discover and Book Your Perfect Getaway"),
         "onboardingSubtitle2": MessageLookupByLibrary.simpleMessage(
@@ -76,11 +89,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Explore Amazing Properties"),
         "or": MessageLookupByLibrary.simpleMessage("or sign in with"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "planTrip": MessageLookupByLibrary.simpleMessage("Plan your trip"),
+        "popular": MessageLookupByLibrary.simpleMessage("Popular"),
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "I have read and accepted the terms of use\nand privacy policy "),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "rooms": MessageLookupByLibrary.simpleMessage("Rooms"),
+        "sections": MessageLookupByLibrary.simpleMessage("Sections"),
+        "seeMore": MessageLookupByLibrary.simpleMessage("See More"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Signup"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
@@ -96,7 +115,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "title_signup":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
+        "to": MessageLookupByLibrary.simpleMessage("To"),
         "username": MessageLookupByLibrary.simpleMessage("UserName"),
-        "verify": MessageLookupByLibrary.simpleMessage("Verify")
+        "verify": MessageLookupByLibrary.simpleMessage("Verify"),
+        "villa": MessageLookupByLibrary.simpleMessage("Villa"),
+        "whereWantGo":
+            MessageLookupByLibrary.simpleMessage("Where do you want to go ?")
       };
 }

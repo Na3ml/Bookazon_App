@@ -1,6 +1,7 @@
 import 'package:bookazon/data/models/onboarding_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 
+import '../../view/widgets/custom_containe_sections_services.dart';
 import '../localization/generated/l10n.dart';
 
 class AppConstants {
@@ -21,6 +22,25 @@ class AppConstants {
       image: Assets.imageOnboarding3,
       title: S.current.onboardingTitle3,
       description: S.current.onboardingSubtitle3,
+    ),
+  ];
+
+  static List<ContainerServices> sections = [
+    ContainerServices(
+      nameAsset: Assets.imageSection1,
+      nameServices: S.current.hotel,
+    ),
+    ContainerServices(
+      nameAsset: Assets.imageSection2,
+      nameServices: S.current.appartment,
+    ),
+    ContainerServices(
+      nameAsset: Assets.imageSection3,
+      nameServices: S.current.glamping,
+    ),
+    ContainerServices(
+      nameAsset: Assets.imageSection4,
+      nameServices: S.current.villa,
     ),
   ];
 }

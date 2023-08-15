@@ -1,6 +1,7 @@
 import 'package:bookazon/data/repository/auth_repository.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/resources/router/app_router.dart';
+import 'package:bookazon/resources/style/app_theme.dart';
 
 import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
 import 'package:bookazon/view/screens/reset_password/reset_password_page.dart';
@@ -18,9 +19,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'firebase_options.dart';
 import 'resources/service_locator/service_locator.dart';
-import 'view/screens/home/home_screen.dart';
+import 'view/screens/home/home_page.dart';
+import 'view/screens/layouts/layouts_page.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   // fro testing splash
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
@@ -62,13 +65,13 @@ class MyApp extends StatelessWidget {
               GlobalCupertinoLocalizations.delegate,
             ],
             supportedLocales: S.delegate.supportedLocales,
-            title: 'Bookazon',
-            theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              useMaterial3: true,
+            scrollBehavior: ScrollConfiguration.of(context).copyWith(
+              physics: const BouncingScrollPhysics(),
             ),
+            title: 'Bookazon',
+            theme: AppTheme.getLight(),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: const HomeScreen(),
+            home: const LayoutsPage(),
             // home: const SplashPage()
           ),
         );

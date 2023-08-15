@@ -509,6 +509,226 @@ class S {
       args: [],
     );
   }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Booking`
+  String get booking {
+    return Intl.message(
+      'Booking',
+      name: 'booking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notifications`
+  String get notificaiton {
+    return Intl.message(
+      'Notifications',
+      name: 'notificaiton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Favourite`
+  String get favourite {
+    return Intl.message(
+      'Favourite',
+      name: 'favourite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Where do you want to go ?`
+  String get whereWantGo {
+    return Intl.message(
+      'Where do you want to go ?',
+      name: 'whereWantGo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Going to`
+  String get goingTo {
+    return Intl.message(
+      'Going to',
+      name: 'goingTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `From`
+  String get from {
+    return Intl.message(
+      'From',
+      name: 'from',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To`
+  String get to {
+    return Intl.message(
+      'To',
+      name: 'to',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adults`
+  String get adults {
+    return Intl.message(
+      'Adults',
+      name: 'adults',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rooms`
+  String get rooms {
+    return Intl.message(
+      'Rooms',
+      name: 'rooms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children`
+  String get children {
+    return Intl.message(
+      'Children',
+      name: 'children',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sections`
+  String get sections {
+    return Intl.message(
+      'Sections',
+      name: 'sections',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See More`
+  String get seeMore {
+    return Intl.message(
+      'See More',
+      name: 'seeMore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Popular`
+  String get popular {
+    return Intl.message(
+      'Popular',
+      name: 'popular',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Offer`
+  String get offer {
+    return Intl.message(
+      'Offer',
+      name: 'offer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hotel`
+  String get hotel {
+    return Intl.message(
+      'Hotel',
+      name: 'hotel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Appartment`
+  String get appartment {
+    return Intl.message(
+      'Appartment',
+      name: 'appartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Glamping`
+  String get glamping {
+    return Intl.message(
+      'Glamping',
+      name: 'glamping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Villa`
+  String get villa {
+    return Intl.message(
+      'Villa',
+      name: 'villa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Plan your trip`
+  String get planTrip {
+    return Intl.message(
+      'Plan your trip',
+      name: 'planTrip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Book now!`
+  String get bookNow {
+    return Intl.message(
+      'Book now!',
+      name: 'bookNow',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -103,7 +103,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                         29.ph,
                         PublicText(
                             txt: S.of(context).describe_forget_password,
-                            color: AppColors.grey,
+                            color: AppColors.hintGrey,
                             fw: FontWeight.w400,
                             align: TextAlign.center),
                         41.ph,

@@ -5,9 +5,11 @@ import 'app_colors.dart';
 class AppTheme {
   static ThemeData getLight() {
     return ThemeData(
+      scaffoldBackgroundColor: AppColors.white,
+
       /// color theme
       colorScheme: ColorScheme.fromSwatch().copyWith(
-        secondary: AppColors.blue.withOpacity(0.2),
+        secondary: AppColors.purple.withOpacity(0.2),
       ),
 
       /// AppBar theme
