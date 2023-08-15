@@ -21,7 +21,9 @@ dependencies:
   flutter_native_splash: ^2.3.1
   flutter_screenutil: ^5.8.4
   flutter_svg: ^2.0.7
+  font_awesome_flutter: ^10.5.0
   get_it: ^7.6.0
+  image_picker: ^1.0.2
   internet_connection_checker: ^1.0.0+1
   intl: ^0.18.0
   lottie: ^2.5.0
@@ -40,6 +42,7 @@ flutter:
   assets:
     - assets/image/
     - assets/json/
+    - assets/icon/
 
 flutter_intl:
   enabled: true

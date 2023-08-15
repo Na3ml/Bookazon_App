@@ -7,7 +7,7 @@ import '../../resources/style/app_colors.dart';
 class PublicTextFormField extends StatefulWidget {
   final String hint;
   final FormFieldValidator<String>? validator;
-  final TextEditingController controller;
+  TextEditingController? controller;
   final TextInputType keyboardtype;
   final IconData prefixIcon;
   final IconData suffixIcon;
@@ -23,26 +23,26 @@ class PublicTextFormField extends StatefulWidget {
   final void Function(String)? onChanged;
   final void Function(String)? onSubmitted;
 
-  const PublicTextFormField(
-      {Key? key,
-      required this.hint,
-      required this.controller,
-      required this.validator,
-      this.isPassword = false,
-      this.showSuffixIcon = false,
-      this.showprefixIcon = false,
-      this.ontap,
-      this.keyboardtype = TextInputType.text,
-      this.maxlenght,
-      this.prefixIcon = Icons.person,
-      this.suffixIcon = Icons.person,
-      this.ontapPrefixIcon,
-      this.ontapSuffixIcon,
-      this.borderRadius = 12,
-      this.contentPadding,
-      this.onChanged,
-      this.onSubmitted})
-      : super(key: key);
+  PublicTextFormField({
+    Key? key,
+    required this.hint,
+    this.controller,
+    required this.validator,
+    this.isPassword = false,
+    this.showSuffixIcon = false,
+    this.showprefixIcon = false,
+    this.ontap,
+    this.keyboardtype = TextInputType.text,
+    this.maxlenght,
+    this.prefixIcon = Icons.person,
+    this.suffixIcon = Icons.person,
+    this.ontapPrefixIcon,
+    this.ontapSuffixIcon,
+    this.borderRadius = 12,
+    this.contentPadding,
+    this.onChanged,
+    this.onSubmitted,
+  }) : super(key: key);
 
   @override
   State<PublicTextFormField> createState() => _PublicTextFormFieldState();
@@ -66,14 +66,14 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
         autovalidateMode: AutovalidateMode.disabled,
         validator: widget.validator,
         decoration: InputDecoration(
-          fillColor: AppColors.white,
+          fillColor: AppColors.textFieldWhite,
           iconColor: AppColors.purple,
           filled: true,
           hintText: widget.hint,
-          hintStyle: TextStyle(color: AppColors.grey, fontSize: 15.sp),
+          hintStyle: TextStyle(color: AppColors.hintGrey, fontSize: 15.sp),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(widget.borderRadius),
-            borderSide: const BorderSide(color: AppColors.black, width: 0.5),
+            borderSide: const BorderSide(color: AppColors.textFieldWhite, width: 0.5),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(widget.borderRadius),

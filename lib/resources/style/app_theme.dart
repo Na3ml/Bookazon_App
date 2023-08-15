@@ -9,7 +9,7 @@ class AppTheme {
 
       /// color theme
       colorScheme: ColorScheme.fromSwatch().copyWith(
-        secondary: AppColors.orange.withOpacity(0.2),
+        secondary: AppColors.purple.withOpacity(0.2),
       ),
 
       /// AppBar theme

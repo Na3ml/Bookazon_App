@@ -86,7 +86,7 @@ class EmailVerificationPage extends StatelessWidget {
                       29.ph,
                       PublicText(
                           txt: S.of(context).describe_email_verification,
-                          color: AppColors.grey,
+                          color: AppColors.hintGrey,
                           fw: FontWeight.w400,
                           align: TextAlign.center),
                       46.ph,
