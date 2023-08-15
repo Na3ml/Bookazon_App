@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 import '../../data/data_source/remote/api_service.dart';
@@ -28,6 +29,7 @@ void initModule() {
       apiService: getIt(),
     ),
   );
+
 }
 
 AuthCubit authModule() {

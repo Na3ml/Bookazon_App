@@ -1,121 +1,146 @@
-import 'dart:io';
-
+import 'package:bookazon/resources/extensions/extensions.dart';
+import 'package:bookazon/resources/localization/generated/l10n.dart';
+import 'package:bookazon/resources/style/app_colors.dart';
+import 'package:bookazon/view/widgets/public_text.dart';
+import 'package:bookazon/view_model/profile/profile_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../resources/constants/colors.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({super.key});
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<ProfilePage> createState() => _ProfilePageState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
-  File? image;
-  final imagePicker = ImagePicker();
-
-  pickedImageFromGallery() async {
-    var pickedImage = await imagePicker.pickImage(source: ImageSource.gallery);
-    if (pickedImage != null) {
-      setState(() {
-        image = File(pickedImage.path);
-      });
-    } else {}
-  }
-
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Profile",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.pause_circle),
-          )
-        ],
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            Stack(
-              clipBehavior: Clip.none,
-              // fit: StackFit.expand,
-              children: [
-                image == null
-                    ? const CircleAvatar(
-                        radius: 80,
-                        child: Text("No Image"),
-                      )
-                    : CircleAvatar(
-                        radius: 80,
-                        backgroundImage: Image.file(image!).image,
+    final cubit = ProfileCubit.get(context);
+    return SafeArea(
+      child: Scaffold(
+        body: Padding(
+          padding: EdgeInsets.only(top: 40.h),
+          child: Column(
+            children: [
+              BlocBuilder<ProfileCubit, ProfileState>(
+                builder: (context, state) {
+                  return Stack(
+                    children: [
+                      cubit.image == null
+                          ? CircleAvatar(
+                              radius: 70.w,
+                              backgroundColor: AppColors.purple,
+                              child: const PublicText(
+                                txt: "No Image",
+                                color: AppColors.white,
+                              ),
+                            )
+                          : CircleAvatar(
+                              radius: 70.w,
+                              backgroundImage: Image.file(cubit.image!).image,
+                            ),
+                      Positioned(
+                        bottom: 20.h,
+                        right: 1.w,
+                        child: InkWell(
+                          onTap: () => cubit.pickImageFromGallery(),
+                          child: const Icon(
+                            Icons.camera_alt,
+                          ),
+                        ),
                       ),
-                Positioned(
-                  bottom: 40,
-                  right: -10,
-                  child: GestureDetector(
-                    onTap: pickedImageFromGallery,
-                    child: const Icon(Icons.camera_alt),
+                    ],
+                  );
+                },
+              ),
+              16.ph,
+              PublicText(
+                txt: "Kezia Ajibastin",
+                size: 24.sp,
+                fw: FontWeight.w600,
+              ),
+              8.ph,
+              PublicText(
+                txt: "ezia_ajibastin@domain.com",
+                size: 14.sp,
+                fw: FontWeight.w500,
+              ),
+              ListTile(
+                leading: const Icon(Icons.person_outline),
+                title: PublicText(
+                  txt: S.of(context).editProfile,
+                  color: AppColors.subTitleBlack,
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.payment_outlined),
+                title: PublicText(
+                  txt: S.of(context).payment,
+                  color: AppColors.subTitleBlack,
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.notifications_outlined),
+               title: PublicText(
+                  txt: S.of(context).notificaiton,
+                  color: AppColors.subTitleBlack,
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.security_outlined),
+                title: PublicText(
+                  txt: S.of(context).security,
+                  color: AppColors.subTitleBlack,
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.help_outline),
+                title: PublicText(
+                  txt: S.of(context).help,
+                  color: AppColors.subTitleBlack,
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.remove_red_eye_outlined),
+                title: PublicText(
+                  txt: S.of(context).darkTheme,
+                  color: AppColors.subTitleBlack,
+                ),
+                trailing: Transform.scale(
+                  scale: 0.7,
+                  child: CupertinoSwitch(
+                    onChanged: (value) {},
+                    value: false,
+                    activeColor: themColor,
+                    // thumbColor: Colors.amber,
+                    // trackColor: Colors.blue,
                   ),
                 ),
-              ],
-            ),
-            const Text("Kezia Ajibastin"),
-            const Text("kezia_ajibastin@domain.com"),
-            const ListTile(
-              leading: Icon(Icons.person),
-              title: Text("Edit Profile"),
-            ),
-            const ListTile(
-              leading: Icon(Icons.payment),
-              title: Text("Payment"),
-            ),
-            const ListTile(
-              leading: Icon(Icons.notifications),
-              title: Text("notification"),
-            ),
-            const ListTile(
-              leading: Icon(Icons.security),
-              title: Text("security"),
-            ),
-            const ListTile(
-              leading: Icon(Icons.help),
-              title: Text("Help"),
-            ),
-            ListTile(
-              leading: const Icon(Icons.person),
-              title: const Text("Dark Theme"),
-              trailing: CupertinoSwitch(
-                onChanged: (value) {},
-                value: false,
-                activeColor: themColor,
-                // thumbColor: Colors.amber,
-                // trackColor: Colors.blue,
               ),
-            ),
-            const ListTile(
-              leading: Icon(Icons.delete),
-              title: Text("Delete Account"),
-            ),
-            const ListTile(
-              leading: Icon(
-                Icons.logout,
-                color: Color(0xFFF75555),
+              ListTile(
+                leading: const Icon(Icons.delete_outline),
+                title: PublicText(
+                  txt: S.of(context).deleteAccount,
+                  color: AppColors.subTitleBlack,
+                ),
               ),
-              title: Text(
-                "Logout",
-                style: TextStyle(color: Color(0xFFF75555)),
+              ListTile(
+                leading: const Icon(
+                  Icons.logout,
+                  color: AppColors.red,
+                ),
+                title: Text(
+                  S.of(context).logout,
+                  style: const TextStyle(color: AppColors.red),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

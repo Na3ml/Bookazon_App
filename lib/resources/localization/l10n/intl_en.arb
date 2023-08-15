@@ -66,6 +66,13 @@
     "glamping": "Glamping",
     "villa": "Villa",
     "planTrip": "Plan your trip",
-    "bookNow": "Book now!"
+    "bookNow": "Book now!",
+    "logout": "Logout",
+    "editProfile": "Edit Profile",
+    "payment": "Payment",
+    "security": "Security",
+    "help": "Help",
+    "darkTheme": "Dark Theme",
+    "deleteAccount": "Delete Account"
 
 }

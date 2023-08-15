@@ -23,7 +23,7 @@ class _LayoutsPageState extends State<LayoutsPage> {
     const BookingPage(),
     const NotificationsPage(),
     const FavouritePage(),
-    const ProfileScreen(),
+    const ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
