@@ -25,12 +25,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "acceptTermsErrorMessage": MessageLookupByLibrary.simpleMessage(
             "You have to accept terms of use and privacy policy before you sign up"),
         "adults": MessageLookupByLibrary.simpleMessage("Adults"),
+        "ages17": MessageLookupByLibrary.simpleMessage("Ages 0 - 17"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "appartment": MessageLookupByLibrary.simpleMessage("Appartment"),
         "bookNow": MessageLookupByLibrary.simpleMessage("Book now!"),
         "booking": MessageLookupByLibrary.simpleMessage("Booking"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
+        "childrenAgesCheckout":
+            MessageLookupByLibrary.simpleMessage("Children’s age at check-out"),
+        "childrenAgesSubTitle": MessageLookupByLibrary.simpleMessage(
+            "Children’s ages will be used to find you the best match in beds, rooms, size, and special prices."),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "darkTheme": MessageLookupByLibrary.simpleMessage("Dark Theme"),
@@ -119,9 +124,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "restaurant": MessageLookupByLibrary.simpleMessage("Restaurant"),
         "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
         "rooms": MessageLookupByLibrary.simpleMessage("Rooms"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "sections": MessageLookupByLibrary.simpleMessage("Sections"),
         "security": MessageLookupByLibrary.simpleMessage("Security"),
         "seeMore": MessageLookupByLibrary.simpleMessage("See More"),
+        "selectRoomsGuests":
+            MessageLookupByLibrary.simpleMessage("Select Rooms and Guests"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Signup"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),

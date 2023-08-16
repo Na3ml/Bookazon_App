@@ -949,6 +949,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Rooms and Guests`
+  String get selectRoomsGuests {
+    return Intl.message(
+      'Select Rooms and Guests',
+      name: 'selectRoomsGuests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ages 0 - 17`
+  String get ages17 {
+    return Intl.message(
+      'Ages 0 - 17',
+      name: 'ages17',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children’s age at check-out`
+  String get childrenAgesCheckout {
+    return Intl.message(
+      'Children’s age at check-out',
+      name: 'childrenAgesCheckout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children’s ages will be used to find you the best match in beds, rooms, size, and special prices.`
+  String get childrenAgesSubTitle {
+    return Intl.message(
+      'Children’s ages will be used to find you the best match in beds, rooms, size, and special prices.',
+      name: 'childrenAgesSubTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

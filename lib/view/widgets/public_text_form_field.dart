@@ -7,7 +7,7 @@ import '../../resources/style/app_colors.dart';
 class PublicTextFormField extends StatefulWidget {
   final String hint;
   final FormFieldValidator<String>? validator;
-  TextEditingController? controller;
+  final TextEditingController? controller;
   final TextInputType keyboardtype;
   final IconData prefixIcon;
   final IconData suffixIcon;
@@ -23,7 +23,7 @@ class PublicTextFormField extends StatefulWidget {
   final void Function(String)? onChanged;
   final void Function(String)? onSubmitted;
 
-  PublicTextFormField({
+  const PublicTextFormField({
     Key? key,
     required this.hint,
     this.controller,

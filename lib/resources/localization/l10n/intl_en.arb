@@ -88,5 +88,10 @@
     "meetingRoom": "Meeting Room",
     "elevator": "Elevator",
     "gym": "Gym",
-    "open24": "24-hours open"
+    "open24": "24-hours open",
+    "save":"Save",
+    "selectRoomsGuests": "Select Rooms and Guests",
+    "ages17":"Ages 0 - 17",
+    "childrenAgesCheckout": "Children’s age at check-out",
+    "childrenAgesSubTitle": "Children’s ages will be used to find you the best match in beds, rooms, size, and special prices."
 }

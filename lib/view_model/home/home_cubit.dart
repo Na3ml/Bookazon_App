@@ -14,6 +14,16 @@ class HomeCubit extends Cubit<HomeState> {
 
   static HomeCubit get(BuildContext context) => BlocProvider.of(context);
 
+  late final TextEditingController searchController;
+
+  void init() {
+    searchController = TextEditingController();
+  }
+
+  void dispose() {
+    searchController.dispose();
+  }
+
   List<StayModel> stays = [];
   Future<void> getSearchStays(SearchStayRequest request) async {
     emit(SearchLoadingState());
@@ -56,6 +66,43 @@ class HomeCubit extends Cubit<HomeState> {
       if (error is CustomException) {
         emit(DataErrorState(error.message));
       }
+    }
+  }
+
+  DateTime? fromDate;
+  DateTime? toDate;
+
+  void changeFromDate(DateTime date) {
+    fromDate = date;
+    emit(ChangeDateState(date, true));
+  }
+
+  void changeToDate(DateTime date) {
+    toDate = date;
+    emit(ChangeDateState(date, false));
+  }
+
+  int roomsCount = 1;
+  int adultsCount = 1;
+  int childrenCount = 0;
+  void changeRoomsCount(int count) {
+    if (count > 0) {
+      roomsCount = count;
+      emit(ChangeRoomsCountState(count));
+    }
+  }
+
+  void changeAdultsCount(int count) {
+    if (count > 0) {
+      adultsCount = count;
+      emit(ChangeAdultsCountState(count));
+    }
+  }
+
+  void changeChildrenCount(int count) {
+    if (count >= 0) {
+      childrenCount = count;
+      emit(ChangeChildrenCountState(count));
     }
   }
 }
