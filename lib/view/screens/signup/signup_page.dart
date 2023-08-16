@@ -72,7 +72,7 @@ class _SignupPageState extends State<SignupPage> {
           } else if (state is LoginSuccessState) {
             Navigator.pushNamedAndRemoveUntil(
               context,
-              AppRoutes.homePage,
+              AppRoutes.home,
               (_) => false,
             );
           }

@@ -2,17 +2,18 @@ import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/constants/app_constants.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
+import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../widgets/public_text_form_field.dart';
+import '../../widgets/public_title_tile.dart';
 
 part 'components/popular_card.dart';
 part 'components/date_menu_container.dart';
 part 'components/offer_card.dart';
-part 'components/title_tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -93,7 +94,7 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-              TitleTile(title: S.of(context).sections),
+              PublicTitleTile(title: S.of(context).sections),
               SizedBox(
                 height: 120.h,
                 child: ListView.separated(
@@ -105,7 +106,7 @@ class HomePage extends StatelessWidget {
                   separatorBuilder: (_, __) => 8.pw,
                 ),
               ),
-              TitleTile(title: S.of(context).offer),
+              PublicTitleTile(title: S.of(context).offer),
               SizedBox(
                 height: 160.h,
                 child: ListView.separated(
@@ -115,7 +116,7 @@ class HomePage extends StatelessWidget {
                   separatorBuilder: (context, index) => 10.pw,
                 ),
               ),
-              TitleTile(title: S.of(context).popular),
+              PublicTitleTile(title: S.of(context).popular),
               GridView.builder(
                 physics: const ClampingScrollPhysics(),
                 shrinkWrap: true,
@@ -136,4 +137,5 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+  
 }

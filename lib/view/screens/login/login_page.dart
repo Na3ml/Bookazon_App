@@ -64,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
             MySnackBar.error(
                 message: state.error, color: Colors.red, context: context);
           } else if (state is LoginSuccessState) {
-            Navigator.pushReplacementNamed(context, AppRoutes.homePage);
+            Navigator.pushReplacementNamed(context, AppRoutes.home);
           }
         }
       },

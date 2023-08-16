@@ -41,12 +41,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "Don\'t worry it happens,please enter \n your email address"),
         "describe_reset_password": MessageLookupByLibrary.simpleMessage(
             "Enter your new password and confirm it"),
+        "description": MessageLookupByLibrary.simpleMessage("Description"),
+        "details": MessageLookupByLibrary.simpleMessage("Details"),
         "dont_have_account":
             MessageLookupByLibrary.simpleMessage("Don’t have an account yet?"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
+        "elevator": MessageLookupByLibrary.simpleMessage("Elevator"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_verification":
             MessageLookupByLibrary.simpleMessage("Email Verification"),
+        "facilites": MessageLookupByLibrary.simpleMessage("Facilites"),
         "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
         "forget_password":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
@@ -54,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "glamping": MessageLookupByLibrary.simpleMessage("Glamping"),
         "goingTo": MessageLookupByLibrary.simpleMessage("Going to"),
+        "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "hint_email": MessageLookupByLibrary.simpleMessage("enter your email"),
         "hint_new_password":
@@ -66,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hotel": MessageLookupByLibrary.simpleMessage("Hotel"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "meetingRoom": MessageLookupByLibrary.simpleMessage("Meeting Room"),
         "message_error_email": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid email address, such as name@example.com."),
         "message_error_otp":
@@ -94,10 +100,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create Your Account"),
         "onboardingTitle3":
             MessageLookupByLibrary.simpleMessage("Explore Amazing Properties"),
+        "open24": MessageLookupByLibrary.simpleMessage("24-hours open"),
         "or": MessageLookupByLibrary.simpleMessage("or sign in with"),
+        "parking": MessageLookupByLibrary.simpleMessage("Parking"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "planTrip": MessageLookupByLibrary.simpleMessage("Plan your trip"),
+        "pool": MessageLookupByLibrary.simpleMessage("Pool"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "I have read and accepted the terms of use\nand privacy policy "),
@@ -105,6 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "restaurant": MessageLookupByLibrary.simpleMessage("Restaurant"),
+        "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
         "rooms": MessageLookupByLibrary.simpleMessage("Rooms"),
         "sections": MessageLookupByLibrary.simpleMessage("Sections"),
         "security": MessageLookupByLibrary.simpleMessage("Security"),
@@ -129,6 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
         "villa": MessageLookupByLibrary.simpleMessage("Villa"),
         "whereWantGo":
-            MessageLookupByLibrary.simpleMessage("Where do you want to go ?")
+            MessageLookupByLibrary.simpleMessage("Where do you want to go ?"),
+        "wifi": MessageLookupByLibrary.simpleMessage("Wifi")
       };
 }

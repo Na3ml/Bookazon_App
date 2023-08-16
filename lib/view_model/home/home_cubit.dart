@@ -1,5 +1,5 @@
 import 'package:bookazon/data/error_handler/error_handler.dart';
-import 'package:bookazon/data/models/Stay_model.dart';
+import 'package:bookazon/data/models/stays_model.dart';
 import 'package:bookazon/data/models/requests/home_requests_model.dart';
 import 'package:bookazon/data/repository/home_repository.dart';
 import 'package:equatable/equatable.dart';
@@ -19,7 +19,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(SearchLoadingState());
     try {
       repo.searchAccomodation(request).then((elements) {
-        stays.addAll(elements as Iterable<StayModel>);
+        stays.addAll(elements);
         emit(SearchSuccessState());
       });
     } catch (error) {
@@ -34,7 +34,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(DataLoadingState());
     try {
       repo.getOfferStays().then((elements) {
-        offerStays.addAll(elements as Iterable<StayModel>);
+        offerStays.addAll(elements);
         emit(DataSuccessState());
       });
     } catch (error) {
@@ -49,7 +49,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(DataLoadingState());
     try {
       repo.getPopularStays().then((elements) {
-        popularStays.addAll(elements as Iterable<StayModel>);
+        popularStays.addAll(elements);
         emit(DataSuccessState());
       });
     } catch (error) {

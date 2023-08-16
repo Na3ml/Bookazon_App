@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../resources/constants/colors.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -116,7 +115,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: CupertinoSwitch(
                     onChanged: (value) {},
                     value: false,
-                    activeColor: themColor,
+                    activeColor: AppColors.purple,
                     // thumbColor: Colors.amber,
                     // trackColor: Colors.blue,
                   ),
