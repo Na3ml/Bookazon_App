@@ -52,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email Verification"),
         "facilites": MessageLookupByLibrary.simpleMessage("Facilites"),
         "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
+        "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
         "forget_password":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "from": MessageLookupByLibrary.simpleMessage("From"),
@@ -60,15 +61,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "goingTo": MessageLookupByLibrary.simpleMessage("Going to"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
-        "hint_email": MessageLookupByLibrary.simpleMessage("enter your email"),
+        "hint_email": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "hint_new_password":
             MessageLookupByLibrary.simpleMessage("enter new password"),
         "hint_password":
-            MessageLookupByLibrary.simpleMessage("enter your password"),
+            MessageLookupByLibrary.simpleMessage("Enter your password"),
         "hint_username":
-            MessageLookupByLibrary.simpleMessage("enter your name"),
+            MessageLookupByLibrary.simpleMessage(" Eenter your name"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "hotel": MessageLookupByLibrary.simpleMessage("Hotel"),
+        "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "meetingRoom": MessageLookupByLibrary.simpleMessage("Meeting Room"),
@@ -136,7 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_signup":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
-        "username": MessageLookupByLibrary.simpleMessage("UserName"),
+        "username": MessageLookupByLibrary.simpleMessage("User Name"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
         "villa": MessageLookupByLibrary.simpleMessage("Villa"),
         "whereWantGo":
