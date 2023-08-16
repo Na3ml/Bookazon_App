@@ -1,10 +1,6 @@
-// ignore_for_file: file_names
-
 import 'dart:convert';
-
 import 'package:equatable/equatable.dart';
-
-import 'package:bookazon/data/models/location_model.dart';
+import 'location_model.dart';
 
 part 'room_model.dart';
 

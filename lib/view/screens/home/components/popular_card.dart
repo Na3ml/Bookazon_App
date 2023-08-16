@@ -7,50 +7,55 @@ class PopularCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.circular(6),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 1,
-            spreadRadius: 0.5,
-            offset: Offset(0.0, 3),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ClipRRect(
-            clipBehavior: Clip.antiAlias,
-            borderRadius: const BorderRadius.vertical(
-              top: Radius.circular(6),
+    return InkWell(
+      onTap: (){
+        Navigator.pushNamed(context, AppRoutes.hotelDetails);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: AppColors.white,
+          borderRadius: BorderRadius.circular(6),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 1,
+              spreadRadius: 0.5,
+              offset: Offset(0.0, 3),
             ),
-            child: Image.asset(
-              Assets.imageHotel1,
-              height: 150.h,
-              fit: BoxFit.fill,
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              clipBehavior: Clip.antiAlias,
+              borderRadius: const BorderRadius.vertical(
+                top: Radius.circular(6),
+              ),
+              child: Image.asset(
+                Assets.imageHotel1,
+                height: 150.h,
+                fit: BoxFit.fill,
+              ),
             ),
-          ),
-          22.ph,
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.w),
-            child: PublicText(
-              txt: "Lavander Hotel",
-              size: 20.sp,
+            22.ph,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
+              child: PublicText(
+                txt: "Lavander Hotel",
+                size: 20.sp,
+              ),
             ),
-          ),
-          9.ph,
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.w),
-            child: Row(
-              children: [...generateStars(4)],
+            9.ph,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
+              child: Row(
+                children: [...generateStars(4)],
+              ),
             ),
-          ),
-          10.ph,
-        ],
+            10.ph,
+          ],
+        ),
       ),
     );
   }
@@ -62,13 +67,13 @@ class PopularCard extends StatelessWidget {
         Icon(
           Icons.star,
           size: 12.sp,
-          color: Colors.yellow,
+          color: AppColors.orange,
         ),
       for (var i = 0; i < (5 - rate.round()); i++)
         Icon(
           Icons.star_border_outlined,
           size: 12.sp,
-          color: Colors.yellow,
+          color: AppColors.orange,
         ),
     ];
   }
