@@ -14,7 +14,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   static HomeCubit get(BuildContext context) => BlocProvider.of(context);
 
-  late final TextEditingController searchController;
+  late TextEditingController searchController;
 
   void init() {
     searchController = TextEditingController();
