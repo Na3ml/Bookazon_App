@@ -56,5 +56,7 @@
     "delete": "Delete",
     "can_you_share": "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it.",
     "your_explanation": "Your explanation.....",
-    "confirm_Deletion": "Confirm Deletion"
+    "confirm_Deletion": "Confirm Deletion",
+    "map": "Map",
+    "hotel": "Hotel"
 }

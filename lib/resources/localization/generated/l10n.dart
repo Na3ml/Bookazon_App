@@ -629,6 +629,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Map`
+  String get map {
+    return Intl.message(
+      'Map',
+      name: 'map',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hotel`
+  String get hotel {
+    return Intl.message(
+      'Hotel',
+      name: 'hotel',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

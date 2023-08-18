@@ -4,6 +4,7 @@ import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/view/screens/delete_account/delete_account_page1.dart';
 import 'package:bookazon/view/screens/delete_account/delete_account_page2.dart';
 import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
+import 'package:bookazon/view/screens/favourite/favourite_page.dart';
 import 'package:bookazon/view/screens/reset_password/reset_password_page.dart';
 // import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
 // import 'package:bookazon/view/screens/reset%20password/reset_password_page.dart';
@@ -29,11 +30,11 @@ void main() async {
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
 
-  await initModule();
+  //await initModule();
   runApp(const MyApp());
 }
 
@@ -74,7 +75,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: DeleteAccountPage(),//const SplashPage(),
+            home: FavouritePage (),//const SplashPage(),
           ),
         );
       },

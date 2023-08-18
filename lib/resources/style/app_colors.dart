@@ -12,4 +12,5 @@ class AppColors {
   static const Color blue = Colors.blue;
   // hint color
   static const Color grey = Color(0xff606060);
+
 }

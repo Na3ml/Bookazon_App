@@ -63,7 +63,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("enter your password"),
         "hint_username":
             MessageLookupByLibrary.simpleMessage("enter your name"),
+        "hotel": MessageLookupByLibrary.simpleMessage("Hotel"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "map": MessageLookupByLibrary.simpleMessage("Map"),
         "message_error_email": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid email address, such as name@example.com."),
         "message_error_otp":
