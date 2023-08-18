@@ -7,38 +7,37 @@ class BookerModel extends Equatable {
   final String firstName;
   final String lastName;
   final String email;
-  final String password;
-  final String phoneNumber;
-  final String address;
-  final String gender;
+  final String? phoneNumber;
+  final String? address;
+  final String? gender;
+  final String? paymentCvv;
 
-  const BookerModel({
-    required this.firstName,
-    required this.lastName,
-    required this.email,
-    required this.password,
-    required this.phoneNumber,
-    required this.address,
-    required this.gender,
-  });
+  const BookerModel(
+      {required this.firstName,
+      required this.lastName,
+      required this.email,
+      this.phoneNumber,
+      this.address,
+      this.gender,
+      this.paymentCvv});
 
   BookerModel copyWith({
     String? firstName,
     String? lastName,
     String? email,
-    String? password,
     String? phoneNumber,
     String? address,
     String? gender,
+    String? paymentCvv,
   }) {
     return BookerModel(
       firstName: firstName ?? this.firstName,
       lastName: lastName ?? this.lastName,
       email: email ?? this.email,
-      password: password ?? this.password,
       phoneNumber: phoneNumber ?? this.phoneNumber,
       address: address ?? this.address,
       gender: gender ?? this.gender,
+      paymentCvv: paymentCvv ?? this.paymentCvv,
     );
   }
 
@@ -47,10 +46,10 @@ class BookerModel extends Equatable {
       'firstName': firstName,
       'lastName': lastName,
       'email': email,
-      'password': password,
       'phoneNumber': phoneNumber,
       'address': address,
       'gender': gender,
+      'paymentCvv': paymentCvv,
     };
   }
 
@@ -59,10 +58,12 @@ class BookerModel extends Equatable {
       firstName: map['firstName'] as String,
       lastName: map['lastName'] as String,
       email: map['email'] as String,
-      password: map['password'] as String,
-      phoneNumber: map['phoneNumber'] as String,
-      address: map['address'] as String,
-      gender: map['gender'] as String,
+      phoneNumber:
+          map['phoneNumber'] != null ? map['phoneNumber'] as String : null,
+      address: map['address'] != null ? map['address'] as String : null,
+      gender: map['gender'] != null ? map['gender'] as String : null,
+      paymentCvv:
+          map['paymentCvv'] != null ? map['paymentCvv'] as String : null,
     );
   }
 
@@ -77,10 +78,6 @@ class BookerModel extends Equatable {
       firstName,
       lastName,
       email,
-      password,
-      phoneNumber,
-      address,
-      gender,
     ];
   }
 

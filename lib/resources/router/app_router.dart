@@ -1,3 +1,4 @@
+import 'package:bookazon/view/screens/edit_profile/edit_profile_page.dart';
 import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
 import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
 import 'package:bookazon/view/screens/home/home_page.dart';
@@ -32,6 +33,7 @@ class AppRoutes {
   static const String layouts = "layouts";
   static const String home = "home";
   static const String hotelDetails = "hotel details";
+  static const String editProfile = "edit profile";
 }
 
 class RouteGenerate {
@@ -89,6 +91,10 @@ class RouteGenerate {
      case AppRoutes.hotelDetails:
         return MaterialPageRoute(
           builder: (_) => const HotelDetailsPage(),
+        );
+     case AppRoutes.editProfile:
+        return MaterialPageRoute(
+          builder: (_) => const EditProfilePage(),
         );
       default:
         return MaterialPageRoute(
