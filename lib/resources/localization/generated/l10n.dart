@@ -1009,6 +1009,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Are you sure you want to Log out?`
+  String get logoutWarning {
+    return Intl.message(
+      'Are you sure you want to Log out?',
+      name: 'logoutWarning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rooms Photos`
+  String get roomsPhotos {
+    return Intl.message(
+      'Rooms Photos',
+      name: 'roomsPhotos',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

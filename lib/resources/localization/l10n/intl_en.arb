@@ -94,5 +94,8 @@
     "ages17": "Ages 0 - 17",
     "childrenAgesCheckout": "Children’s age at check-out",
     "childrenAgesSubTitle": "Children’s ages will be used to find you the best match in beds, rooms, size, and special prices.",
-    "update": "Update"
+    "update": "Update",
+    "logoutWarning": "Are you sure you want to Log out?",
+    "cancel": "Cancel",
+    "roomsPhotos": "Rooms Photos"
 }

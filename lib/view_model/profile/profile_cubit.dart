@@ -70,10 +70,7 @@ class ProfileCubit extends Cubit<ProfileState> {
   }
 
   bool updateUserInfo(BuildContext context, BookerModel booker) {
-    print("outside valid");
     if (formKey.currentState!.validate()) {
-      print("inside valid");
-      print(firstNameController.text.isNotEmpty.toString());
       appPrefs.setUserInfo(
         firstName: firstNameController.text.isNotEmpty
             ? firstNameController.text
@@ -101,5 +98,9 @@ class ProfileCubit extends Cubit<ProfileState> {
       return true;
     }
     return false;
+  }
+
+  void logout(){
+    
   }
 }
