@@ -9,7 +9,7 @@ class AppTheme {
 
       /// color theme
       colorScheme: ColorScheme.fromSwatch().copyWith(
-        secondary: AppColors.orange.withOpacity(0.2),
+        secondary: AppColors.purple.withOpacity(0.2),
       ),
 
       /// AppBar theme
@@ -19,6 +19,7 @@ class AppTheme {
         backgroundColor: AppColors.white,
         foregroundColor: AppColors.black,
         iconTheme: IconThemeData(color: Colors.black),
+        
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarIconBrightness: Brightness.dark,
           statusBarColor: Colors.white,

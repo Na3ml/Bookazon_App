@@ -2,7 +2,7 @@ import 'package:bookazon/data/data_source/remote/api_service.dart';
 import 'package:bookazon/data/models/requests/home_requests_model.dart';
 
 import '../error_handler/error_handler.dart';
-import '../models/stay_model.dart';
+import '../models/stays_model.dart';
 import '../network/network_info.dart';
 
 abstract class HomeRepository {

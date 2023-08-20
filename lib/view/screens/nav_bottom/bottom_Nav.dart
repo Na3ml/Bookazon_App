@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   List containScreen = [
     const HomeScreen(),
     const SavedScreen(),
-    const BookScreen(),
+    const BookingPage(),
     const ProfileScreen(),
     const notificationsScreen()
   ];

@@ -23,8 +23,12 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "acceptTermsErrorMessage": MessageLookupByLibrary.simpleMessage(""),
+        "booking": MessageLookupByLibrary.simpleMessage("Booking"),
+        "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
         "getStarted": MessageLookupByLibrary.simpleMessage("بدء"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "notificaiton": MessageLookupByLibrary.simpleMessage("Notification"),
         "onboardingSubtitle1": MessageLookupByLibrary.simpleMessage(
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard"),
         "onboardingSubtitle2": MessageLookupByLibrary.simpleMessage(
@@ -37,6 +41,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("The best Hotels for you"),
         "onboardingTitle3":
             MessageLookupByLibrary.simpleMessage("The best Hotels for you"),
-        "skip": MessageLookupByLibrary.simpleMessage("تخطي")
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "whereWantGo":
+            MessageLookupByLibrary.simpleMessage("Where do you want to go ?")
       };
 }

@@ -1,4 +1,5 @@
-part of 'stay_model.dart';
+
+part of 'stays_model.dart';
 
 class RoomModel extends Equatable {
   final List<String> photos;

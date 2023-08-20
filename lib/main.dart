@@ -16,19 +16,21 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 
-import 'view/screens/home/home_screen.dart';
 
-
-import 'data/data_source/local/app_prefs.dart';
 import 'firebase_options.dart';
 import 'resources/service_locator/service_locator.dart';
-import 'view/screens/profile/profile_screen.dart';
+
+import 'view/stripe_payment/home.dart';
+import 'view/stripe_payment/stripe_keys.dart';
 import 'view_model/auth/auth_cubit.dart';
 // import 'view/screens/email verification/email_verification_page.dart';
 // import 'view/screens/signup/signup_page.dart';
 
 void main() async {
+  Stripe.publishableKey = ApiKy.publishableKey;
+
   WidgetsFlutterBinding.ensureInitialized();
   // fro testing splash
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -77,7 +79,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: ProfileScreen(),
+            home: ButtonStripeScreen(),
             // home: const SplashPage()
           ),
         );

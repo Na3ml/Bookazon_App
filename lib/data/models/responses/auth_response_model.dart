@@ -1,11 +1,13 @@
 class AuthResponse {
   final bool success;
   final String message;
+  final String token;
   final User data;
 
   AuthResponse({
     required this.success,
     required this.message,
+    required this.token,
     required this.data,
   });
 
@@ -13,6 +15,7 @@ class AuthResponse {
     return AuthResponse(
       success: json['success'],
       message: json['message'],
+      token: json['message'],
       data: User.fromJson(json['data']),
     );
   }
