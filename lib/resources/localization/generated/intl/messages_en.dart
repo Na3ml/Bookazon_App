@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "appartment": MessageLookupByLibrary.simpleMessage("Appartment"),
         "bookNow": MessageLookupByLibrary.simpleMessage("Book now!"),
         "booking": MessageLookupByLibrary.simpleMessage("Booking"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "childrenAgesCheckout":
             MessageLookupByLibrary.simpleMessage("Children’s age at check-out"),
@@ -78,6 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "logoutWarning": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to Log out?"),
         "meetingRoom": MessageLookupByLibrary.simpleMessage("Meeting Room"),
         "message_error_email": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid email address, such as name@example.com."),
