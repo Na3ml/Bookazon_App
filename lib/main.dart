@@ -20,8 +20,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'view/screens/home/home_screen.dart';
 
 
+import 'data/data_source/local/app_prefs.dart';
 import 'firebase_options.dart';
 import 'resources/service_locator/service_locator.dart';
+import 'view/screens/profile/profile_screen.dart';
+import 'view_model/auth/auth_cubit.dart';
 // import 'view/screens/email verification/email_verification_page.dart';
 // import 'view/screens/signup/signup_page.dart';
 
@@ -35,8 +38,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  initModule();
-
+  await initModule();
   runApp(const MyApp());
 }
 
@@ -56,7 +58,7 @@ class MyApp extends StatelessWidget {
               create: (context) => OnboardingCubit(),
             ),
             BlocProvider(
-              create: (context) => authModule(),
+              create: (context) => AuthCubit(repo: getIt()),
             ),
           ],
           child: MaterialApp(
@@ -75,10 +77,13 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: HomeScreen(),
+            home: ProfileScreen(),
+            // home: const SplashPage()
           ),
         );
       },
     );
   }
+
+
 }

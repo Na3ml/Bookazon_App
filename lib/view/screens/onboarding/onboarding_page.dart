@@ -1,7 +1,6 @@
 import 'package:bookazon/resources/constants/app_constants.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
-import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
 import 'package:bookazon/view_model/onboarding/onboarding_cubit.dart';
 import 'package:flutter/material.dart';
@@ -40,6 +39,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     var cubit = OnboardingCubit.get(context);
     return SafeArea(
       child: Scaffold(
+        backgroundColor: AppColors.white,
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 70.h),
           child: Column(
@@ -90,12 +90,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 builder: (context, _) {
                   return PublicButton(
                     onPressed: () {
-                      if (cubit.currentIndex == 2) {
-                        Navigator.pushReplacementNamed(
-                            context, AppRoutes.login);
-                      } else {
-                        cubit.increaseIndex();
-                      }
+                      cubit.onBoardingButton(context);
                     },
                     title: cubit.currentIndex == 2
                         ? S.of(context).getStarted

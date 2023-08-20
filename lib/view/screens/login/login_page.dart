@@ -1,4 +1,4 @@
-import 'package:bookazon/data/models/auth_requests_model.dart';
+import 'package:bookazon/data/models/requests/auth_requests_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/router/app_router.dart';
@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                           txt: S.of(context).title_login,
                           size: 28.sp,
                           fw: FontWeight.w600,
-                          color: AppColors.purple,
+                          color: AppColors.black,
                         ),
                         63.ph,
                         //email
@@ -111,6 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         PublicTextFormField(
                           hint: S.of(context).hint_email,
+                          keyboardtype: TextInputType.emailAddress,
                           controller: emailController,
                           validator: (email) {
                             if (email == null || email.isEmpty) {
@@ -134,6 +135,9 @@ class _LoginPageState extends State<LoginPage> {
                         PublicTextFormField(
                           hint: S.of(context).hint_password,
                           controller: passwordController,
+                          keyboardtype: TextInputType.visiblePassword,
+                          isPassword: true,
+                          showSuffixIcon: true,
                           validator: (password) {
                             if (password == null || password.isEmpty) {
                               return S.of(context).message_null_password;
@@ -143,8 +147,6 @@ class _LoginPageState extends State<LoginPage> {
                               return S.of(context).title_error_password;
                             }
                           },
-                          isPassword: true,
-                          showSuffixIcon: true,
                         ),
                         //forget password
                         Row(
@@ -152,9 +154,16 @@ class _LoginPageState extends State<LoginPage> {
                           children: [
                             Row(
                               children: [
-                                Checkbox(
-                                  value: false,
-                                  onChanged: (value) => value,
+                                BlocBuilder<AuthCubit, AuthState>(
+                                  buildWhen: (_, current) =>
+                                      current is ChangeRememberMeState,
+                                  builder: (context, state) {
+                                    return Checkbox(
+                                      value: cubit.rememberMe,
+                                      onChanged: (_) =>
+                                          cubit.changeRememberMe(),
+                                    );
+                                  },
                                 ),
                                 PublicText(
                                     txt: S.of(context).remember_me,
@@ -172,7 +181,8 @@ class _LoginPageState extends State<LoginPage> {
                                 child: PublicText(
                                   txt: S.of(context).forget_password,
                                   size: 14.sp,
-                                )),
+                                  color: AppColors.orange,
+                                ),),
                           ],
                         ),
                         63.ph,
@@ -268,7 +278,7 @@ class _LoginPageState extends State<LoginPage> {
                                 txt: S.of(context).signup,
                                 fw: FontWeight.bold,
                                 size: 13.sp,
-                                color: AppColors.purple,
+                                color: AppColors.orange,
                               ),
                             )
                           ],

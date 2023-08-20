@@ -1,4 +1,4 @@
-import 'package:bookazon/data/models/auth_requests_model.dart';
+import 'package:bookazon/data/models/requests/auth_requests_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
@@ -81,7 +81,10 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                   child: Form(
                     key: _formKey,
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 25.w,
+                        vertical: 20.h,
+                      ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -125,6 +128,9 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                           PublicTextFormField(
                             hint: S.of(context).hint_new_password,
                             controller: newPasswordController,
+                            keyboardtype: TextInputType.visiblePassword,
+                            isPassword: true,
+                            showSuffixIcon: true,
                             validator: (password) {
                               if (password == null || password.isEmpty) {
                                 return S.of(context).message_null_password;
@@ -160,6 +166,9 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                           PublicTextFormField(
                             hint: S.of(context).hint_new_password,
                             controller: confirmPasswordController,
+                            keyboardtype: TextInputType.visiblePassword,
+                            isPassword: true,
+                            showSuffixIcon: true,
                             validator: (confirmPassword) {
                               if (confirmPassword == null ||
                                   confirmPassword.isEmpty) {

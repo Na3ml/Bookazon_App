@@ -5,16 +5,19 @@ import 'app_colors.dart';
 class AppTheme {
   static ThemeData getLight() {
     return ThemeData(
+      scaffoldBackgroundColor: AppColors.white,
+
       /// color theme
       colorScheme: ColorScheme.fromSwatch().copyWith(
-        secondary: AppColors.blue.withOpacity(0.2),
+        secondary: AppColors.orange.withOpacity(0.2),
       ),
 
       /// AppBar theme
       appBarTheme: const AppBarTheme(
         elevation: 0,
         centerTitle: true,
-        color: Colors.white,
+        backgroundColor: AppColors.white,
+        foregroundColor: AppColors.black,
         iconTheme: IconThemeData(color: Colors.black),
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarIconBrightness: Brightness.dark,

@@ -23,12 +23,28 @@ class LoginLoadingState extends LoginState {}
 
 class LoginSuccessState extends LoginState {}
 
+class ChangeRememberMeState extends LoginState {
+  final bool value;
+  ChangeRememberMeState(this.value);
+
+  @override
+  List<Object?> get props => [value];
+}
+
 /// register
 abstract class RegisterState extends AuthState {}
 
 class RegisterLoadingState extends RegisterState {}
 
 class RegisterSuccessState extends RegisterState {}
+
+class ChangeAcceptTermsState extends RegisterState {
+  final bool value;
+  ChangeAcceptTermsState(this.value);
+
+  @override
+  List<Object?> get props => [value];
+}
 
 /// Forgot password
 abstract class ForgotPasswordState extends AuthState {}

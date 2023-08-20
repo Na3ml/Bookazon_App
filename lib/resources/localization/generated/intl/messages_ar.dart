@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "acceptTermsErrorMessage": MessageLookupByLibrary.simpleMessage(""),
         "getStarted": MessageLookupByLibrary.simpleMessage("بدء"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "onboardingSubtitle1": MessageLookupByLibrary.simpleMessage(
