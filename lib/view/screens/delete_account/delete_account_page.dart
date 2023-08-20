@@ -1,3 +1,4 @@
+import 'package:bookazon/resources/constants/app_constants.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/view/screens/delete_account/components/consts.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
@@ -32,12 +33,12 @@ class DeleteAccountPage extends StatelessWidget {
                   return SizedBox(
                     height: 248.h,
                     child: ListView.builder(
-                      itemCount: listAnswer(context).length,
+                      itemCount: AppConstants.listAnswer(context).length,
                       itemBuilder: (context, index) => Row(
                         children: [
                           Checkbox(
                             shape: const CircleBorder(),
-                            value: listSelect[index],
+                            value: AppConstants.listSelect[index],
 
                             onChanged: (value) {
                                 cubit.changeIndex(index,value!);
@@ -45,7 +46,7 @@ class DeleteAccountPage extends StatelessWidget {
                             },
 
                           ),
-                          PublicText(txt: listAnswer(context)[index],size: 14.sp,fw: FontWeight.w400,)
+                          PublicText(txt: AppConstants.listAnswer(context)[index],size: 14.sp,fw: FontWeight.w400,)
                         ],
                       ),
                     ),

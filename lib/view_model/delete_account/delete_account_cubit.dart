@@ -1,5 +1,6 @@
 
 
+import 'package:bookazon/resources/constants/app_constants.dart';
 import 'package:bookazon/view/screens/delete_account/components/consts.dart';
 import 'package:bookazon/view_model/delete_account/delete_account_state.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class DeleteAccountCubit extends Cubit<DeleteAccountStates>{
   int currentIndex = 0;
   void changeIndex(int index,bool value) {
     currentIndex = index;
-    listSelect[index]=value;
+    AppConstants.listSelect[index]=value;
 
     emit(ChangeCurrentIndexState(index: index));
   }

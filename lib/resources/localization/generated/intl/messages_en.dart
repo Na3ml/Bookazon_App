@@ -53,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_verification":
             MessageLookupByLibrary.simpleMessage("Email Verification"),
+        "filter": MessageLookupByLibrary.simpleMessage("Filter"),
         "forget_password":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
@@ -99,9 +100,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Signup"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "sort": MessageLookupByLibrary.simpleMessage("Sort"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "test": MessageLookupByLibrary.simpleMessage("test"),
         "title_delete_account":

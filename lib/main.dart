@@ -1,11 +1,12 @@
 import 'package:bookazon/data/repository/auth_repository.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/resources/router/app_router.dart';
-import 'package:bookazon/view/screens/delete_account/delete_account_page1.dart';
-import 'package:bookazon/view/screens/delete_account/delete_account_page2.dart';
+import 'package:bookazon/view/screens/delete_account/delete_account_page.dart';
+import 'package:bookazon/view/screens/delete_account/confirm_delete_account_page.dart';
 import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
 import 'package:bookazon/view/screens/favourite/favourite_page.dart';
 import 'package:bookazon/view/screens/reset_password/reset_password_page.dart';
+import 'package:bookazon/view/screens/search/search_page.dart';
 // import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
 // import 'package:bookazon/view/screens/reset%20password/reset_password_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
@@ -75,7 +76,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: FavouritePage (),//const SplashPage(),
+            home: SearchPage(),//const SplashPage(),
           ),
         );
       },

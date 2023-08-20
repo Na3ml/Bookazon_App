@@ -58,5 +58,8 @@
     "your_explanation": "Your explanation.....",
     "confirm_Deletion": "Confirm Deletion",
     "map": "Map",
-    "hotel": "Hotel"
+    "hotel": "Hotel",
+    "search": "Search",
+    "sort": "Sort",
+    "filter": "Filter"
 }
