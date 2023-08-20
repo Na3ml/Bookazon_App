@@ -1029,6 +1029,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Rooms Photos`
+  String get roomsPhotos {
+    return Intl.message(
+      'Rooms Photos',
+      name: 'roomsPhotos',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

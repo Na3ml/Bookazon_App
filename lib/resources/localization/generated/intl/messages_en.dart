@@ -127,6 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "restaurant": MessageLookupByLibrary.simpleMessage("Restaurant"),
         "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
         "rooms": MessageLookupByLibrary.simpleMessage("Rooms"),
+        "roomsPhotos": MessageLookupByLibrary.simpleMessage("Rooms Photos"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "sections": MessageLookupByLibrary.simpleMessage("Sections"),
         "security": MessageLookupByLibrary.simpleMessage("Security"),

@@ -2,7 +2,6 @@ import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/constants/app_constants.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
-import 'package:bookazon/view/screens/home/home_page.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
 import 'package:bookazon/view/widgets/public_divider.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
@@ -16,6 +15,7 @@ import '../../../resources/style/app_colors.dart';
 import '../../widgets/public_title_tile.dart';
 
 part 'components/facilite_container.dart';
+part 'components/review_card.dart';
 
 class HotelDetailsPage extends StatelessWidget {
   const HotelDetailsPage({super.key});
@@ -112,7 +112,7 @@ class HotelDetailsPage extends StatelessWidget {
                           TextSpan(
                             children: [
                               TextSpan(
-                                text: '\$200,7',
+                                text: '29\$',
                                 style: TextStyle(
                                   fontSize: 17.sp,
                                   fontWeight: FontWeight.bold,
@@ -152,6 +152,22 @@ class HotelDetailsPage extends StatelessWidget {
                       width: double.infinity,
                       color: AppColors.grey,
                     ),
+                    PublicTitleTile(title: S.of(context).roomsPhotos),
+                    SizedBox(
+                      height: 100.h,
+                      child: ListView.separated(
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 10,
+                        itemBuilder: (_, index) {
+                          return ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.asset(Assets.imageRoom),
+                          );
+                        },
+                        separatorBuilder: (_, __) => 10.pw,
+                      ),
+                    ),
                     PublicTitleTile(title: S.of(context).facilites),
                     15.ph,
                     GridView.builder(
@@ -182,13 +198,52 @@ class HotelDetailsPage extends StatelessWidget {
                       color: AppColors.subTitleGrey,
                       max: 10,
                     ),
+                    PublicTitleTile(title: S.of(context).reviews),
+                    ListView.separated(
+                      physics: const ClampingScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: 3,
+                      itemBuilder: (context, index) {
+                        return const ReviewCard();
+                      },
+                      separatorBuilder: (_, __) => 12.ph,
+                    ),
                     20.ph,
                   ],
                 ),
+
               ),
-              PublicButton(
-                onPressed: () {},
-                title: S.of(context).bookNow,
+              Row(
+                children: [
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '29\$',
+                          style: TextStyle(
+                            fontSize: 24.sp,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.orange,
+                          ),
+                        ),
+                        TextSpan(
+                          text: '/night',
+                          style: TextStyle(
+                            fontSize: 18.sp,
+                            color: AppColors.hintGrey,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  20.pw,
+                  Expanded(
+                    child: PublicButton(
+                      onPressed: () {},
+                      title: S.of(context).bookNow,
+                    ),
+                  ),
+                ],
               )
             ],
           ),
