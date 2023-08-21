@@ -1,10 +1,6 @@
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
-import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
-import 'package:bookazon/view/widgets/public_button.dart';
-import 'package:bookazon/view/widgets/public_divider.dart';
-import 'package:bookazon/view/widgets/public_outline_button.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:bookazon/view_model/profile/profile_cubit.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-part 'components/logout_bottom_sheet.dart';
+import '../../../resources/constants/colors.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -33,19 +29,33 @@ class _ProfilePageState extends State<ProfilePage> {
             children: [
               BlocBuilder<ProfileCubit, ProfileState>(
                 builder: (context, state) {
-                  return cubit.image == null
-                      ? CircleAvatar(
-                          radius: 70.w,
-                          backgroundColor: AppColors.orange,
-                          child: const PublicText(
-                            txt: "No Image",
-                            color: AppColors.white,
+                  return Stack(
+                    children: [
+                      cubit.image == null
+                          ? CircleAvatar(
+                              radius: 70.w,
+                              backgroundColor: AppColors.purple,
+                              child: const PublicText(
+                                txt: "No Image",
+                                color: AppColors.white,
+                              ),
+                            )
+                          : CircleAvatar(
+                              radius: 70.w,
+                              backgroundImage: Image.file(cubit.image!).image,
+                            ),
+                      Positioned(
+                        bottom: 20.h,
+                        right: 1.w,
+                        child: InkWell(
+                          onTap: () => cubit.pickImageFromGallery(),
+                          child: const Icon(
+                            Icons.camera_alt,
                           ),
-                        )
-                      : CircleAvatar(
-                          radius: 70.w,
-                          backgroundImage: Image.file(cubit.image!).image,
-                        );
+                        ),
+                      ),
+                    ],
+                  );
                 },
               ),
               16.ph,
@@ -60,15 +70,11 @@ class _ProfilePageState extends State<ProfilePage> {
                 size: 14.sp,
                 fw: FontWeight.w500,
               ),
-              InkWell(
-                onTap: () =>
-                    Navigator.pushNamed(context, AppRoutes.editProfile),
-                child: ListTile(
-                  leading: const Icon(Icons.person_outline),
-                  title: PublicText(
-                    txt: S.of(context).editProfile,
-                    color: AppColors.subTitleBlack,
-                  ),
+              ListTile(
+                leading: const Icon(Icons.person_outline),
+                title: PublicText(
+                  txt: S.of(context).editProfile,
+                  color: AppColors.subTitleBlack,
                 ),
               ),
               ListTile(
@@ -80,7 +86,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               ListTile(
                 leading: const Icon(Icons.notifications_outlined),
-                title: PublicText(
+               title: PublicText(
                   txt: S.of(context).notificaiton,
                   color: AppColors.subTitleBlack,
                 ),
@@ -110,7 +116,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: CupertinoSwitch(
                     onChanged: (value) {},
                     value: false,
-                    activeColor: AppColors.purple,
+                    activeColor: themColor,
                     // thumbColor: Colors.amber,
                     // trackColor: Colors.blue,
                   ),
@@ -123,25 +129,14 @@ class _ProfilePageState extends State<ProfilePage> {
                   color: AppColors.subTitleBlack,
                 ),
               ),
-              InkWell(
-                onTap: () {
-                  showModalBottomSheet(
-                    context: context,
-                    backgroundColor: Colors.transparent,
-                    builder: (context) {
-                      return const LogoutBottomSheet();
-                    },
-                  );
-                },
-                child: ListTile(
-                  leading: const Icon(
-                    Icons.logout,
-                    color: AppColors.red,
-                  ),
-                  title: Text(
-                    S.of(context).logout,
-                    style: const TextStyle(color: AppColors.red),
-                  ),
+              ListTile(
+                leading: const Icon(
+                  Icons.logout,
+                  color: AppColors.red,
+                ),
+                title: Text(
+                  S.of(context).logout,
+                  style: const TextStyle(color: AppColors.red),
                 ),
               ),
             ],
@@ -151,4 +146,3 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 }
-

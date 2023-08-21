@@ -120,20 +120,20 @@ class S {
     );
   }
 
-  /// `Enter your email`
+  /// `enter your email`
   String get hint_email {
     return Intl.message(
-      'Enter your email',
+      'enter your email',
       name: 'hint_email',
       desc: '',
       args: [],
     );
   }
 
-  /// `Enter your password`
+  /// `enter your password`
   String get hint_password {
     return Intl.message(
-      'Enter your password',
+      'enter your password',
       name: 'hint_password',
       desc: '',
       args: [],
@@ -190,41 +190,21 @@ class S {
     );
   }
 
-  /// `User Name`
+  /// `UserName`
   String get username {
     return Intl.message(
-      'User Name',
+      'UserName',
       name: 'username',
       desc: '',
       args: [],
     );
   }
 
-  /// ` Eenter your name`
+  /// `enter your name`
   String get hint_username {
     return Intl.message(
-      ' Eenter your name',
+      'enter your name',
       name: 'hint_username',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `First Name`
-  String get firstName {
-    return Intl.message(
-      'First Name',
-      name: 'firstName',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Last Name`
-  String get lastName {
-    return Intl.message(
-      'Last Name',
-      name: 'lastName',
       desc: '',
       args: [],
     );
@@ -975,216 +955,6 @@ class S {
     return Intl.message(
       'Delete Account',
       name: 'deleteAccount',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Details`
-  String get details {
-    return Intl.message(
-      'Details',
-      name: 'details',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Reviews`
-  String get reviews {
-    return Intl.message(
-      'Reviews',
-      name: 'reviews',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Description`
-  String get description {
-    return Intl.message(
-      'Description',
-      name: 'description',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Facilites`
-  String get facilites {
-    return Intl.message(
-      'Facilites',
-      name: 'facilites',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Pool`
-  String get pool {
-    return Intl.message(
-      'Pool',
-      name: 'pool',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Wifi`
-  String get wifi {
-    return Intl.message(
-      'Wifi',
-      name: 'wifi',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Parking`
-  String get parking {
-    return Intl.message(
-      'Parking',
-      name: 'parking',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Restaurant`
-  String get restaurant {
-    return Intl.message(
-      'Restaurant',
-      name: 'restaurant',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Meeting Room`
-  String get meetingRoom {
-    return Intl.message(
-      'Meeting Room',
-      name: 'meetingRoom',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Elevator`
-  String get elevator {
-    return Intl.message(
-      'Elevator',
-      name: 'elevator',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Gym`
-  String get gym {
-    return Intl.message(
-      'Gym',
-      name: 'gym',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `24-hours open`
-  String get open24 {
-    return Intl.message(
-      '24-hours open',
-      name: 'open24',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Save`
-  String get save {
-    return Intl.message(
-      'Save',
-      name: 'save',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Select Rooms and Guests`
-  String get selectRoomsGuests {
-    return Intl.message(
-      'Select Rooms and Guests',
-      name: 'selectRoomsGuests',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Ages 0 - 17`
-  String get ages17 {
-    return Intl.message(
-      'Ages 0 - 17',
-      name: 'ages17',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Children’s age at check-out`
-  String get childrenAgesCheckout {
-    return Intl.message(
-      'Children’s age at check-out',
-      name: 'childrenAgesCheckout',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Children’s ages will be used to find you the best match in beds, rooms, size, and special prices.`
-  String get childrenAgesSubTitle {
-    return Intl.message(
-      'Children’s ages will be used to find you the best match in beds, rooms, size, and special prices.',
-      name: 'childrenAgesSubTitle',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Update`
-  String get update {
-    return Intl.message(
-      'Update',
-      name: 'update',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Are you sure you want to Log out?`
-  String get logoutWarning {
-    return Intl.message(
-      'Are you sure you want to Log out?',
-      name: 'logoutWarning',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Cancel`
-  String get cancel {
-    return Intl.message(
-      'Cancel',
-      name: 'cancel',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Rooms Photos`
-  String get roomsPhotos {
-    return Intl.message(
-      'Rooms Photos',
-      name: 'roomsPhotos',
       desc: '',
       args: [],
     );

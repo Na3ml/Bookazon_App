@@ -24,27 +24,27 @@ class PublicTextFormField extends StatefulWidget {
   final void Function(String)? onChanged;
   final void Function(String)? onSubmitted;
 
-  const PublicTextFormField(
-      {Key? key,
-      required this.hint,
-      required this.controller,
-      required this.validator,
-      this.isPassword = false,
-      this.showSuffixIcon = false,
-      this.showprefixIcon = false,
-      this.ontap,
-      this.keyboardtype = TextInputType.text,
-      this.maxlenght,
-      this.maxLines,
-      this.prefixIcon = Icons.person,
-      this.suffixIcon = Icons.person,
-      this.ontapPrefixIcon,
-      this.ontapSuffixIcon,
-      this.borderRadius = 12,
-      this.contentPadding,
-      this.onChanged,
-      this.onSubmitted})
-      : super(key: key);
+  const PublicTextFormField({
+    Key? key,
+    required this.hint,
+    this.controller,
+    required this.validator,
+    this.isPassword = false,
+    this.showSuffixIcon = false,
+    this.showprefixIcon = false,
+    this.ontap,
+    this.keyboardtype = TextInputType.text,
+    this.maxlenght,
+    this.maxLines,
+    this.prefixIcon = Icons.person,
+    this.suffixIcon = Icons.person,
+    this.ontapPrefixIcon,
+    this.ontapSuffixIcon,
+    this.borderRadius = 12,
+    this.contentPadding,
+    this.onChanged,
+    this.onSubmitted,
+  }) : super(key: key);
 
   @override
   State<PublicTextFormField> createState() => _PublicTextFormFieldState();
@@ -59,9 +59,8 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
       width: 374.w,
       //height: 57.h,
       child: TextFormField(
-
         textCapitalization: TextCapitalization.none,
-        maxLines: widget.maxLines??1,
+        maxLines: widget.maxLines ?? 1,
         maxLength: widget.maxlenght,
         obscureText: widget.isPassword ? showPassword : false,
         keyboardType: widget.keyboardtype,
@@ -76,7 +75,8 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
           hintStyle: TextStyle(color: AppColors.hintGrey, fontSize: 15.sp),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(widget.borderRadius),
-            borderSide: const BorderSide(color: AppColors.textFieldWhite, width: 0.5),
+            borderSide:
+                const BorderSide(color: AppColors.textFieldWhite, width: 0.5),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(widget.borderRadius),
@@ -123,8 +123,14 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
           });
         }),
         child: !showPassword
-            ? const Icon(Icons.visibility,color: AppColors.purple,)
-            : const Icon(Icons.visibility_off,color: AppColors.purple,),
+            ? const Icon(
+                Icons.visibility,
+                color: AppColors.purple,
+              )
+            : const Icon(
+                Icons.visibility_off,
+                color: AppColors.purple,
+              ),
       );
     }
     return null;

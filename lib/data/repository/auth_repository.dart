@@ -51,8 +51,7 @@ class AuthRepositoryImpl extends AuthRepository {
         var response = await _apiService.postData(
           endPoint: EndPoints.login,
           body: {
-            "first_name": request.firstName,
-            "last_name": request.lastName,
+            "username": request.name,
             "email": request.email,
             "password": request.password,
             "phone": request.phone,

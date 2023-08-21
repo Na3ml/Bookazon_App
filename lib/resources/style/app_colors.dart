@@ -17,5 +17,4 @@ class AppColors {
   static const Color unSelectedGrey = Color(0xFFA1A1A1);
   static const Color textFieldWhite = Color(0xFFF2F2F2);
   static const Color subTitleBlack = Color(0xff242424);
-  static const Color subTitleGrey = Color(0xff878787);
 }

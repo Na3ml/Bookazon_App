@@ -25,7 +25,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "acceptTermsErrorMessage": MessageLookupByLibrary.simpleMessage(
             "You have to accept terms of use and privacy policy before you sign up"),
         "adults": MessageLookupByLibrary.simpleMessage("Adults"),
-        "ages17": MessageLookupByLibrary.simpleMessage("Ages 0 - 17"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "answer_delete_account1": MessageLookupByLibrary.simpleMessage(
@@ -42,12 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "booking": MessageLookupByLibrary.simpleMessage("Booking"),
         "can_you_share": MessageLookupByLibrary.simpleMessage(
             "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it."),
-        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
-        "childrenAgesCheckout":
-            MessageLookupByLibrary.simpleMessage("Children’s age at check-out"),
-        "childrenAgesSubTitle": MessageLookupByLibrary.simpleMessage(
-            "Children’s ages will be used to find you the best match in beds, rooms, size, and special prices."),
         "confirm_Deletion":
             MessageLookupByLibrary.simpleMessage("Confirm Deletion"),
         "confirm_password":
@@ -61,43 +55,33 @@ class MessageLookup extends MessageLookupByLibrary {
             "Don\'t worry it happens,please enter \n your email address"),
         "describe_reset_password": MessageLookupByLibrary.simpleMessage(
             "Enter your new password and confirm it"),
-        "description": MessageLookupByLibrary.simpleMessage("Description"),
-        "details": MessageLookupByLibrary.simpleMessage("Details"),
         "dont_have_account":
             MessageLookupByLibrary.simpleMessage("Don’t have an account yet?"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
-        "elevator": MessageLookupByLibrary.simpleMessage("Elevator"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_verification":
             MessageLookupByLibrary.simpleMessage("Email Verification"),
-        "facilites": MessageLookupByLibrary.simpleMessage("Facilites"),
         "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
         "filter": MessageLookupByLibrary.simpleMessage("Filter"),
-        "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
         "forget_password":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "from": MessageLookupByLibrary.simpleMessage("From"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "glamping": MessageLookupByLibrary.simpleMessage("Glamping"),
         "goingTo": MessageLookupByLibrary.simpleMessage("Going to"),
-        "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
-        "hint_email": MessageLookupByLibrary.simpleMessage("Enter your email"),
+        "hint_email": MessageLookupByLibrary.simpleMessage("enter your email"),
         "hint_new_password":
             MessageLookupByLibrary.simpleMessage("enter new password"),
         "hint_password":
-            MessageLookupByLibrary.simpleMessage("Enter your password"),
+            MessageLookupByLibrary.simpleMessage("enter your password"),
         "hint_username":
-            MessageLookupByLibrary.simpleMessage(" Eenter your name"),
+            MessageLookupByLibrary.simpleMessage("enter your name"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "hotel": MessageLookupByLibrary.simpleMessage("Hotel"),
-        "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
-        "logoutWarning": MessageLookupByLibrary.simpleMessage(
-            "Are you sure you want to Log out?"),
         "map": MessageLookupByLibrary.simpleMessage("Map"),
-        "meetingRoom": MessageLookupByLibrary.simpleMessage("Meeting Room"),
         "message_error_email": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid email address, such as name@example.com."),
         "message_error_otp":
@@ -126,13 +110,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create Your Account"),
         "onboardingTitle3":
             MessageLookupByLibrary.simpleMessage("Explore Amazing Properties"),
-        "open24": MessageLookupByLibrary.simpleMessage("24-hours open"),
         "or": MessageLookupByLibrary.simpleMessage("or sign in with"),
-        "parking": MessageLookupByLibrary.simpleMessage("Parking"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "planTrip": MessageLookupByLibrary.simpleMessage("Plan your trip"),
-        "pool": MessageLookupByLibrary.simpleMessage("Pool"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "I have read and accepted the terms of use\nand privacy policy "),
@@ -140,17 +121,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
-        "restaurant": MessageLookupByLibrary.simpleMessage("Restaurant"),
-        "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
         "rooms": MessageLookupByLibrary.simpleMessage("Rooms"),
-        "roomsPhotos": MessageLookupByLibrary.simpleMessage("Rooms Photos"),
-        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "sections": MessageLookupByLibrary.simpleMessage("Sections"),
         "security": MessageLookupByLibrary.simpleMessage("Security"),
         "seeMore": MessageLookupByLibrary.simpleMessage("See More"),
-        "selectRoomsGuests":
-            MessageLookupByLibrary.simpleMessage("Select Rooms and Guests"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Signup"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
@@ -170,15 +145,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_signup":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
-        "update": MessageLookupByLibrary.simpleMessage("Update"),
-        "username": MessageLookupByLibrary.simpleMessage("User Name"),
+        "username": MessageLookupByLibrary.simpleMessage("UserName"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
         "villa": MessageLookupByLibrary.simpleMessage("Villa"),
         "whereWantGo":
             MessageLookupByLibrary.simpleMessage("Where do you want to go ?"),
         "why_delete_account": MessageLookupByLibrary.simpleMessage(
             "Why do you want to delete your\naccount?"),
-        "wifi": MessageLookupByLibrary.simpleMessage("Wifi"),
         "your_explanation":
             MessageLookupByLibrary.simpleMessage("Your explanation.....")
       };

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intl/intl.dart';
 
 extension SizedBoxExtension on num {
   SizedBox get ph => SizedBox(height: toDouble().h);
@@ -62,17 +61,10 @@ extension ValidString on String {
   }
 
   bool isMobileNumberValid() {
-    return length > 7 && length < 15;
+    return length >= 8;
   }
 
   bool isNotEmpty() {
     return this.isNotEmpty;
-  }
-}
-
-extension DateFormant on DateTime {
-  /// Ex: "Mon, 19, Apr"
-  String get format1 {
-    return DateFormat("EEE, d, MMM").format(this);
   }
 }

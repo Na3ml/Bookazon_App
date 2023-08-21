@@ -22,17 +22,6 @@ class DataErrorState extends HomeState {
   List<Object> get props => [error];
 }
 
-/// Date
-class ChangeDateState extends HomeState {
-  final DateTime date;
-  final bool isFromDate;
-
-  const ChangeDateState(this.date, this.isFromDate);
-
-  @override
-  List<Object> get props => [date, isFromDate];
-}
-
 /// search
 class SearchState extends HomeState {}
 
@@ -46,26 +35,4 @@ class SearchErrorState extends SearchState {
 
   @override
   List<Object> get props => [error];
-}
-
-/// guests count
-class ChangeRoomsCountState extends HomeState {
-  final int count;
-  const ChangeRoomsCountState(this.count);
-  @override
-  List<Object> get props => [count];
-}
-
-class ChangeAdultsCountState extends HomeState {
-  final int count;
-  const ChangeAdultsCountState(this.count);
-  @override
-  List<Object> get props => [count];
-}
-
-class ChangeChildrenCountState extends HomeState {
-  final int count;
-  const ChangeChildrenCountState(this.count);
-  @override
-  List<Object> get props => [count];
 }

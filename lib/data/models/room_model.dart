@@ -1,5 +1,8 @@
 
-part of 'stays_model.dart';
+import 'dart:convert';
+
+import 'package:equatable/equatable.dart';
+import 'stay_model.dart';
 
 class RoomModel extends Equatable {
   final List<String> photos;
