@@ -67,9 +67,19 @@ class AuthCubit extends Cubit<AuthState> {
     if (acceptTerms) {
       emit(RegisterLoadingState());
       try {
-        if (await _repo.register(request)) {
+        final response = await _repo.register(request);
+        if (response.status == 1) {
+          final user = response.data!.user;
           appPrefs.setUserLoggedIn();
+          appPrefs.setUserInfo(
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+            phone: user.phoneNumber,
+          );
           emit(RegisterSuccessState());
+        } else {
+          emit(AuthnErrorState(response.message));
         }
       } catch (e) {
         if (e is CustomException) {

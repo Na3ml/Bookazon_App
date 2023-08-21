@@ -38,7 +38,7 @@
     "skip": "Skip",
     "next": "Next",
     "getStarted": "Get Started",
-    "acceptTermsErrorMessage":"You have to accept terms of use and privacy policy before you sign up",
+    "acceptTermsErrorMessage": "You have to accept terms of use and privacy policy before you sign up",
     "message_null_email": "Please enter email",
     "message_error_email": "Please enter a valid email address, such as name@example.com.",
     "title_error_email": "Please enter a valid email address",
@@ -91,6 +91,8 @@
     "security": "Security",
     "help": "Help",
     "darkTheme": "Dark Theme",
-    "deleteAccount": "Delete Account"
-
+    "deleteAccount": "Delete Account",
+    "phoneNumber": "Phone Number",
+    "enterPhoneNumber": "Please, enter your phone number",
+    "phoneNumberInvalid": "Phone number must be between 8 and 14"
 }

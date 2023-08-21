@@ -979,6 +979,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Phone Number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please, enter your phone number`
+  String get enterPhoneNumber {
+    return Intl.message(
+      'Please, enter your phone number',
+      name: 'enterPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number must be between 8 and 14`
+  String get phoneNumberInvalid {
+    return Intl.message(
+      'Phone number must be between 8 and 14',
+      name: 'phoneNumberInvalid',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

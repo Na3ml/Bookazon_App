@@ -30,6 +30,7 @@ class _SignupPageState extends State<SignupPage> {
   late final TextEditingController _emailController;
   late final TextEditingController _passwordController;
   late final TextEditingController _passwordConfirmController;
+  late final TextEditingController _phoneController;
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -40,6 +41,7 @@ class _SignupPageState extends State<SignupPage> {
     _emailController = TextEditingController();
     _passwordController = TextEditingController();
     _passwordConfirmController = TextEditingController();
+    _phoneController = TextEditingController();
   }
 
   @override
@@ -49,6 +51,7 @@ class _SignupPageState extends State<SignupPage> {
     _emailController.dispose();
     _passwordController.dispose();
     _passwordConfirmController.dispose();
+    _phoneController.dispose();
     super.dispose();
   }
 
@@ -229,6 +232,31 @@ class _SignupPageState extends State<SignupPage> {
                             } else if (confirmPassword !=
                                 _passwordController.text) {
                               return S.of(context).title_error_confirmPassword;
+                            } else {
+                              return null;
+                            }
+                          },
+                        ),
+                        21.ph,
+                        // phone 
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).phoneNumber,
+                            color: AppColors.black,
+                            fw: FontWeight.w500,
+                          ),
+                        ),
+                        PublicTextFormField(
+                          hint: S.of(context).phoneNumber,
+                          controller: _phoneController,
+                          keyboardtype: TextInputType.number,
+                          validator: (phone) {
+                            if (phone == null ||
+                                phone.isEmpty) {
+                              return S.of(context).enterPhoneNumber;
+                            } else if (phone.isMobileNumberValid()) {
+                              return S.of(context).phoneNumberInvalid;
                             } else {
                               return null;
                             }

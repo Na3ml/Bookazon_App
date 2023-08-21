@@ -61,6 +61,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_verification":
             MessageLookupByLibrary.simpleMessage("Email Verification"),
+        "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
+            "Please, enter your phone number"),
         "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
         "filter": MessageLookupByLibrary.simpleMessage("Filter"),
         "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
@@ -115,6 +117,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "or": MessageLookupByLibrary.simpleMessage("or sign in with"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "phoneNumberInvalid": MessageLookupByLibrary.simpleMessage(
+            "Phone number must be between 8 and 14"),
         "planTrip": MessageLookupByLibrary.simpleMessage("Plan your trip"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
