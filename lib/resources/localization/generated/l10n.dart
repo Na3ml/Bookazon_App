@@ -970,16 +970,6 @@ class S {
     );
   }
 
-  /// `Delete Account`
-  String get deleteAccount {
-    return Intl.message(
-      'Delete Account',
-      name: 'deleteAccount',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Phone Number`
   String get phoneNumber {
     return Intl.message(
@@ -1005,6 +995,136 @@ class S {
     return Intl.message(
       'Phone number must be between 8 and 14',
       name: 'phoneNumberInvalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete Account`
+  String get deleteAccount {
+    return Intl.message(
+      'Delete Account',
+      name: 'deleteAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details`
+  String get details {
+    return Intl.message(
+      'Details',
+      name: 'details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reviews`
+  String get reviews {
+    return Intl.message(
+      'Reviews',
+      name: 'reviews',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Facilites`
+  String get facilites {
+    return Intl.message(
+      'Facilites',
+      name: 'facilites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pool`
+  String get pool {
+    return Intl.message(
+      'Pool',
+      name: 'pool',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wifi`
+  String get wifi {
+    return Intl.message(
+      'Wifi',
+      name: 'wifi',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Parking`
+  String get parking {
+    return Intl.message(
+      'Parking',
+      name: 'parking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Restaurant`
+  String get restaurant {
+    return Intl.message(
+      'Restaurant',
+      name: 'restaurant',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Meeting Room`
+  String get meetingRoom {
+    return Intl.message(
+      'Meeting Room',
+      name: 'meetingRoom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Elevator`
+  String get elevator {
+    return Intl.message(
+      'Elevator',
+      name: 'elevator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gym`
+  String get gym {
+    return Intl.message(
+      'Gym',
+      name: 'gym',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `24-hours open`
+  String get open24 {
+    return Intl.message(
+      '24-hours open',
+      name: 'open24',
       desc: '',
       args: [],
     );

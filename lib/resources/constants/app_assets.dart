@@ -13,6 +13,14 @@ class Assets {
   /// assets/icon/Calendar.svg
   static const String iconCalendar = "assets/icon/Calendar.svg";
 
+  /// Assets for iconElevator
+  /// assets/icon/elevator.png
+  static const String iconElevator = "assets/icon/elevator.png";
+
+  /// Assets for iconGym
+  /// assets/icon/gym.png
+  static const String iconGym = "assets/icon/gym.png";
+
   /// Assets for iconHeart
   /// assets/icon/heart.svg
   static const String iconHeart = "assets/icon/heart.svg";
@@ -20,6 +28,30 @@ class Assets {
   /// Assets for iconHome
   /// assets/icon/home.svg
   static const String iconHome = "assets/icon/home.svg";
+
+  /// Assets for iconMeetingRoom
+  /// assets/icon/meetingRoom.png
+  static const String iconMeetingRoom = "assets/icon/meetingRoom.png";
+
+  /// Assets for iconOpen24
+  /// assets/icon/open24.png
+  static const String iconOpen24 = "assets/icon/open24.png";
+
+  /// Assets for iconParking
+  /// assets/icon/parking.png
+  static const String iconParking = "assets/icon/parking.png";
+
+  /// Assets for iconRestaurant
+  /// assets/icon/restaurant.png
+  static const String iconRestaurant = "assets/icon/restaurant.png";
+
+  /// Assets for iconSwimming
+  /// assets/icon/swimming.png
+  static const String iconSwimming = "assets/icon/swimming.png";
+
+  /// Assets for iconWifi
+  /// assets/icon/wifi.png
+  static const String iconWifi = "assets/icon/wifi.png";
 
   /// Assets for imageApple
   /// assets/image/apple.png

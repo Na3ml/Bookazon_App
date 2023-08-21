@@ -1,8 +1,8 @@
-part of "../home_page.dart";
+part of '../screens/home/home_page.dart';
 
-class TitleTile extends StatelessWidget {
+class PublicTitleTile extends StatelessWidget {
   final String title;
-  const TitleTile({
+  const PublicTitleTile({
     super.key,
     required this.title,
   });

@@ -91,8 +91,20 @@
     "security": "Security",
     "help": "Help",
     "darkTheme": "Dark Theme",
-    "deleteAccount": "Delete Account",
     "phoneNumber": "Phone Number",
     "enterPhoneNumber": "Please, enter your phone number",
-    "phoneNumberInvalid": "Phone number must be between 8 and 14"
+    "phoneNumberInvalid": "Phone number must be between 8 and 14",
+    "deleteAccount": "Delete Account",
+    "details": "Details",
+    "reviews": "Reviews",
+    "description":"Description",
+    "facilites": "Facilites",
+    "pool": "Pool",
+    "wifi": "Wifi",
+    "parking": "Parking",
+    "restaurant": "Restaurant",
+    "meetingRoom": "Meeting Room",
+    "elevator": "Elevator",
+    "gym": "Gym",
+    "open24": "24-hours open"
 }
