@@ -7,7 +7,7 @@ import '../../resources/style/app_colors.dart';
 class PublicTextFormField extends StatefulWidget {
   final String hint;
   final FormFieldValidator<String>? validator;
-  TextEditingController? controller;
+  final TextEditingController? controller;
   final TextInputType keyboardtype;
   final IconData prefixIcon;
   final IconData suffixIcon;
@@ -15,6 +15,7 @@ class PublicTextFormField extends StatefulWidget {
   final bool showprefixIcon;
   final bool showSuffixIcon;
   final int? maxlenght;
+  final int? maxLines;
   final Function()? ontap;
   final Function()? ontapPrefixIcon;
   final Function()? ontapSuffixIcon;
@@ -23,7 +24,7 @@ class PublicTextFormField extends StatefulWidget {
   final void Function(String)? onChanged;
   final void Function(String)? onSubmitted;
 
-  PublicTextFormField({
+  const PublicTextFormField({
     Key? key,
     required this.hint,
     this.controller,
@@ -34,6 +35,7 @@ class PublicTextFormField extends StatefulWidget {
     this.ontap,
     this.keyboardtype = TextInputType.text,
     this.maxlenght,
+    this.maxLines,
     this.prefixIcon = Icons.person,
     this.suffixIcon = Icons.person,
     this.ontapPrefixIcon,
@@ -58,7 +60,7 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
       //height: 57.h,
       child: TextFormField(
         textCapitalization: TextCapitalization.none,
-        maxLines: 1,
+        maxLines: widget.maxLines ?? 1,
         maxLength: widget.maxlenght,
         obscureText: widget.isPassword ? showPassword : false,
         keyboardType: widget.keyboardtype,
@@ -73,7 +75,8 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
           hintStyle: TextStyle(color: AppColors.hintGrey, fontSize: 15.sp),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(widget.borderRadius),
-            borderSide: const BorderSide(color: AppColors.textFieldWhite, width: 0.5),
+            borderSide:
+                const BorderSide(color: AppColors.textFieldWhite, width: 0.5),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(widget.borderRadius),
@@ -120,8 +123,14 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
           });
         }),
         child: !showPassword
-            ? const Icon(Icons.visibility,color: AppColors.purple,)
-            : const Icon(Icons.visibility_off,color: AppColors.purple,),
+            ? const Icon(
+                Icons.visibility,
+                color: AppColors.purple,
+              )
+            : const Icon(
+                Icons.visibility_off,
+                color: AppColors.purple,
+              ),
       );
     }
     return null;
