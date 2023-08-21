@@ -88,8 +88,8 @@ class MyApp extends StatelessWidget {
             title: 'Bookazon',
             theme: AppTheme.getLight(),
             onGenerateRoute: RouteGenerate.getRoute,
-            home: const LayoutsPage(),
-            // home: const SplashPage()
+            home: const SplashPage()
+            // home: const LayoutsPage(),
           ),
         );
       },

@@ -6,6 +6,10 @@ import 'package:bookazon/view/screens/signup/signup_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
+import '../../view/screens/edit_profile/edit_profile.dart';
+import '../../view/screens/home/home_page.dart';
+import '../../view/screens/hotel_details/hotel_details_page.dart';
+import '../../view/screens/layouts/layouts_page.dart';
 import '../../view/screens/login/login_page.dart';
 import '../../view/screens/reset_password/reset_password_page.dart';
 
@@ -26,7 +30,10 @@ class AppRoutes {
   static const String privacyPolicy = "privacy password";
 
   /// main pages
+  static const String layouts = "layouts";
   static const String homePage = "home page";
+  static const String hotelDetails = "hotel details";
+  static const String editProfile = "edit profile";
 }
 
 class RouteGenerate {
@@ -73,6 +80,22 @@ class RouteGenerate {
         );
 
       /// Main
+      case AppRoutes.layouts:
+        return MaterialPageRoute(
+          builder: (_) => const LayoutsPage(),
+        );
+      case AppRoutes.homePage:
+        return MaterialPageRoute(
+          builder: (_) => const HomePage(),
+        );
+      case AppRoutes.hotelDetails:
+        return MaterialPageRoute(
+          builder: (_) => const HotelDetailsPage(),
+        );
+      case AppRoutes.editProfile:
+        return MaterialPageRoute(
+          builder: (_) => const EditProfilePage(),
+        );
       default:
         return MaterialPageRoute(
             builder: (_) => _undfinedPage(route: routeSettings.name));

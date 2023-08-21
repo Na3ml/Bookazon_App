@@ -7,7 +7,7 @@ import '../models/requests/auth_requests_model.dart';
 
 abstract class AuthRepository {
   Future<bool> login(LoginRequest request);
-  Future<bool> register(RegisterRequest request);
+  Future<AuthResponse> register(RegisterRequest request);
   Future<bool> forgotPassword(String email);
   Future<bool> verifyEmail(VerifyEmailRequest request);
   Future<bool> resetPassword(ResetPasswordRequest request);
@@ -35,7 +35,7 @@ class AuthRepositoryImpl extends AuthRepository {
           },
         );
         var responseModel = AuthResponse.fromJson(response.data);
-        return responseModel.success;
+        return responseModel.status == 1;
       } catch (e) {
         throw CustomException(e.toString());
       }
@@ -45,20 +45,21 @@ class AuthRepositoryImpl extends AuthRepository {
   }
 
   @override
-  Future<bool> register(RegisterRequest request) async {
+  Future<AuthResponse> register(RegisterRequest request) async {
     if (await _networkInfo.isConnected) {
       try {
         var response = await _apiService.postData(
           endPoint: EndPoints.login,
           body: {
-            "username": request.name,
+            "first_name": request.firstName,
+            "last_name": request.lastName,
             "email": request.email,
             "password": request.password,
-            "phone": request.phone,
+            "c_password": request.password,
+            "phone_number": request.phone,
           },
         );
-        var responseModel = AuthResponse.fromJson(response.data);
-        return responseModel.success;
+        return AuthResponse.fromJson(response.data);
       } catch (e) {
         throw CustomException(e.toString());
       }
@@ -78,7 +79,7 @@ class AuthRepositoryImpl extends AuthRepository {
           },
         );
         var responseModel = AuthResponse.fromJson(response.data);
-        return responseModel.success;
+        return responseModel.status == 1;
       } catch (e) {
         throw CustomException(e.toString());
       }
@@ -99,7 +100,7 @@ class AuthRepositoryImpl extends AuthRepository {
           },
         );
         var responseModel = AuthResponse.fromJson(response.data);
-        return responseModel.success;
+        return responseModel.status == 1;
       } catch (e) {
         throw CustomException(e.toString());
       }
@@ -121,7 +122,7 @@ class AuthRepositoryImpl extends AuthRepository {
           },
         );
         var responseModel = AuthResponse.fromJson(response.data);
-        return responseModel.success;
+        return responseModel.status == 1;
       } catch (e) {
         throw CustomException(e.toString());
       }

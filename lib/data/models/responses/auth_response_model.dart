@@ -1,45 +1,65 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
+
 class AuthResponse {
-  final bool success;
+  final int status;
   final String message;
-  final String token;
-  final User data;
+  final Data? data;
 
   AuthResponse({
-    required this.success,
+    required this.status,
     required this.message,
-    required this.token,
-    required this.data,
+    this.data,
   });
 
   factory AuthResponse.fromJson(Map<String, dynamic> json) {
     return AuthResponse(
-      success: json['success'],
+      status: json['status'],
       message: json['message'],
-      token: json['message'],
-      data: User.fromJson(json['data']),
+      data: json['status'] == 1 ? Data.fromMap(json['data']) : null,
+    );
+  }
+}
+
+class Data {
+  final String token;
+  final User user;
+
+  Data({
+    required this.token,
+    required this.user,
+  });
+
+  factory Data.fromMap(Map<String, dynamic> map) {
+    return Data(
+      token: map['token'] as String,
+      user: User.fromMap(map['user'] as Map<String, dynamic>),
     );
   }
 }
 
 class User {
   final int id;
-  final String username;
+  final String firstName;
+  final String lastName;
   final String email;
-  final String token;
+  final String phoneNumber;
 
   User({
     required this.id,
-    required this.username,
+    required this.firstName,
+    required this.lastName,
     required this.email,
-    required this.token,
+    required this.phoneNumber,
   });
 
-  factory User.fromJson(Map<String, dynamic> json) {
+  factory User.fromMap(Map<String, dynamic> map) {
     return User(
-      id: json['id'],
-      username: json['username'],
-      email: json['email'],
-      token: json['token'],
+      id: map['id'] as int,
+      firstName: map['firstName'] as String,
+      lastName: map['lastName'] as String,
+      email: map['email'] as String,
+      phoneNumber: map['phoneNumber'] as String,
     );
   }
 }

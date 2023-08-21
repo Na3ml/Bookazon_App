@@ -1,3 +1,4 @@
+import 'package:bookazon/data/models/facilite_model.dart';
 import 'package:bookazon/data/models/onboarding_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 
@@ -25,12 +26,26 @@ class AppConstants {
     ),
   ];
 
+  static List<FaciliteModel> facilites = [
+    FaciliteModel(icon: Assets.iconSwimming, name: S.current.pool),
+    FaciliteModel(icon: Assets.iconWifi, name: S.current.wifi),
+    FaciliteModel(icon: Assets.iconRestaurant, name: S.current.restaurant),
+    FaciliteModel(icon: Assets.iconParking, name: S.current.parking),
+    FaciliteModel(icon: Assets.iconMeetingRoom, name: S.current.meetingRoom),
+    FaciliteModel(icon: Assets.iconElevator, name: S.current.elevator),
+    FaciliteModel(icon: Assets.iconGym, name: S.current.gym),
+    FaciliteModel(icon: Assets.iconOpen24, name: S.current.open24),
+  ];
 
+  static List<String> hotelImage = [
+    Assets.imageHotel1,
+    Assets.imageHotel2,
+    Assets.imageHotel3,
+    Assets.imageHotel4,
+    Assets.imageHotel5,
+  ];
 
-
-
-
-  static List listAnswer(context){
+  static List listAnswer(context) {
     return [
       S.of(context).answer_delete_account1,
       S.of(context).answer_delete_account2,
@@ -40,21 +55,19 @@ class AppConstants {
     ];
   }
 
-  static get select1=>false;
-  static get select2=>false;
-  static get select3=>false;
-  static get select4=>false;
-  static get select5=>false;
+  static get select1 => false;
+  static get select2 => false;
+  static get select3 => false;
+  static get select4 => false;
+  static get select5 => false;
 
- static List<bool> listSelect=[
+  static List<bool> listSelect = [
     select1,
     select2,
     select3,
     select4,
     select5,
   ];
-
-
 
   static List<ContainerServices> sections = [
     ContainerServices(
