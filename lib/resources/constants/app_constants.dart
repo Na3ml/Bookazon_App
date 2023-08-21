@@ -26,6 +26,37 @@ class AppConstants {
     ),
   ];
 
+
+
+
+
+
+  static List listAnswer(context){
+    return [
+      S.of(context).answer_delete_account1,
+      S.of(context).answer_delete_account2,
+      S.of(context).answer_delete_account3,
+      S.of(context).answer_delete_account4,
+      S.of(context).answer_delete_account5,
+    ];
+  }
+
+  static get select1=>false;
+  static get select2=>false;
+  static get select3=>false;
+  static get select4=>false;
+  static get select5=>false;
+
+ static List<bool> listSelect=[
+    select1,
+    select2,
+    select3,
+    select4,
+    select5,
+  ];
+
+
+
   static List<ContainerServices> sections = [
     ContainerServices(
       nameAsset: Assets.imageSection1,

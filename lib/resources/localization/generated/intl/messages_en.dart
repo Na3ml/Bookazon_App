@@ -28,18 +28,32 @@ class MessageLookup extends MessageLookupByLibrary {
         "ages17": MessageLookupByLibrary.simpleMessage("Ages 0 - 17"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "answer_delete_account1": MessageLookupByLibrary.simpleMessage(
+            "I get to many emails from bookzon"),
+        "answer_delete_account2": MessageLookupByLibrary.simpleMessage(
+            "I want to use a different email address\nfor my account"),
+        "answer_delete_account3": MessageLookupByLibrary.simpleMessage(
+            "I want to remove all my data"),
+        "answer_delete_account4":
+            MessageLookupByLibrary.simpleMessage("I have a privacy concern"),
+        "answer_delete_account5": MessageLookupByLibrary.simpleMessage("Other"),
         "appartment": MessageLookupByLibrary.simpleMessage("Appartment"),
         "bookNow": MessageLookupByLibrary.simpleMessage("Book now!"),
         "booking": MessageLookupByLibrary.simpleMessage("Booking"),
+        "can_you_share": MessageLookupByLibrary.simpleMessage(
+            "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it."),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "childrenAgesCheckout":
             MessageLookupByLibrary.simpleMessage("Children’s age at check-out"),
         "childrenAgesSubTitle": MessageLookupByLibrary.simpleMessage(
             "Children’s ages will be used to find you the best match in beds, rooms, size, and special prices."),
+        "confirm_Deletion":
+            MessageLookupByLibrary.simpleMessage("Confirm Deletion"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "darkTheme": MessageLookupByLibrary.simpleMessage("Dark Theme"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),
         "describe_email_verification": MessageLookupByLibrary.simpleMessage(
             "Please type OTP code that we given you"),
@@ -58,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email Verification"),
         "facilites": MessageLookupByLibrary.simpleMessage("Facilites"),
         "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
+        "filter": MessageLookupByLibrary.simpleMessage("Filter"),
         "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
         "forget_password":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
@@ -81,6 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "logoutWarning": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to Log out?"),
+        "map": MessageLookupByLibrary.simpleMessage("Map"),
         "meetingRoom": MessageLookupByLibrary.simpleMessage("Meeting Room"),
         "message_error_email": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid email address, such as name@example.com."),
@@ -129,6 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "rooms": MessageLookupByLibrary.simpleMessage("Rooms"),
         "roomsPhotos": MessageLookupByLibrary.simpleMessage("Rooms Photos"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "sections": MessageLookupByLibrary.simpleMessage("Sections"),
         "security": MessageLookupByLibrary.simpleMessage("Security"),
         "seeMore": MessageLookupByLibrary.simpleMessage("See More"),
@@ -137,8 +154,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Signup"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "sort": MessageLookupByLibrary.simpleMessage("Sort"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "test": MessageLookupByLibrary.simpleMessage("test"),
+        "title_delete_account":
+            MessageLookupByLibrary.simpleMessage("Delete Account"),
         "title_error_confirmPassword": MessageLookupByLibrary.simpleMessage(
             "Confirm password must match Password field"),
         "title_error_email": MessageLookupByLibrary.simpleMessage(
@@ -156,6 +176,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "villa": MessageLookupByLibrary.simpleMessage("Villa"),
         "whereWantGo":
             MessageLookupByLibrary.simpleMessage("Where do you want to go ?"),
-        "wifi": MessageLookupByLibrary.simpleMessage("Wifi")
+        "why_delete_account": MessageLookupByLibrary.simpleMessage(
+            "Why do you want to delete your\naccount?"),
+        "wifi": MessageLookupByLibrary.simpleMessage("Wifi"),
+        "your_explanation":
+            MessageLookupByLibrary.simpleMessage("Your explanation.....")
       };
 }

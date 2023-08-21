@@ -22,7 +22,7 @@ class IconsBox extends StatelessWidget {
             spreadRadius: 0.6,
             blurRadius: 4,
 
-          )
+          ),
         ]
       ),
       child: Center(child: imge),

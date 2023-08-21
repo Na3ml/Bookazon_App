@@ -15,6 +15,7 @@ class PublicTextFormField extends StatefulWidget {
   final bool showprefixIcon;
   final bool showSuffixIcon;
   final int? maxlenght;
+  final int? maxLines;
   final Function()? ontap;
   final Function()? ontapPrefixIcon;
   final Function()? ontapSuffixIcon;
@@ -23,26 +24,27 @@ class PublicTextFormField extends StatefulWidget {
   final void Function(String)? onChanged;
   final void Function(String)? onSubmitted;
 
-  const PublicTextFormField({
-    Key? key,
-    required this.hint,
-    this.controller,
-    required this.validator,
-    this.isPassword = false,
-    this.showSuffixIcon = false,
-    this.showprefixIcon = false,
-    this.ontap,
-    this.keyboardtype = TextInputType.text,
-    this.maxlenght,
-    this.prefixIcon = Icons.person,
-    this.suffixIcon = Icons.person,
-    this.ontapPrefixIcon,
-    this.ontapSuffixIcon,
-    this.borderRadius = 12,
-    this.contentPadding,
-    this.onChanged,
-    this.onSubmitted,
-  }) : super(key: key);
+  const PublicTextFormField(
+      {Key? key,
+      required this.hint,
+      required this.controller,
+      required this.validator,
+      this.isPassword = false,
+      this.showSuffixIcon = false,
+      this.showprefixIcon = false,
+      this.ontap,
+      this.keyboardtype = TextInputType.text,
+      this.maxlenght,
+      this.maxLines,
+      this.prefixIcon = Icons.person,
+      this.suffixIcon = Icons.person,
+      this.ontapPrefixIcon,
+      this.ontapSuffixIcon,
+      this.borderRadius = 12,
+      this.contentPadding,
+      this.onChanged,
+      this.onSubmitted})
+      : super(key: key);
 
   @override
   State<PublicTextFormField> createState() => _PublicTextFormFieldState();
@@ -57,8 +59,9 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
       width: 374.w,
       //height: 57.h,
       child: TextFormField(
+
         textCapitalization: TextCapitalization.none,
-        maxLines: 1,
+        maxLines: widget.maxLines??1,
         maxLength: widget.maxlenght,
         obscureText: widget.isPassword ? showPassword : false,
         keyboardType: widget.keyboardtype,

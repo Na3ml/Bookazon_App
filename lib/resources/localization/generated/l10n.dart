@@ -540,6 +540,166 @@ class S {
     );
   }
 
+  /// `Delete Account`
+  String get title_delete_account {
+    return Intl.message(
+      'Delete Account',
+      name: 'title_delete_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Why do you want to delete your\naccount?`
+  String get why_delete_account {
+    return Intl.message(
+      'Why do you want to delete your\naccount?',
+      name: 'why_delete_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I get to many emails from bookzon`
+  String get answer_delete_account1 {
+    return Intl.message(
+      'I get to many emails from bookzon',
+      name: 'answer_delete_account1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I want to use a different email address\nfor my account`
+  String get answer_delete_account2 {
+    return Intl.message(
+      'I want to use a different email address\nfor my account',
+      name: 'answer_delete_account2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I want to remove all my data`
+  String get answer_delete_account3 {
+    return Intl.message(
+      'I want to remove all my data',
+      name: 'answer_delete_account3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I have a privacy concern`
+  String get answer_delete_account4 {
+    return Intl.message(
+      'I have a privacy concern',
+      name: 'answer_delete_account4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Other`
+  String get answer_delete_account5 {
+    return Intl.message(
+      'Other',
+      name: 'answer_delete_account5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it.`
+  String get can_you_share {
+    return Intl.message(
+      'Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it.',
+      name: 'can_you_share',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your explanation.....`
+  String get your_explanation {
+    return Intl.message(
+      'Your explanation.....',
+      name: 'your_explanation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Deletion`
+  String get confirm_Deletion {
+    return Intl.message(
+      'Confirm Deletion',
+      name: 'confirm_Deletion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Map`
+  String get map {
+    return Intl.message(
+      'Map',
+      name: 'map',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hotel`
+  String get hotel {
+    return Intl.message(
+      'Hotel',
+      name: 'hotel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sort`
+  String get sort {
+    return Intl.message(
+      'Sort',
+      name: 'sort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Filter`
+  String get filter {
+    return Intl.message(
+      'Filter',
+      name: 'filter',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get home {
     return Intl.message(
@@ -695,16 +855,6 @@ class S {
     return Intl.message(
       'Offer',
       name: 'offer',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Hotel`
-  String get hotel {
-    return Intl.message(
-      'Hotel',
-      name: 'hotel',
       desc: '',
       args: [],
     );
