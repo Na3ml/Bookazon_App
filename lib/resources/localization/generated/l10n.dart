@@ -120,20 +120,20 @@ class S {
     );
   }
 
-  /// `enter your email`
+  /// `Enter your email`
   String get hint_email {
     return Intl.message(
-      'enter your email',
+      'Enter your email',
       name: 'hint_email',
       desc: '',
       args: [],
     );
   }
 
-  /// `enter your password`
+  /// `Enter your password`
   String get hint_password {
     return Intl.message(
-      'enter your password',
+      'Enter your password',
       name: 'hint_password',
       desc: '',
       args: [],
@@ -190,21 +190,41 @@ class S {
     );
   }
 
-  /// `UserName`
+  /// `User Name`
   String get username {
     return Intl.message(
-      'UserName',
+      'User Name',
       name: 'username',
       desc: '',
       args: [],
     );
   }
 
-  /// `enter your name`
+  /// ` Eenter your name`
   String get hint_username {
     return Intl.message(
-      'enter your name',
+      ' Eenter your name',
       name: 'hint_username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Name`
+  String get firstName {
+    return Intl.message(
+      'First Name',
+      name: 'firstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Name`
+  String get lastName {
+    return Intl.message(
+      'Last Name',
+      name: 'lastName',
       desc: '',
       args: [],
     );
