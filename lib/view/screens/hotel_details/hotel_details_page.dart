@@ -13,6 +13,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../data/models/facilite_model.dart';
 import '../../../resources/style/app_colors.dart';
+import '../../widgets/public_title_tile.dart';
 
 part 'components/facilite_container.dart';
 

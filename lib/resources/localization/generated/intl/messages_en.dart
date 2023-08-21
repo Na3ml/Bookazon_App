@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "acceptTermsErrorMessage": MessageLookupByLibrary.simpleMessage(
             "You have to accept terms of use and privacy policy before you sign up"),
         "adults": MessageLookupByLibrary.simpleMessage("Adults"),
+        "ages17": MessageLookupByLibrary.simpleMessage("Ages 0 - 17"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "answer_delete_account1": MessageLookupByLibrary.simpleMessage(
@@ -42,6 +43,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "can_you_share": MessageLookupByLibrary.simpleMessage(
             "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it."),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
+        "childrenAgesCheckout":
+            MessageLookupByLibrary.simpleMessage("Children’s age at check-out"),
+        "childrenAgesSubTitle": MessageLookupByLibrary.simpleMessage(
+            "Children’s ages will be used to find you the best match in beds, rooms, size, and special prices."),
         "confirm_Deletion":
             MessageLookupByLibrary.simpleMessage("Confirm Deletion"),
         "confirm_password":
@@ -140,10 +145,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "restaurant": MessageLookupByLibrary.simpleMessage("Restaurant"),
         "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
         "rooms": MessageLookupByLibrary.simpleMessage("Rooms"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "sections": MessageLookupByLibrary.simpleMessage("Sections"),
         "security": MessageLookupByLibrary.simpleMessage("Security"),
         "seeMore": MessageLookupByLibrary.simpleMessage("See More"),
+        "selectRoomsGuests":
+            MessageLookupByLibrary.simpleMessage("Select Rooms and Guests"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Signup"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),

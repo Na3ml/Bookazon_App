@@ -1,4 +1,10 @@
-part of '../screens/home/home_page.dart';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../resources/localization/generated/l10n.dart';
+import '../../resources/style/app_colors.dart';
+import 'public_text.dart';
 
 class PublicTitleTile extends StatelessWidget {
   final String title;
