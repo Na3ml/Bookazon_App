@@ -99,4 +99,8 @@ class ProfileCubit extends Cubit<ProfileState> {
     }
     return false;
   }
+
+  void logout(){
+    
+  }
 }

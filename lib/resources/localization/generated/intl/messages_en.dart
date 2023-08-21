@@ -42,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "booking": MessageLookupByLibrary.simpleMessage("Booking"),
         "can_you_share": MessageLookupByLibrary.simpleMessage(
             "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it."),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "childrenAgesCheckout":
             MessageLookupByLibrary.simpleMessage("Children’s age at check-out"),
@@ -95,6 +96,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "logoutWarning": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to Log out?"),
         "map": MessageLookupByLibrary.simpleMessage("Map"),
         "meetingRoom": MessageLookupByLibrary.simpleMessage("Meeting Room"),
         "message_error_email": MessageLookupByLibrary.simpleMessage(

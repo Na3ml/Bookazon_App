@@ -6,6 +6,7 @@ import 'package:bookazon/view/screens/signup/signup_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
+import '../../view/screens/edit_profile/edit_profile.dart';
 import '../../view/screens/home/home_page.dart';
 import '../../view/screens/hotel_details/hotel_details_page.dart';
 import '../../view/screens/layouts/layouts_page.dart';
