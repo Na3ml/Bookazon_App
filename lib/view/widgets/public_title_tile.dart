@@ -16,6 +16,7 @@ class PublicTitleTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 0),
       leading: PublicText(
         txt: title,
         size: 24.sp,
