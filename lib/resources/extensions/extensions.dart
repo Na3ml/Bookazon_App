@@ -61,7 +61,7 @@ extension ValidString on String {
   }
 
   bool isMobileNumberValid() {
-    return length >= 8;
+    return length >= 8 && length <= 14;
   }
 
   bool isNotEmpty() {

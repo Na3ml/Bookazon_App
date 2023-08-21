@@ -238,7 +238,7 @@ class _SignupPageState extends State<SignupPage> {
                           },
                         ),
                         21.ph,
-                        // phone 
+                        // phone
                         Align(
                           alignment: Alignment.centerLeft,
                           child: PublicText(
@@ -252,13 +252,12 @@ class _SignupPageState extends State<SignupPage> {
                           controller: _phoneController,
                           keyboardtype: TextInputType.number,
                           validator: (phone) {
-                            if (phone == null ||
-                                phone.isEmpty) {
+                            if (phone == null || phone.isEmpty) {
                               return S.of(context).enterPhoneNumber;
                             } else if (phone.isMobileNumberValid()) {
-                              return S.of(context).phoneNumberInvalid;
-                            } else {
                               return null;
+                            } else {
+                              return S.of(context).phoneNumberInvalid;
                             }
                           },
                         ),
@@ -271,6 +270,7 @@ class _SignupPageState extends State<SignupPage> {
                               builder: (context, state) {
                                 return Checkbox(
                                   value: cubit.acceptTerms,
+                                  activeColor: AppColors.orange,
                                   onChanged: (_) => cubit.changeAcceptTerms(),
                                 );
                               },
