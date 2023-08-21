@@ -1,4 +1,4 @@
-import 'package:bookazon/data/models/auth_requests_model.dart';
+import 'package:bookazon/data/models/requests/auth_requests_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
@@ -25,7 +25,8 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  late final TextEditingController _usernameController;
+  late final TextEditingController _firsttNameController;
+  late final TextEditingController _lastNameController;
   late final TextEditingController _emailController;
   late final TextEditingController _passwordController;
   late final TextEditingController _passwordConfirmController;
@@ -34,7 +35,8 @@ class _SignupPageState extends State<SignupPage> {
   @override
   void initState() {
     super.initState();
-    _usernameController = TextEditingController();
+    _firsttNameController = TextEditingController();
+    _lastNameController = TextEditingController();
     _emailController = TextEditingController();
     _passwordController = TextEditingController();
     _passwordConfirmController = TextEditingController();
@@ -42,7 +44,8 @@ class _SignupPageState extends State<SignupPage> {
 
   @override
   void dispose() {
-    _usernameController.dispose();
+    _firsttNameController.dispose();
+    _lastNameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
     _passwordConfirmController.dispose();
@@ -72,7 +75,7 @@ class _SignupPageState extends State<SignupPage> {
           } else if (state is LoginSuccessState) {
             Navigator.pushNamedAndRemoveUntil(
               context,
-              AppRoutes.homePage,
+              AppRoutes.home,
               (_) => false,
             );
           }
@@ -83,6 +86,8 @@ class _SignupPageState extends State<SignupPage> {
           return ModalProgressHUD(
             inAsyncCall: cubit.spinner,
             child: Scaffold(
+              backgroundColor: AppColors.white,
+              appBar: AppBar(),
               body: SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -116,28 +121,52 @@ class _SignupPageState extends State<SignupPage> {
                             fw: FontWeight.w500,
                           ),
                         ),
-                        PublicTextFormField(
-                          hint: S.of(context).hint_username,
-                          controller: _usernameController,
-                          validator: (username) {
-                            if (username == null || username.length < 3) {
-                              return S.of(context).message_null_username;
-                            } else {
-                              return null;
-                            }
-                          },
+                        Row(
+                          children: [
+                            Expanded(
+                              child: PublicTextFormField(
+                                hint: S.of(context).firstName,
+                                controller: _firsttNameController,
+                                keyboardtype: TextInputType.name,
+                                validator: (name) {
+                                  if (name == null || name.length < 3) {
+                                    return S.of(context).message_null_username;
+                                  } else {
+                                    return null;
+                                  }
+                                },
+                              ),
+                            ),
+                            10.pw,
+                            Expanded(
+                              child: PublicTextFormField(
+                                hint: S.of(context).lastName,
+                                controller: _lastNameController,
+                                keyboardtype: TextInputType.name,
+                                validator: (name) {
+                                  if (name == null || name.length < 3) {
+                                    return S.of(context).message_null_username;
+                                  } else {
+                                    return null;
+                                  }
+                                },
+                              ),
+                            ),
+                          ],
                         ),
                         21.ph,
                         //email
                         Align(
-                            alignment: Alignment.centerLeft,
-                            child: PublicText(
-                              txt: S.of(context).email,
-                              color: AppColors.black,
-                              fw: FontWeight.w500,
-                            )),
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).email,
+                            color: AppColors.black,
+                            fw: FontWeight.w500,
+                          ),
+                        ),
                         PublicTextFormField(
                           hint: S.of(context).hint_email,
+                          keyboardtype: TextInputType.emailAddress,
                           controller: _emailController,
                           validator: (email) {
                             if (email == null || email.isEmpty) {
@@ -152,15 +181,19 @@ class _SignupPageState extends State<SignupPage> {
                         21.ph,
                         //password
                         Align(
-                            alignment: Alignment.centerLeft,
-                            child: PublicText(
-                              txt: S.of(context).password,
-                              color: AppColors.black,
-                              fw: FontWeight.w500,
-                            )),
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).password,
+                            color: AppColors.black,
+                            fw: FontWeight.w500,
+                          ),
+                        ),
                         PublicTextFormField(
                           hint: S.of(context).hint_password,
                           controller: _passwordController,
+                          keyboardtype: TextInputType.visiblePassword,
+                          isPassword: true,
+                          showSuffixIcon: true,
                           validator: (password) {
                             if (password == null || password.isEmpty) {
                               return S.of(context).message_null_password;
@@ -176,15 +209,19 @@ class _SignupPageState extends State<SignupPage> {
                         21.ph,
                         //confirm password
                         Align(
-                            alignment: Alignment.centerLeft,
-                            child: PublicText(
-                              txt: S.of(context).confirm_password,
-                              color: AppColors.black,
-                              fw: FontWeight.w500,
-                            )),
+                          alignment: Alignment.centerLeft,
+                          child: PublicText(
+                            txt: S.of(context).confirm_password,
+                            color: AppColors.black,
+                            fw: FontWeight.w500,
+                          ),
+                        ),
                         PublicTextFormField(
                           hint: S.of(context).hint_password,
                           controller: _passwordConfirmController,
+                          keyboardtype: TextInputType.visiblePassword,
+                          isPassword: true,
+                          showSuffixIcon: true,
                           validator: (confirmPassword) {
                             if (confirmPassword == null ||
                                 confirmPassword.isEmpty) {
@@ -211,15 +248,17 @@ class _SignupPageState extends State<SignupPage> {
                               },
                             ),
                             InkWell(
-                              onTap: (){
-
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, AppRoutes.privacyPolicy);
                               },
                               child: PublicText(
                                 txt: S.of(context).privacy_policy,
                                 align: TextAlign.center,
                                 fw: FontWeight.w500,
                                 size: 14.sp,
-                                color: AppColors.purple,
+                                color: AppColors.orange,
+                                under: true,
                               ),
                             )
                           ],
@@ -232,7 +271,8 @@ class _SignupPageState extends State<SignupPage> {
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
                               final request = RegisterRequest(
-                                name: _usernameController.text,
+                                firstName: _firsttNameController.text,
+                                lastName: _lastNameController.text,
                                 email: _emailController.text,
                                 password: _passwordController.text,
                                 phone: "",
@@ -321,7 +361,7 @@ class _SignupPageState extends State<SignupPage> {
                                 txt: S.of(context).login,
                                 fw: FontWeight.bold,
                                 size: 13.sp,
-                                color: AppColors.purple,
+                                color: AppColors.orange,
                               ),
                             )
                           ],

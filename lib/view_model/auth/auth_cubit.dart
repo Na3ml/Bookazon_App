@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/error_handler/error_handler.dart';
-import '../../data/models/auth_requests_model.dart';
+import '../../data/models/requests/auth_requests_model.dart';
 import '../../resources/service_locator/service_locator.dart';
 
 part 'auth_state.dart';

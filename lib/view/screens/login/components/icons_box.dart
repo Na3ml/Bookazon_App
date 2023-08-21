@@ -18,7 +18,7 @@ class IconsBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(15.sp),
         boxShadow: [
           BoxShadow(
-            color: AppColors.grey.withOpacity(0.5),
+            color: AppColors.hintGrey.withOpacity(0.5),
             spreadRadius: 0.6,
             blurRadius: 4,
 

@@ -23,7 +23,7 @@ class PublicButton extends StatelessWidget {
     this.width,
     this.borderRadius = 12,
     this.titleColor = Colors.white,
-    this.backgroundColor = AppColors.purple,
+    this.backgroundColor = AppColors.orange,
     this.verticalpadding,
   }) : super(key: key);
 

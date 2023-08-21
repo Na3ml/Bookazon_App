@@ -1,4 +1,4 @@
-import 'package:bookazon/data/models/auth_requests_model.dart';
+import 'package:bookazon/data/models/requests/auth_requests_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
@@ -86,7 +86,7 @@ class EmailVerificationPage extends StatelessWidget {
                       29.ph,
                       PublicText(
                           txt: S.of(context).describe_email_verification,
-                          color: AppColors.grey,
+                          color: AppColors.hintGrey,
                           fw: FontWeight.w400,
                           align: TextAlign.center),
                       46.ph,

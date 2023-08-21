@@ -69,9 +69,11 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
             inAsyncCall: cubit.spinner,
             child: Scaffold(
               backgroundColor: Colors.white,
+              appBar: AppBar(),
               body: SingleChildScrollView(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 25.w, vertical: 20.h),
                   child: Form(
                     key: _formKey,
                     child: Column(
@@ -103,7 +105,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                         29.ph,
                         PublicText(
                             txt: S.of(context).describe_forget_password,
-                            color: AppColors.grey,
+                            color: AppColors.hintGrey,
                             fw: FontWeight.w400,
                             align: TextAlign.center),
                         41.ph,

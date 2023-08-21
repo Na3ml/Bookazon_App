@@ -27,7 +27,7 @@ class OnboardingItem extends StatelessWidget {
         16.ph,
         PublicText(
           txt: onBoarding.description,
-          color: AppColors.grey,
+          color: AppColors.hintGrey,
           size: 17.sp,
           align: TextAlign.center,
         ),

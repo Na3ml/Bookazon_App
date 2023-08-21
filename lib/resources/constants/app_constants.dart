@@ -1,6 +1,8 @@
 import 'package:bookazon/data/models/onboarding_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 
+import '../../data/models/facilite_model.dart';
+import '../../view/widgets/custom_containe_sections_services.dart';
 import '../localization/generated/l10n.dart';
 
 class AppConstants {
@@ -55,4 +57,41 @@ class AppConstants {
 
 
 
+  static List<ContainerServices> sections = [
+    ContainerServices(
+      nameAsset: Assets.imageSection1,
+      nameServices: S.current.hotel,
+    ),
+    ContainerServices(
+      nameAsset: Assets.imageSection2,
+      nameServices: S.current.appartment,
+    ),
+    ContainerServices(
+      nameAsset: Assets.imageSection3,
+      nameServices: S.current.glamping,
+    ),
+    ContainerServices(
+      nameAsset: Assets.imageSection4,
+      nameServices: S.current.villa,
+    ),
+  ];
+
+  static List<FaciliteModel> facilites = [
+    FaciliteModel(icon: Assets.iconSwimming, name: S.current.pool),
+    FaciliteModel(icon: Assets.iconWifi, name: S.current.wifi),
+    FaciliteModel(icon: Assets.iconRestaurant, name: S.current.restaurant),
+    FaciliteModel(icon: Assets.iconParking, name: S.current.parking),
+    FaciliteModel(icon: Assets.iconMeetingRoom, name: S.current.meetingRoom),
+    FaciliteModel(icon: Assets.iconElevator, name: S.current.elevator),
+    FaciliteModel(icon: Assets.iconGym, name: S.current.gym),
+    FaciliteModel(icon: Assets.iconOpen24, name: S.current.open24),
+  ];
+
+  static List<String> hotelImage = [
+    Assets.imageHotel1,
+    Assets.imageHotel2,
+    Assets.imageHotel3,
+    Assets.imageHotel4,
+    Assets.imageHotel5,
+  ];
 }
