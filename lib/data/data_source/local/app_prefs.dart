@@ -5,7 +5,7 @@ class PrefsKeys {
 
   static const String onboarding = "Onboarding";
   static const String login = "Login";
-  static const String userInfo = "userInfo";
+  static const String userInfo = "User Info";
 }
 
 class AppPrefs {
@@ -32,42 +32,5 @@ class AppPrefs {
 
   Future<void> logout() async {
     await _sharedPrefs.remove(PrefsKeys.login);
-  }
-
-  /// user info
-  Future<void> setUserInfo({
-    required String firstName,
-    required String lastName,
-    required String email,
-    required String phone,
-    String? gender,
-    String? address,
-    String? paymentCvv,
-  }) async {
-    await _sharedPrefs.setStringList(
-      PrefsKeys.userInfo,
-      [
-        firstName,
-        lastName,
-        email,
-        phone,
-        gender ?? "--",
-        address ?? "--",
-        paymentCvv ?? "--",
-      ],
-    );
-  }
-
-  List<String> getUserInfo() {
-    return _sharedPrefs.getStringList(PrefsKeys.userInfo) ??
-        [
-          "First Name",
-          "Last Name",
-          "Email Address",
-          "Phone Number",
-          "Gender",
-          "Address",
-          "Payment CVV",
-        ];
   }
 }

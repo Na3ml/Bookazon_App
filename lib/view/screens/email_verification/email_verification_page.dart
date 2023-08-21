@@ -10,14 +10,12 @@ import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/style.dart';
 
 import '../../../resources/router/app_router.dart';
 import '../../widgets/public_snack_bar.dart';
 
-// ignore: must_be_immutable
 class EmailVerificationPage extends StatelessWidget {
   final String email;
   const EmailVerificationPage({super.key, required this.email});

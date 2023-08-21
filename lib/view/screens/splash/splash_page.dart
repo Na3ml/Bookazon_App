@@ -4,7 +4,6 @@ import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
-
 import 'package:bookazon/view/screens/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

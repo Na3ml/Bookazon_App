@@ -25,8 +25,7 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  late final TextEditingController _firsttNameController;
-  late final TextEditingController _lastNameController;
+  late final TextEditingController _usernameController;
   late final TextEditingController _emailController;
   late final TextEditingController _passwordController;
   late final TextEditingController _passwordConfirmController;
@@ -35,8 +34,7 @@ class _SignupPageState extends State<SignupPage> {
   @override
   void initState() {
     super.initState();
-    _firsttNameController = TextEditingController();
-    _lastNameController = TextEditingController();
+    _usernameController = TextEditingController();
     _emailController = TextEditingController();
     _passwordController = TextEditingController();
     _passwordConfirmController = TextEditingController();
@@ -44,8 +42,7 @@ class _SignupPageState extends State<SignupPage> {
 
   @override
   void dispose() {
-    _firsttNameController.dispose();
-    _lastNameController.dispose();
+    _usernameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
     _passwordConfirmController.dispose();
@@ -75,7 +72,7 @@ class _SignupPageState extends State<SignupPage> {
           } else if (state is LoginSuccessState) {
             Navigator.pushNamedAndRemoveUntil(
               context,
-              AppRoutes.home,
+              AppRoutes.homePage,
               (_) => false,
             );
           }
@@ -121,49 +118,27 @@ class _SignupPageState extends State<SignupPage> {
                             fw: FontWeight.w500,
                           ),
                         ),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: PublicTextFormField(
-                                hint: S.of(context).firstName,
-                                controller: _firsttNameController,
-                                keyboardtype: TextInputType.name,
-                                validator: (name) {
-                                  if (name == null || name.length < 3) {
-                                    return S.of(context).message_null_username;
-                                  } else {
-                                    return null;
-                                  }
-                                },
-                              ),
-                            ),
-                            10.pw,
-                            Expanded(
-                              child: PublicTextFormField(
-                                hint: S.of(context).lastName,
-                                controller: _lastNameController,
-                                keyboardtype: TextInputType.name,
-                                validator: (name) {
-                                  if (name == null || name.length < 3) {
-                                    return S.of(context).message_null_username;
-                                  } else {
-                                    return null;
-                                  }
-                                },
-                              ),
-                            ),
-                          ],
+                        PublicTextFormField(
+                          hint: S.of(context).hint_username,
+                          controller: _usernameController,
+                          keyboardtype: TextInputType.name,
+                          validator: (username) {
+                            if (username == null || username.length < 3) {
+                              return S.of(context).message_null_username;
+                            } else {
+                              return null;
+                            }
+                          },
                         ),
                         21.ph,
                         //email
                         Align(
-                          alignment: Alignment.centerLeft,
-                          child: PublicText(
-                            txt: S.of(context).email,
-                            color: AppColors.black,
-                            fw: FontWeight.w500,
-                          ),
-                        ),
+                            alignment: Alignment.centerLeft,
+                            child: PublicText(
+                              txt: S.of(context).email,
+                              color: AppColors.black,
+                              fw: FontWeight.w500,
+                            )),
                         PublicTextFormField(
                           hint: S.of(context).hint_email,
                           keyboardtype: TextInputType.emailAddress,
@@ -249,8 +224,7 @@ class _SignupPageState extends State<SignupPage> {
                             ),
                             InkWell(
                               onTap: () {
-                                Navigator.pushNamed(
-                                    context, AppRoutes.privacyPolicy);
+                                Navigator.pushNamed(context, AppRoutes.privacyPolicy);
                               },
                               child: PublicText(
                                 txt: S.of(context).privacy_policy,
@@ -271,8 +245,7 @@ class _SignupPageState extends State<SignupPage> {
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
                               final request = RegisterRequest(
-                                firstName: _firsttNameController.text,
-                                lastName: _lastNameController.text,
+                                name: _usernameController.text,
                                 email: _emailController.text,
                                 password: _passwordController.text,
                                 phone: "",

@@ -1,9 +1,5 @@
-import 'package:bookazon/view/screens/edit_profile/edit_profile_page.dart';
 import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
 import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
-import 'package:bookazon/view/screens/home/home_page.dart';
-import 'package:bookazon/view/screens/hotel_details/hotel_details_page.dart';
-import 'package:bookazon/view/screens/layouts/layouts_page.dart';
 import 'package:bookazon/view/screens/onboarding/onboarding_page.dart';
 import 'package:bookazon/view/screens/privacy_policy/privacy_policy_page.dart';
 import 'package:bookazon/view/screens/signup/signup_page.dart';
@@ -30,10 +26,7 @@ class AppRoutes {
   static const String privacyPolicy = "privacy password";
 
   /// main pages
-  static const String layouts = "layouts";
-  static const String home = "home";
-  static const String hotelDetails = "hotel details";
-  static const String editProfile = "edit profile";
+  static const String homePage = "home page";
 }
 
 class RouteGenerate {
@@ -80,22 +73,6 @@ class RouteGenerate {
         );
 
       /// Main
-     case AppRoutes.layouts:
-        return MaterialPageRoute(
-          builder: (_) => const LayoutsPage(),
-        );
-     case AppRoutes.home:
-        return MaterialPageRoute(
-          builder: (_) => const HomePage(),
-        );
-     case AppRoutes.hotelDetails:
-        return MaterialPageRoute(
-          builder: (_) => const HotelDetailsPage(),
-        );
-     case AppRoutes.editProfile:
-        return MaterialPageRoute(
-          builder: (_) => const EditProfilePage(),
-        );
       default:
         return MaterialPageRoute(
             builder: (_) => _undfinedPage(route: routeSettings.name));

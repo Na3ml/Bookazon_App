@@ -15,7 +15,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-
 import '../../widgets/public_snack_bar.dart';
 
 class LoginPage extends StatefulWidget {
@@ -65,14 +64,13 @@ class _LoginPageState extends State<LoginPage> {
             MySnackBar.error(
                 message: state.error, color: Colors.red, context: context);
           } else if (state is LoginSuccessState) {
-            Navigator.pushReplacementNamed(context, AppRoutes.home);
+            Navigator.pushReplacementNamed(context, AppRoutes.homePage);
           }
         }
       },
       builder: (context, state) {
         if (state is! LoginSuccessState) {
-          return 
-          ModalProgressHUD(
+          return ModalProgressHUD(
             inAsyncCall: cubit.spinner,
             child: Scaffold(
               backgroundColor: AppColors.white,

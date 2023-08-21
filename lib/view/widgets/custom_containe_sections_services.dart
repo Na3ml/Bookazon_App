@@ -1,8 +1,10 @@
+import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: must_be_immutable
 class ContainerServices extends StatefulWidget {
   final String nameAsset;
   final String nameServices;
@@ -30,7 +32,7 @@ class _ContainerServicesState extends State<ContainerServices> {
             blurRadius: 1,
             spreadRadius: 0.5,
             offset: Offset(0.0, 3),
-          ),
+          )
         ],
       ),
       child: Column(

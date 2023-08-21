@@ -9,15 +9,13 @@ class LoginRequest {
 }
 
 class RegisterRequest {
-  final String firstName;
-  final String lastName;
+  final String name;
   final String email;
   final String password;
   final String phone;
 
   const RegisterRequest({
-    required this.firstName,
-    required this.lastName,
+    required this.name,
     required this.email,
     required this.password,
     required this.phone,
