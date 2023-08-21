@@ -32,6 +32,7 @@ class AppRoutes {
   static const String layouts = "layouts";
   static const String homePage = "home page";
   static const String hotelDetails = "hotel details";
+  static const String editProfile = "edit profile";
 }
 
 class RouteGenerate {
@@ -78,17 +79,21 @@ class RouteGenerate {
         );
 
       /// Main
-     case AppRoutes.layouts:
+      case AppRoutes.layouts:
         return MaterialPageRoute(
           builder: (_) => const LayoutsPage(),
         );
-     case AppRoutes.homePage:
+      case AppRoutes.homePage:
         return MaterialPageRoute(
           builder: (_) => const HomePage(),
         );
-     case AppRoutes.hotelDetails:
+      case AppRoutes.hotelDetails:
         return MaterialPageRoute(
           builder: (_) => const HotelDetailsPage(),
+        );
+      case AppRoutes.editProfile:
+        return MaterialPageRoute(
+          builder: (_) => const EditProfilePage(),
         );
       default:
         return MaterialPageRoute(

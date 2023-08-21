@@ -171,6 +171,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_signup":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
+        "update": MessageLookupByLibrary.simpleMessage("Update"),
         "username": MessageLookupByLibrary.simpleMessage("User Name"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
         "villa": MessageLookupByLibrary.simpleMessage("Villa"),
