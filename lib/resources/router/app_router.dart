@@ -1,3 +1,4 @@
+import 'package:bookazon/view/screens/delete_account/confirm_delete_account_page.dart';
 import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
 import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
 import 'package:bookazon/view/screens/onboarding/onboarding_page.dart';
@@ -36,6 +37,7 @@ class AppRoutes {
   static const String hotelDetails = "hotel details";
   static const String editProfile = "edit profile";
   static const String deleteAccount = "delete account";
+  static const String confirmDeleteAccount = "confirm delete account";
 }
 
 class RouteGenerate {
@@ -102,6 +104,10 @@ class RouteGenerate {
       case AppRoutes.deleteAccount:
         return MaterialPageRoute(
           builder: (_) => const DeleteAccountPage(),
+        );
+      case AppRoutes.confirmDeleteAccount:
+        return MaterialPageRoute(
+          builder: (_) => const ConfirmDeleteAccount(),
         );
       default:
         return MaterialPageRoute(

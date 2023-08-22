@@ -12,6 +12,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../view_model/auth/auth_cubit.dart';
+
 part 'components/logout_bottom_sheet.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -50,13 +52,13 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               16.ph,
               PublicText(
-                txt: "Kezia Ajibastin",
+                txt: "${cubit.getUserInfo().firstName} ${cubit.getUserInfo().lastName}",
                 size: 24.sp,
                 fw: FontWeight.w600,
               ),
               8.ph,
               PublicText(
-                txt: "ezia_ajibastin@domain.com",
+                txt: cubit.getUserInfo().email,
                 size: 14.sp,
                 fw: FontWeight.w500,
               ),

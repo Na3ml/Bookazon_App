@@ -3,7 +3,7 @@ import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../booking/booking_screen.dart';
+import '../booking/booking_page.dart';
 import '../notifications/notifications_page.dart';
 import '../home/home_page.dart';
 import '../profile/profile_page.dart';
@@ -38,7 +38,7 @@ class _LayoutsPageState extends State<LayoutsPage> {
         type: BottomNavigationBarType.fixed,
         currentIndex: selectedIndex,
         backgroundColor: Colors.white,
-        selectedItemColor: AppColors.orange,
+        selectedItemColor: AppColors.purple,
         unselectedItemColor: AppColors.unSelectedGrey,
         iconSize: 35.w,
         selectedFontSize: 11.sp,

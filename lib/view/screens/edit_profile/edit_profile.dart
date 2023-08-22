@@ -94,6 +94,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     children: [
                       Expanded(
                         child: PublicTextFormField(
+                          label: S.of(context).firstName,
                           hint: booker.firstName,
                           controller: cubit.firstNameController,
                           keyboardtype: TextInputType.name,
@@ -111,6 +112,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                       10.pw,
                       Expanded(
                         child: PublicTextFormField(
+                          label: S.of(context).lastName,
                           hint: booker.lastName,
                           controller: cubit.lastNameController,
                           keyboardtype: TextInputType.name,
@@ -129,6 +131,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   ),
                   20.ph,
                   PublicTextFormField(
+                    label: S.of(context).email,
                     hint: booker.email,
                     keyboardtype: TextInputType.emailAddress,
                     controller: cubit.emailController,
@@ -144,7 +147,8 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   ),
                   20.ph,
                   PublicTextFormField(
-                    hint: booker.phoneNumber ?? "Phone Number",
+                    label: S.of(context).phoneNumber,
+                    hint: booker.phoneNumber ?? "",
                     keyboardtype: TextInputType.phone,
                     controller: cubit.phoneController,
                     validator: (phone) {
@@ -159,7 +163,8 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   ),
                   20.ph,
                   PublicTextFormField(
-                    hint: booker.address ?? "Address",
+                    label: S.of(context).address,
+                    hint: booker.address ?? "",
                     keyboardtype: TextInputType.text,
                     controller: cubit.addressController,
                     validator: (address) {
@@ -174,7 +179,8 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   ),
                   20.ph,
                   PublicTextFormField(
-                    hint: booker.paymentCvv ?? "Payment CVV",
+                    label: S.of(context).paymentCvv,
+                    hint: booker.paymentCvv ?? "",
                     keyboardtype: TextInputType.number,
                     controller: cubit.paymentController,
                     validator: (cvv) {

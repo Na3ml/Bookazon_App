@@ -6,6 +6,7 @@ import '../../resources/style/app_colors.dart';
 
 class PublicTextFormField extends StatefulWidget {
   final String hint;
+  final String? label;
   final FormFieldValidator<String>? validator;
   final TextEditingController? controller;
   final TextInputType keyboardtype;
@@ -27,8 +28,9 @@ class PublicTextFormField extends StatefulWidget {
   const PublicTextFormField({
     Key? key,
     required this.hint,
-    this.controller,
     required this.validator,
+    this.label,
+    this.controller,
     this.isPassword = false,
     this.showSuffixIcon = false,
     this.showprefixIcon = false,
@@ -71,6 +73,8 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
           fillColor: AppColors.textFieldWhite,
           iconColor: AppColors.purple,
           filled: true,
+          labelText: widget.label,
+          labelStyle: TextStyle(color: AppColors.purple, fontSize: 18.sp),
           hintText: widget.hint,
           hintStyle: TextStyle(color: AppColors.hintGrey, fontSize: 15.sp),
           enabledBorder: OutlineInputBorder(

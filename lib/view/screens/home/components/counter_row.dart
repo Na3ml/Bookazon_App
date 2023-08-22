@@ -48,7 +48,7 @@ class CounterRow extends StatelessWidget {
         const Spacer(),
         FloatingActionButton.small(
           onPressed: decrement,
-          backgroundColor: AppColors.orange,
+          backgroundColor: AppColors.purple,
           child: const Icon(Icons.remove),
         ),
         20.pw,

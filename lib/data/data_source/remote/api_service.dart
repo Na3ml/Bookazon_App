@@ -63,11 +63,15 @@ class ApiService {
     required String endPoint,
     required Map<String, dynamic> body,
     Map<String, dynamic>? query,
+    String? token,
   }) async {
     return await _dio.post(
       endPoint,
       data: body,
       queryParameters: query,
+      options: Options(
+        headers: {"Authorization": "Bearer $token"},
+      ),
     );
   }
 }
