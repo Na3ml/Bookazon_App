@@ -29,7 +29,7 @@ class ReviewCard extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 25.w,
-                child: Image.asset(Assets.imageProfile),
+                backgroundImage: const AssetImage(Assets.imageProfile,),
               ),
               10.pw,
               Column(

@@ -17,7 +17,12 @@ import '../../widgets/public_snack_bar.dart';
 
 class ResetPasswordPage extends StatefulWidget {
   final String email;
-  const ResetPasswordPage({super.key, required this.email});
+  final String otp;
+  const ResetPasswordPage({
+    super.key,
+    required this.email,
+    required this.otp,
+  });
 
   @override
   State<ResetPasswordPage> createState() => _ResetPasswordPageState();
@@ -193,7 +198,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                                 final request = ResetPasswordRequest(
                                   email: widget.email,
                                   password: newPasswordController.text,
-                                  token: "",
+                                  token: widget.otp,
                                 );
                                 // To dismiss keyboard
                                 FocusScope.of(context).unfocus();

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bookazon/data/data_source/local/app_prefs.dart';
 import 'package:bookazon/data/repository/auth_repository.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
@@ -51,6 +53,7 @@ class AuthCubit extends Cubit<AuthState> {
     emit(LoginLoadingState());
     try {
       final response = await _repo.login(request);
+      log("here");
       if (response.status == 1) {
         appPrefs.setToken(response.data!.token);
         final user = response.data!.user;
@@ -64,10 +67,12 @@ class AuthCubit extends Cubit<AuthState> {
           appPrefs.setUserLoggedIn();
         }
         emit(LoginSuccessState());
+      } else {
+        emit(AuthnErrorState("Email or Passowrd is worng"));
       }
     } catch (e) {
       if (e is CustomException) {
-        emit(AuthnErrorState(e.message));
+        emit(AuthnErrorState("cubit Error ${e.message}"));
       }
     }
   }
@@ -104,7 +109,8 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> forgotPassword(String email) async {
     emit(ForgotPasswordLoadingState());
     try {
-      if (await _repo.forgotPassword(email)) {
+      final response = await _repo.forgotPassword(email);
+      if (response.status == 1) {
         emit(ForgotPasswordSuccessState());
       }
     } catch (e) {
@@ -115,11 +121,12 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   String otp = '';
-  Future<void> verifyEmail(VerifyEmailRequest request) async {
-    if (request.otp.length == 4) {
+  Future<void> verifyEmail() async {
+    if (otp.length == 6) {
       emit(VerifyEmailLoadingState());
       try {
-        if (await _repo.verifyEmail(request)) {
+        final response = await _repo.verifyEmail(otp);
+        if (response.status == 1) {
           emit(VerifyEmailSuccessState());
         }
       } catch (e) {
@@ -128,15 +135,16 @@ class AuthCubit extends Cubit<AuthState> {
         }
       }
     } else {
-      emit(AuthnErrorState("Enter 4-digits Code"));
+      emit(AuthnErrorState("Enter 6-digits Code"));
     }
   }
 
   Future<void> resetPassword(ResetPasswordRequest request) async {
-    emit(VerifyEmailLoadingState());
+    emit(ResetPasswordLoadingState());
     try {
-      if (await _repo.resetPassword(request)) {
-        emit(VerifyEmailSuccessState());
+      final respones = await _repo.resetPassword(request);
+      if (respones.status == 1) {
+        emit(ResetPasswordSuccessState());
       }
     } catch (e) {
       if (e is CustomException) {

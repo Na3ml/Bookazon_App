@@ -6,6 +6,7 @@ import 'package:bookazon/view/screens/signup/signup_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
+import '../../view/screens/delete_account/delete_account_page.dart';
 import '../../view/screens/edit_profile/edit_profile.dart';
 import '../../view/screens/home/home_page.dart';
 import '../../view/screens/hotel_details/hotel_details_page.dart';
@@ -34,6 +35,7 @@ class AppRoutes {
   static const String homePage = "home page";
   static const String hotelDetails = "hotel details";
   static const String editProfile = "edit profile";
+  static const String deleteAccount = "delete account";
 }
 
 class RouteGenerate {
@@ -71,7 +73,8 @@ class RouteGenerate {
       case AppRoutes.resetPassword:
         return MaterialPageRoute(
           builder: (_) => ResetPasswordPage(
-            email: routeSettings.arguments as String,
+            email: (routeSettings.arguments as List<String>)[0],
+            otp: (routeSettings.arguments as List<String>)[1],
           ),
         );
       case AppRoutes.privacyPolicy:
@@ -95,6 +98,10 @@ class RouteGenerate {
       case AppRoutes.editProfile:
         return MaterialPageRoute(
           builder: (_) => const EditProfilePage(),
+        );
+      case AppRoutes.deleteAccount:
+        return MaterialPageRoute(
+          builder: (_) => const DeleteAccountPage(),
         );
       default:
         return MaterialPageRoute(

@@ -1,4 +1,3 @@
-
 class AuthResponse {
   final int status;
   final String message;
@@ -11,11 +10,14 @@ class AuthResponse {
   });
 
   factory AuthResponse.fromJson(Map<String, dynamic> json) {
-    return AuthResponse(
-      status: json['status'],
-      message: json['message'],
-      data: json['status'] == 1 ? Data.fromMap(json['data']) : null,
-    );
+    int status = json['status'];
+    Data? data;
+    if (status == 1) {
+      if (json['data'] is Map<String, dynamic>) {
+        data = Data.fromMap(json['data']);
+      }
+    }
+    return AuthResponse(status: status, message: json['message'], data: data);
   }
 }
 
@@ -54,10 +56,10 @@ class User {
   factory User.fromMap(Map<String, dynamic> map) {
     return User(
       id: map['id'] as int,
-      firstName: map['firstName'] as String,
-      lastName: map['lastName'] as String,
+      firstName: map['first_name'] as String,
+      lastName: map['last_name'] as String,
       email: map['email'] as String,
-      phoneNumber: map['phoneNumber'] as String,
+      phoneNumber: map['phone_number'] as String,
     );
   }
 }

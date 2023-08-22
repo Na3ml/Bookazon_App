@@ -75,10 +75,10 @@ class _SignupPageState extends State<SignupPage> {
           if (state is AuthnErrorState) {
             MySnackBar.error(
                 message: state.error, color: Colors.red, context: context);
-          } else if (state is LoginSuccessState) {
+          } else if (state is RegisterSuccessState) {
             Navigator.pushNamedAndRemoveUntil(
               context,
-              AppRoutes.homePage,
+              AppRoutes.layouts,
               (_) => false,
             );
           }
@@ -303,7 +303,7 @@ class _SignupPageState extends State<SignupPage> {
                                 lastName: _lastNameController.text,
                                 email: _emailController.text,
                                 password: _passwordController.text,
-                                phone: "",
+                                phone: _phoneController.text,
                               );
                               // To dismiss keyboard
                               FocusScope.of(context).unfocus();
