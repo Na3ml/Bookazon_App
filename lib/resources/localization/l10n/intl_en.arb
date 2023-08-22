@@ -124,5 +124,6 @@
     "cancelBooking": "Cancel Booking",
     "viewTicket" : "View Ticket",
     "completedBookingTitle": "You have completed it !",
-    "canceledBookingTitle": "You canceled this booking"
+    "canceledBookingTitle": "You canceled this booking",
+    "other": "Other"
 }

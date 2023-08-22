@@ -139,6 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ongoing": MessageLookupByLibrary.simpleMessage("Ongoing"),
         "open24": MessageLookupByLibrary.simpleMessage("24-hours open"),
         "or": MessageLookupByLibrary.simpleMessage("or sign in with"),
+        "other": MessageLookupByLibrary.simpleMessage("Other"),
         "paid": MessageLookupByLibrary.simpleMessage("Paid"),
         "parking": MessageLookupByLibrary.simpleMessage("Parking"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),

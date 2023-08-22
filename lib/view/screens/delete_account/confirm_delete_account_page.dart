@@ -1,8 +1,10 @@
 import 'package:bookazon/resources/extensions/extensions.dart';
+import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/view/widgets/public_text_form_field.dart';
+import 'package:bookazon/view_model/delete_account/delete_account_cubit.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,11 +18,13 @@ class ConfirmDeleteAccount extends StatefulWidget {
 
 class _ConfirmDeleteAccountState extends State<ConfirmDeleteAccount> {
   late final TextEditingController _explanationController;
+  late final DeleteAccountCubit cubit;
 
   @override
   void initState() {
     super.initState();
     _explanationController = TextEditingController();
+    cubit = DeleteAccountCubit.get(context);
   }
 
   @override
@@ -45,13 +49,14 @@ class _ConfirmDeleteAccountState extends State<ConfirmDeleteAccount> {
             children: [
               55.ph,
               SizedBox(
-                  height: 150.h,
-                  child: PublicText(
-                    txt: S.of(context).can_you_share,
-                    size: 18.sp,
-                    fw: FontWeight.w500,
-                    max: 7,
-                  )),
+                height: 150.h,
+                child: PublicText(
+                  txt: S.of(context).can_you_share,
+                  size: 18.sp,
+                  fw: FontWeight.w500,
+                  max: 7,
+                ),
+              ),
               21.ph,
               PublicTextFormField(
                 hint: S.of(context).your_explanation,
@@ -62,7 +67,14 @@ class _ConfirmDeleteAccountState extends State<ConfirmDeleteAccount> {
               86.ph,
               PublicButton(
                 title: S.of(context).confirm_Deletion,
-                onPressed: () {},
+                onPressed: () {
+                  cubit.confirmDelete();
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    AppRoutes.login,
+                    (route) => false,
+                  );
+                },
               )
             ],
           ),

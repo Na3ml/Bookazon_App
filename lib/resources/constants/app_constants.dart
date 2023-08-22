@@ -45,7 +45,7 @@ class AppConstants {
     Assets.imageHotel5,
   ];
 
-  static List listAnswer(context) {
+  static List<String> listAnswer(context) {
     return [
       S.of(context).answer_delete_account1,
       S.of(context).answer_delete_account2,
@@ -55,19 +55,6 @@ class AppConstants {
     ];
   }
 
-  static get select1 => false;
-  static get select2 => false;
-  static get select3 => false;
-  static get select4 => false;
-  static get select5 => false;
-
-  static List<bool> listSelect = [
-    select1,
-    select2,
-    select3,
-    select4,
-    select5,
-  ];
 
   static List<ContainerServices> sections = [
     ContainerServices(
