@@ -117,13 +117,15 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
               ListTile(
+                onTap: () =>
+                    Navigator.pushNamed(context, AppRoutes.deleteAccount),
                 leading: const Icon(Icons.delete_outline),
                 title: PublicText(
                   txt: S.of(context).deleteAccount,
                   color: AppColors.subTitleBlack,
                 ),
               ),
-              InkWell(
+              ListTile(
                 onTap: () {
                   showModalBottomSheet(
                     context: context,
@@ -133,15 +135,13 @@ class _ProfilePageState extends State<ProfilePage> {
                     },
                   );
                 },
-                child: ListTile(
-                  leading: const Icon(
-                    Icons.logout,
-                    color: AppColors.red,
-                  ),
-                  title: Text(
-                    S.of(context).logout,
-                    style: const TextStyle(color: AppColors.red),
-                  ),
+                leading: const Icon(
+                  Icons.logout,
+                  color: AppColors.red,
+                ),
+                title: Text(
+                  S.of(context).logout,
+                  style: const TextStyle(color: AppColors.red),
                 ),
               ),
             ],

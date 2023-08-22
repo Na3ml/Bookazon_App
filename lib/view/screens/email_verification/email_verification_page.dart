@@ -1,4 +1,3 @@
-import 'package:bookazon/data/models/requests/auth_requests_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
@@ -44,7 +43,7 @@ class EmailVerificationPage extends StatelessWidget {
             Navigator.pushNamed(
               context,
               AppRoutes.resetPassword,
-              arguments: email,
+              arguments: [email, cubit.otp],
             );
           }
         }
@@ -92,15 +91,18 @@ class EmailVerificationPage extends StatelessWidget {
                       46.ph,
                       //otp text field
                       OTPTextField(
-                        length: 4,
-                        width: 364.w,
-                        fieldWidth: 82.w,
+                        length: 6,
+                        width: double.infinity,
+                        fieldWidth: 50.w,
                         style: TextStyle(
-                            fontSize: 35.sp, fontWeight: FontWeight.w400),
+                          fontSize: 35.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
                         textFieldAlignment: MainAxisAlignment.spaceAround,
                         fieldStyle: FieldStyle.box,
                         onChanged: (otp) {
                           cubit.otp = otp;
+                          
                         },
                       ),
                       44.ph,
@@ -109,11 +111,8 @@ class EmailVerificationPage extends StatelessWidget {
                         title: S.of(context).verify,
                         width: 350.w,
                         onPressed: () {
-                          final request = VerifyEmailRequest(
-                            email: email,
-                            otp: cubit.otp,
-                          );
-                          cubit.verifyEmail(request);
+                          print(cubit.otp);
+                          cubit.verifyEmail();
                         },
                       ),
                     ],

@@ -1,34 +1,30 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-const String baseUrl = "https://bookazon.tadafoq.com/api";
+const String baseUrl = "https://bookazon.tadafoq.com/api/";
 
 class EndPoints {
   EndPoints._();
 
-  static const String login = "/auth/login";
-  static const String register = "/auth/register";
-  static const String logout = "/auth/logout";
-  static const String userProfile = "/auth/user-profile";
-  static const String search = "/search";
-  static const String offer = "/offer";
-  static const String popular = "/popular";
-  
-}
+  static const String login = "auth/login";
+  static const String register = "auth/register";
+  static const String forgetPassword = "auth/reset-password";
+  static const String checkOtp = "auth/check-token";
+  static const String updatePassword = "auth/update-password";
+  static const String userProfile = "auth/user-profile";
+  static const String logout = "auth/logout";
 
-class Headers {
-  Headers._();
-
-  static const String contentType = "content-type";
-  static const String applicationJson = "application/json";
-  static const String accept = "accept";
+  static const String search = "search";
+  static const String offer = "offer";
+  static const String popular = "popular";
 }
 
 class ApiService {
   final Dio _dio;
 
   static Map<String, String> headers = {
-    Headers.contentType: Headers.applicationJson,
-    Headers.accept: Headers.applicationJson,
+    // "Content-Type": "application/json",
   };
 
   ApiService()
@@ -40,7 +36,18 @@ class ApiService {
             connectTimeout: const Duration(milliseconds: 3600),
             receiveTimeout: const Duration(milliseconds: 3600),
           ),
-        );
+        ) {
+    if (!kReleaseMode) {
+      _dio.interceptors.add(
+        // Pretty Dio logger is a Dio interceptor that logs network calls in a pretty, easy to read format.
+        PrettyDioLogger(
+          requestHeader: true,
+          requestBody: true,
+          responseHeader: true,
+        ),
+      );
+    }
+  }
 
   Future<Response> getData({
     required String endPoint,

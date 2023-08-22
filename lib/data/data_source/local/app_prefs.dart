@@ -6,6 +6,7 @@ class PrefsKeys {
   static const String onboarding = "Onboarding";
   static const String login = "Login";
   static const String userInfo = "userInfo";
+  static const String token = "token";
 }
 
 class AppPrefs {
@@ -69,5 +70,18 @@ class AppPrefs {
           "Address",
           "Payment CVV",
         ];
+  }
+
+  /// token
+  Future<void> setToken(String token) async {
+    await _sharedPrefs.setString(PrefsKeys.token, token);
+  }
+
+  String? getToken() {
+    return _sharedPrefs.getString(PrefsKeys.token);
+  }
+
+  Future<void> removeToken() async {
+    await _sharedPrefs.remove(PrefsKeys.token);
   }
 }
