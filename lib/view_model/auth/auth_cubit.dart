@@ -50,7 +50,16 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> login(LoginRequest request) async {
     emit(LoginLoadingState());
     try {
-      if (await _repo.login(request)) {
+      final response = await _repo.login(request);
+      if (response.status == 1) {
+        appPrefs.setToken(response.data!.token);
+        final user = response.data!.user;
+        appPrefs.setUserInfo(
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+          phone: user.phoneNumber,
+        );
         if (rememberMe) {
           appPrefs.setUserLoggedIn();
         }
@@ -69,8 +78,9 @@ class AuthCubit extends Cubit<AuthState> {
       try {
         final response = await _repo.register(request);
         if (response.status == 1) {
-          final user = response.data!.user;
           appPrefs.setUserLoggedIn();
+          appPrefs.setToken(response.data!.token);
+          final user = response.data!.user;
           appPrefs.setUserInfo(
             firstName: user.firstName,
             lastName: user.lastName,

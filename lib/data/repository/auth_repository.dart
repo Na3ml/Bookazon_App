@@ -6,7 +6,7 @@ import '../error_handler/error_handler.dart';
 import '../models/requests/auth_requests_model.dart';
 
 abstract class AuthRepository {
-  Future<bool> login(LoginRequest request);
+  Future<AuthResponse> login(LoginRequest request);
   Future<AuthResponse> register(RegisterRequest request);
   Future<bool> forgotPassword(String email);
   Future<bool> verifyEmail(VerifyEmailRequest request);
@@ -24,7 +24,7 @@ class AuthRepositoryImpl extends AuthRepository {
         _apiService = apiService;
 
   @override
-  Future<bool> login(LoginRequest request) async {
+  Future<AuthResponse> login(LoginRequest request) async {
     if (await _networkInfo.isConnected) {
       try {
         var response = await _apiService.postData(
@@ -34,8 +34,7 @@ class AuthRepositoryImpl extends AuthRepository {
             "password": request.password,
           },
         );
-        var responseModel = AuthResponse.fromJson(response.data);
-        return responseModel.status == 1;
+        return AuthResponse.fromJson(response.data);
       } catch (e) {
         throw CustomException(e.toString());
       }

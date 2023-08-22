@@ -1,17 +1,17 @@
 import 'package:dio/dio.dart';
 
-const String baseUrl = "https://bookazon.tadafoq.com/api";
+const String baseUrl = "https://bookazon.tadafoq.com/api/";
 
 class EndPoints {
   EndPoints._();
 
-  static const String login = "/auth/login";
-  static const String register = "/auth/register";
-  static const String logout = "/auth/logout";
-  static const String userProfile = "/auth/user-profile";
-  static const String search = "/search";
-  static const String offer = "/offer";
-  static const String popular = "/popular";
+  static const String login = "auth/login";
+  static const String register = "auth/register";
+  static const String logout = "auth/logout";
+  static const String userProfile = "auth/user-profile";
+  static const String search = "search";
+  static const String offer = "offer";
+  static const String popular = "popular";
   
 }
 

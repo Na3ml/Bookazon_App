@@ -23,6 +23,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'data/data_source/local/app_prefs.dart';
 import 'firebase_options.dart';
@@ -73,24 +74,24 @@ class MyApp extends StatelessWidget {
             ),
           ],
           child: MaterialApp(
-            debugShowCheckedModeBanner: false,
-            locale: const Locale("en"),
-            localizationsDelegates: const [
-              S.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: S.delegate.supportedLocales,
-            scrollBehavior: ScrollConfiguration.of(context).copyWith(
-              physics: const BouncingScrollPhysics(),
-            ),
-            title: 'Bookazon',
-            theme: AppTheme.getLight(),
-            onGenerateRoute: RouteGenerate.getRoute,
-            home: const SplashPage()
-            // home: const LayoutsPage(),
-          ),
+              debugShowCheckedModeBanner: false,
+              locale: const Locale("en"),
+              localizationsDelegates: const [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: S.delegate.supportedLocales,
+              scrollBehavior: ScrollConfiguration.of(context).copyWith(
+                physics: const BouncingScrollPhysics(),
+              ),
+              title: 'Bookazon',
+              theme: AppTheme.getLight(),
+              onGenerateRoute: RouteGenerate.getRoute,
+              home: const SplashPage()
+              // home: const LayoutsPage(),
+              ),
         );
       },
     );
