@@ -1,4 +1,5 @@
 part of '../profile_page.dart';
+
 class LogoutBottomSheet extends StatelessWidget {
   const LogoutBottomSheet({
     super.key,
@@ -6,6 +7,7 @@ class LogoutBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cubit = AuthCubit.get(context);
     return Container(
       decoration: const BoxDecoration(
         color: AppColors.white,
@@ -14,8 +16,7 @@ class LogoutBottomSheet extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: 60.w, vertical: 26.h),
+        padding: EdgeInsets.symmetric(horizontal: 60.w, vertical: 26.h),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -39,7 +40,12 @@ class LogoutBottomSheet extends StatelessWidget {
             34.ph,
             PublicButton(
               onPressed: () {
-                // TODO: "data" - logout,
+                cubit.logout();
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  AppRoutes.login,
+                  (_) => false,
+                );
               },
               title: S.of(context).logout,
             ),

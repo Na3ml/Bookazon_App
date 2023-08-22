@@ -13,6 +13,7 @@ abstract class AuthRepository {
   Future<AuthResponse> forgotPassword(String email);
   Future<AuthResponse> verifyEmail(String otp);
   Future<AuthResponse> resetPassword(ResetPasswordRequest request);
+  Future<void> logout(String token);
 }
 
 class AuthRepositoryImpl extends AuthRepository {
@@ -121,6 +122,23 @@ class AuthRepositoryImpl extends AuthRepository {
           },
         );
         return AuthResponse.fromJson(response.data);
+      } catch (e) {
+        throw CustomException(e.toString());
+      }
+    } else {
+      throw CustomException("Check your network connection");
+    }
+  }
+
+  @override
+  Future<void> logout(String token) async {
+    if (await _networkInfo.isConnected) {
+      try {
+        await _apiService.postData(
+          endPoint: EndPoints.logout,
+          body: {},
+          token: token,
+        );
       } catch (e) {
         throw CustomException(e.toString());
       }
