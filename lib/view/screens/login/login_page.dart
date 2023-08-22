@@ -158,6 +158,7 @@ class _LoginPageState extends State<LoginPage> {
                                   builder: (context, state) {
                                     return Checkbox(
                                       value: cubit.rememberMe,
+                                      activeColor: AppColors.orange,
                                       onChanged: (_) =>
                                           cubit.changeRememberMe(),
                                     );

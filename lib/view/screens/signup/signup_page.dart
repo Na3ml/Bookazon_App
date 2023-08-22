@@ -112,7 +112,6 @@ class _SignupPageState extends State<SignupPage> {
                           txt: S.of(context).title_signup,
                           size: 28.sp,
                           fw: FontWeight.w600,
-                          color: AppColors.purple,
                         ),
                         43.ph,
                         //username

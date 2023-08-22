@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "acceptTermsErrorMessage": MessageLookupByLibrary.simpleMessage(
             "You have to accept terms of use and privacy policy before you sign up"),
+        "address": MessageLookupByLibrary.simpleMessage("Address"),
         "adults": MessageLookupByLibrary.simpleMessage("Adults"),
         "ages17": MessageLookupByLibrary.simpleMessage("Ages 0 - 17"),
         "already_have_account":
@@ -144,6 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "parking": MessageLookupByLibrary.simpleMessage("Parking"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "paymentCvv": MessageLookupByLibrary.simpleMessage("Payment CVV"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "phoneNumberInvalid": MessageLookupByLibrary.simpleMessage(
             "Phone number must be between 8 and 14"),

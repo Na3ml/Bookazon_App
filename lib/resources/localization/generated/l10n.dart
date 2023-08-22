@@ -1319,6 +1319,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment CVV`
+  String get paymentCvv {
+    return Intl.message(
+      'Payment CVV',
+      name: 'paymentCvv',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -38,7 +38,7 @@ class _LayoutsPageState extends State<LayoutsPage> {
         type: BottomNavigationBarType.fixed,
         currentIndex: selectedIndex,
         backgroundColor: Colors.white,
-        selectedItemColor: AppColors.orange,
+        selectedItemColor: AppColors.purple,
         unselectedItemColor: AppColors.unSelectedGrey,
         iconSize: 35.w,
         selectedFontSize: 11.sp,

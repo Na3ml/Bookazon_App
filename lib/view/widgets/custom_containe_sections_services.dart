@@ -45,7 +45,6 @@ class _ContainerServicesState extends State<ContainerServices> {
           ),
           PublicText(
             txt: widget.nameServices,
-            color: AppColors.orange,
           ),
         ],
       ),
