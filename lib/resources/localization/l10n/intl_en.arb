@@ -115,5 +115,14 @@
     "update": "Update",
     "logoutWarning": "Are you sure you want to Log out?",
     "cancel": "Cancel",
-    "roomsPhotos": "Rooms Photos"
+    "roomsPhotos": "Rooms Photos",
+    "myBooking": "My Booking",
+    "ongoing": "Ongoing",
+    "completed" : "Completed",
+    "canceled" : "Canceled",
+    "paid": "Paid",
+    "cancelBooking": "Cancel Booking",
+    "viewTicket" : "View Ticket",
+    "completedBookingTitle": "You have completed it !",
+    "canceledBookingTitle": "You canceled this booking"
 }

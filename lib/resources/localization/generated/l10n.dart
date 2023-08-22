@@ -1219,6 +1219,96 @@ class S {
       args: [],
     );
   }
+
+  /// `My Booking`
+  String get myBooking {
+    return Intl.message(
+      'My Booking',
+      name: 'myBooking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ongoing`
+  String get ongoing {
+    return Intl.message(
+      'Ongoing',
+      name: 'ongoing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Completed`
+  String get completed {
+    return Intl.message(
+      'Completed',
+      name: 'completed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Canceled`
+  String get canceled {
+    return Intl.message(
+      'Canceled',
+      name: 'canceled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Paid`
+  String get paid {
+    return Intl.message(
+      'Paid',
+      name: 'paid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel Booking`
+  String get cancelBooking {
+    return Intl.message(
+      'Cancel Booking',
+      name: 'cancelBooking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View Ticket`
+  String get viewTicket {
+    return Intl.message(
+      'View Ticket',
+      name: 'viewTicket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have completed it !`
+  String get completedBookingTitle {
+    return Intl.message(
+      'You have completed it !',
+      name: 'completedBookingTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You canceled this booking`
+  String get canceledBookingTitle {
+    return Intl.message(
+      'You canceled this booking',
+      name: 'canceledBookingTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

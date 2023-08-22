@@ -22,7 +22,7 @@ class PublicOutlineButton extends StatelessWidget {
     this.title = "",
     this.width,
     this.borderRadius = 12,
-    this.titleColor = AppColors.orange,
+    this.titleColor = AppColors.purple,
     this.backgroundColor = AppColors.white,
     this.verticalpadding,
   }) : super(key: key);

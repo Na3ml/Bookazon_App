@@ -43,11 +43,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "can_you_share": MessageLookupByLibrary.simpleMessage(
             "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it."),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "cancelBooking": MessageLookupByLibrary.simpleMessage("Cancel Booking"),
+        "canceled": MessageLookupByLibrary.simpleMessage("Canceled"),
+        "canceledBookingTitle":
+            MessageLookupByLibrary.simpleMessage("You canceled this booking"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "childrenAgesCheckout":
             MessageLookupByLibrary.simpleMessage("Children’s age at check-out"),
         "childrenAgesSubTitle": MessageLookupByLibrary.simpleMessage(
             "Children’s ages will be used to find you the best match in beds, rooms, size, and special prices."),
+        "completed": MessageLookupByLibrary.simpleMessage("Completed"),
+        "completedBookingTitle":
+            MessageLookupByLibrary.simpleMessage("You have completed it !"),
         "confirm_Deletion":
             MessageLookupByLibrary.simpleMessage("Confirm Deletion"),
         "confirm_password":
@@ -112,6 +119,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter password"),
         "message_null_username":
             MessageLookupByLibrary.simpleMessage("Please enter name"),
+        "myBooking": MessageLookupByLibrary.simpleMessage("My Booking"),
         "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "notificaiton": MessageLookupByLibrary.simpleMessage("Notifications"),
@@ -128,8 +136,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create Your Account"),
         "onboardingTitle3":
             MessageLookupByLibrary.simpleMessage("Explore Amazing Properties"),
+        "ongoing": MessageLookupByLibrary.simpleMessage("Ongoing"),
         "open24": MessageLookupByLibrary.simpleMessage("24-hours open"),
         "or": MessageLookupByLibrary.simpleMessage("or sign in with"),
+        "paid": MessageLookupByLibrary.simpleMessage("Paid"),
         "parking": MessageLookupByLibrary.simpleMessage("Parking"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
@@ -178,6 +188,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "update": MessageLookupByLibrary.simpleMessage("Update"),
         "username": MessageLookupByLibrary.simpleMessage("User Name"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
+        "viewTicket": MessageLookupByLibrary.simpleMessage("View Ticket"),
         "villa": MessageLookupByLibrary.simpleMessage("Villa"),
         "whereWantGo":
             MessageLookupByLibrary.simpleMessage("Where do you want to go ?"),

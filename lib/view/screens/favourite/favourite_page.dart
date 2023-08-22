@@ -92,9 +92,7 @@ class FavouritePage extends StatelessWidget {
               ],
             ),
             45.ph,
-            SizedBox(
-              height: 630.h,
-              width: double.infinity,
+            Expanded(
               child: ListView.builder(
                 itemBuilder: (context, index) {
                   return Padding(
@@ -114,7 +112,7 @@ class FavouritePage extends StatelessWidget {
                         ],
                       ),
                       child: Column(
-
+            
                         children: [
                           Image.asset(
                             Assets.imageFacebook,
@@ -220,7 +218,6 @@ class FavouritePage extends StatelessWidget {
                   );
                 },
               ),
-
             ),
           ],
         ),
