@@ -2,6 +2,7 @@ import 'package:bookazon/data/data_source/local/app_prefs.dart';
 import 'package:bookazon/resources/constants/app_constants.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../resources/router/app_router.dart';
@@ -28,10 +29,12 @@ class OnboardingCubit extends Cubit<OnboardingState> {
   void onBoardingButton(BuildContext context) {
     if (currentIndex == 2) {
       appPrefs.setOnBoardingViewed();
-      Navigator.pushReplacementNamed(
-        context,
-        AppRoutes.login,
-      );
+      SchedulerBinding.instance.addPostFrameCallback((_) {
+        Navigator.pushReplacementNamed(
+          context,
+          AppRoutes.welcome,
+        );
+      });
     } else {
       increaseIndex();
     }

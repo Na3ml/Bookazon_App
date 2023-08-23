@@ -7,12 +7,12 @@ import 'package:bookazon/view/widgets/public_divider.dart';
 import 'package:bookazon/view/widgets/public_outline_button.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:bookazon/view_model/profile/profile_cubit.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../view_model/auth/auth_cubit.dart';
+import '../../widgets/public_switch_list_tile.dart';
 
 part 'components/logout_bottom_sheet.dart';
 
@@ -52,7 +52,8 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               16.ph,
               PublicText(
-                txt: "${cubit.getUserInfo().firstName} ${cubit.getUserInfo().lastName}",
+                txt:
+                    "${cubit.getUserInfo().firstName} ${cubit.getUserInfo().lastName}",
                 size: 24.sp,
                 fw: FontWeight.w600,
               ),
@@ -88,6 +89,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
               ListTile(
+                onTap: () =>
+                    Navigator.pushNamed(context, AppRoutes.securitySettings),
                 leading: const Icon(Icons.security_outlined),
                 title: PublicText(
                   txt: S.of(context).security,
@@ -101,22 +104,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   color: AppColors.subTitleBlack,
                 ),
               ),
-              ListTile(
-                leading: const Icon(Icons.remove_red_eye_outlined),
-                title: PublicText(
-                  txt: S.of(context).darkTheme,
-                  color: AppColors.subTitleBlack,
-                ),
-                trailing: Transform.scale(
-                  scale: 0.7,
-                  child: CupertinoSwitch(
-                    onChanged: (value) {},
-                    value: false,
-                    activeColor: AppColors.purple,
-                    // thumbColor: Colors.amber,
-                    // trackColor: Colors.blue,
-                  ),
-                ),
+              PublicSwitchListTile(
+                title: S.of(context).darkTheme,
+                swithcer: Switchers.darkMode,
+                icon: const Icon(Icons.dark_mode),
               ),
               ListTile(
                 onTap: () =>

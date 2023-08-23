@@ -45,9 +45,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it."),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancelBooking": MessageLookupByLibrary.simpleMessage("Cancel Booking"),
+        "cancelBookingSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to cancel your hotel booking ?"),
         "canceled": MessageLookupByLibrary.simpleMessage("Canceled"),
         "canceledBookingTitle":
             MessageLookupByLibrary.simpleMessage("You canceled this booking"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("Change Password"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "childrenAgesCheckout":
             MessageLookupByLibrary.simpleMessage("Children’s age at check-out"),
@@ -60,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Deletion"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "continueWithoutSignUp":
+            MessageLookupByLibrary.simpleMessage("Continue Without Sign Up"),
         "darkTheme": MessageLookupByLibrary.simpleMessage("Dark Theme"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),
@@ -80,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email Verification"),
         "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Please, enter your phone number"),
+        "faceId": MessageLookupByLibrary.simpleMessage("Face ID"),
         "facilites": MessageLookupByLibrary.simpleMessage("Facilites"),
         "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
         "filter": MessageLookupByLibrary.simpleMessage("Filter"),
@@ -90,6 +97,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "glamping": MessageLookupByLibrary.simpleMessage("Glamping"),
         "goingTo": MessageLookupByLibrary.simpleMessage("Going to"),
+        "googleAuthenticator":
+            MessageLookupByLibrary.simpleMessage("Google Authenticator"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "hint_email": MessageLookupByLibrary.simpleMessage("Enter your email"),
@@ -155,6 +164,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "I have read and accepted the terms of use\nand privacy policy "),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "rememberMe": MessageLookupByLibrary.simpleMessage("Remember Me"),
         "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
@@ -188,6 +198,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_signup":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
+        "touchId": MessageLookupByLibrary.simpleMessage("Touch ID"),
         "update": MessageLookupByLibrary.simpleMessage("Update"),
         "username": MessageLookupByLibrary.simpleMessage("User Name"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
@@ -198,6 +209,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "why_delete_account": MessageLookupByLibrary.simpleMessage(
             "Why do you want to delete your\naccount?"),
         "wifi": MessageLookupByLibrary.simpleMessage("Wifi"),
+        "yesContinue": MessageLookupByLibrary.simpleMessage("Yes, Continue"),
         "your_explanation":
             MessageLookupByLibrary.simpleMessage("Your explanation.....")
       };

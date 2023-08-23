@@ -97,11 +97,14 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
           contentPadding: widget.contentPadding ??
               EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
           prefixIcon: widget.showprefixIcon
-              ? Icon(
-                  widget.prefixIcon,
-                  size: 22,
-                  color: AppColors.purple,
-                )
+              ? InkWell(
+                onTap: widget.ontapPrefixIcon,
+                child: Icon(
+                    widget.prefixIcon,
+                    size: 22,
+                    color: AppColors.purple,
+                  ),
+              )
               : null,
           suffixIcon: getSuffixIcon(),
         ),

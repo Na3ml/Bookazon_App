@@ -56,6 +56,7 @@ class AuthCubit extends Cubit<AuthState> {
       log("here");
       if (response.status == 1) {
         appPrefs.setToken(response.data!.token);
+        appPrefs.setUserLoggedIn(rememberMe);
         final user = response.data!.user;
         appPrefs.setUserInfo(
           firstName: user.firstName,
@@ -63,9 +64,6 @@ class AuthCubit extends Cubit<AuthState> {
           email: user.email,
           phone: user.phoneNumber,
         );
-        if (rememberMe) {
-          appPrefs.setUserLoggedIn();
-        }
         emit(LoginSuccessState());
       } else {
         emit(AuthnErrorState("Email or Passowrd is worng"));
@@ -83,7 +81,7 @@ class AuthCubit extends Cubit<AuthState> {
       try {
         final response = await _repo.register(request);
         if (response.status == 1) {
-          appPrefs.setUserLoggedIn();
+          appPrefs.setUserLoggedIn(true);
           appPrefs.setToken(response.data!.token);
           final user = response.data!.user;
           appPrefs.setUserInfo(
@@ -157,5 +155,6 @@ class AuthCubit extends Cubit<AuthState> {
     await _repo.logout(appPrefs.getToken()!);
     appPrefs.logout();
     appPrefs.removeToken();
+    appPrefs.removeUserInfo();
   }
 }

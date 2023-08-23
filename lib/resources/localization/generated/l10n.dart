@@ -1339,6 +1339,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Continue Without Sign Up`
+  String get continueWithoutSignUp {
+    return Intl.message(
+      'Continue Without Sign Up',
+      name: 'continueWithoutSignUp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Face ID`
+  String get faceId {
+    return Intl.message(
+      'Face ID',
+      name: 'faceId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember Me`
+  String get rememberMe {
+    return Intl.message(
+      'Remember Me',
+      name: 'rememberMe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Touch ID`
+  String get touchId {
+    return Intl.message(
+      'Touch ID',
+      name: 'touchId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Google Authenticator`
+  String get googleAuthenticator {
+    return Intl.message(
+      'Google Authenticator',
+      name: 'googleAuthenticator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Password`
+  String get changePassword {
+    return Intl.message(
+      'Change Password',
+      name: 'changePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to cancel your hotel booking ?`
+  String get cancelBookingSubtitle {
+    return Intl.message(
+      'Are you sure you want to cancel your hotel booking ?',
+      name: 'cancelBookingSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes, Continue`
+  String get yesContinue {
+    return Intl.message(
+      'Yes, Continue',
+      name: 'yesContinue',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

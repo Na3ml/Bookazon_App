@@ -1,6 +1,7 @@
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
+import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
 import 'package:bookazon/view/widgets/public_divider.dart';
@@ -14,6 +15,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 part 'components/ongoing_card.dart';
 part 'components/final_card.dart';
+part 'components/cancel_booking_bottom_sheet.dart';
 
 class BookingPage extends StatelessWidget {
   const BookingPage({super.key});
