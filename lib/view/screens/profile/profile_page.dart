@@ -7,7 +7,6 @@ import 'package:bookazon/view/widgets/public_divider.dart';
 import 'package:bookazon/view/widgets/public_outline_button.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:bookazon/view_model/profile/profile_cubit.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -107,6 +106,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               PublicSwitchListTile(
                 title: S.of(context).darkTheme,
+                swithcer: Switchers.darkMode,
                 icon: const Icon(Icons.dark_mode),
               ),
               ListTile(

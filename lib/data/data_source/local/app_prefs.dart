@@ -23,8 +23,8 @@ class AppPrefs {
   }
 
   /// Auth
-  Future<void> setUserLoggedIn() async {
-    await _sharedPrefs.setBool(PrefsKeys.login, true);
+  Future<void> setUserLoggedIn(value) async {
+    await _sharedPrefs.setBool(PrefsKeys.login, value);
   }
 
   bool isUserLoggedIn() {
@@ -34,6 +34,7 @@ class AppPrefs {
   Future<void> logout() async {
     await _sharedPrefs.remove(PrefsKeys.login);
   }
+
 
   /// user info
   Future<void> setUserInfo({

@@ -29,9 +29,18 @@ class SecuritySettingsPage extends StatelessWidget {
           padding: EdgeInsets.only(top: 40.h),
           child: Column(
             children: [
-              PublicSwitchListTile(title: S.of(context).faceId),
-              PublicSwitchListTile(title: S.of(context).rememberMe),
-              PublicSwitchListTile(title: S.of(context).touchId),
+              PublicSwitchListTile(
+                title: S.of(context).faceId,
+                swithcer: Switchers.faceId,
+              ),
+              PublicSwitchListTile(
+                title: S.of(context).rememberMe,
+                swithcer: Switchers.rememberMe,
+              ),
+              PublicSwitchListTile(
+                title: S.of(context).touchId,
+                swithcer: Switchers.touchId,
+              ),
               ListTile(
                 onTap: () {},
                 title: PublicText(txt: S.of(context).googleAuthenticator),

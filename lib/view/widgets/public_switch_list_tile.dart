@@ -1,37 +1,68 @@
+import 'package:bookazon/data/data_source/local/app_prefs.dart';
+import 'package:bookazon/resources/service_locator/service_locator.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../../resources/style/app_colors.dart';
 
-class PublicSwitchListTile extends StatelessWidget {
+enum Switchers {
+  darkMode,
+  faceId,
+  rememberMe,
+  touchId,
+}
+
+class PublicSwitchListTile extends StatefulWidget {
   final String title;
+  final Switchers swithcer;
   final Icon? icon;
   const PublicSwitchListTile({
     super.key,
     required this.title,
+    required this.swithcer,
     this.icon,
   });
 
   @override
+  State<PublicSwitchListTile> createState() => _PublicSwitchListTileState();
+}
+
+class _PublicSwitchListTileState extends State<PublicSwitchListTile> {
+  bool switcherValue = false;
+  final appPrefs = getIt<AppPrefs>();
+
+  @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: icon,
+      leading: widget.icon,
       title: PublicText(
-        txt: title,
+        txt: widget.title,
         color: AppColors.subTitleBlack,
       ),
       trailing: Transform.scale(
         scale: 0.7,
         child: CupertinoSwitch(
-          onChanged: (value) {},
-          value: false,
+          onChanged: (value) {
+            setState(() {
+              switcherValue = value;
+            });
+            setSwitches(widget.swithcer, switcherValue);
+          },
+          value: switcherValue,
           activeColor: AppColors.purple,
-          // thumbColor: Colors.amber,
-          // trackColor: Colors.blue,
         ),
       ),
     );
+  }
+
+  // helper methods
+  void setSwitches(Switchers switcher, bool value) {
+    switch (switcher) {
+      case Switchers.rememberMe:
+        appPrefs.setUserLoggedIn(value);
+        break;
+      default:
+    }
   }
 }
