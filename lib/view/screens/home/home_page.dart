@@ -143,16 +143,21 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   5.pw,
-                  Container(
-                    height: 50.w,
-                    width: 50.w,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: AppColors.purple,
-                    ),
-                    child: const Icon(
-                      Icons.search,
-                      color: Colors.white,
+                  InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, AppRoutes.search);
+                    },
+                    child: Container(
+                      height: 50.w,
+                      width: 50.w,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: AppColors.purple,
+                      ),
+                      child: const Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      ),
                     ),
                   )
                 ],

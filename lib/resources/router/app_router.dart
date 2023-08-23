@@ -15,6 +15,7 @@ import '../../view/screens/hotel_details/hotel_details_page.dart';
 import '../../view/screens/layouts/layouts_page.dart';
 import '../../view/screens/login/login_page.dart';
 import '../../view/screens/reset_password/reset_password_page.dart';
+import '../../view/screens/search/search_page.dart';
 import '../../view/screens/welcome/welcome_screen.dart';
 
 class AppRoutes {
@@ -37,6 +38,7 @@ class AppRoutes {
   /// main pages
   static const String layouts = "layouts";
   static const String homePage = "home page";
+  static const String search = "search";
   static const String hotelDetails = "hotel details";
   static const String editProfile = "edit profile";
   static const String deleteAccount = "delete account";
@@ -100,6 +102,10 @@ class RouteGenerate {
       case AppRoutes.homePage:
         return MaterialPageRoute(
           builder: (_) => const HomePage(),
+        );
+      case AppRoutes.search:
+        return MaterialPageRoute(
+          builder: (_) => const SearchPage(),
         );
       case AppRoutes.hotelDetails:
         return MaterialPageRoute(
