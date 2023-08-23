@@ -52,9 +52,9 @@ class AppPrefs {
         lastName,
         email,
         phone,
-        gender ?? "--",
-        address ?? "--",
-        paymentCvv ?? "--",
+        gender ?? "",
+        address ?? "",
+        paymentCvv ?? "",
       ],
     );
   }
@@ -70,6 +70,10 @@ class AppPrefs {
           "Address",
           "Payment CVV",
         ];
+  }
+
+  void removeUserInfo() {
+    _sharedPrefs.remove(PrefsKeys.userInfo);
   }
 
   /// token

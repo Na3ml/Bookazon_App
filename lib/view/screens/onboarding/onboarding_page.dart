@@ -8,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../data/models/onboarding_model.dart';
+import '../../../resources/router/app_router.dart';
 import '../../../resources/style/app_colors.dart';
 import '../../widgets/public_text.dart';
 
@@ -92,6 +93,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   return PublicButton(
                     onPressed: () {
                       cubit.onBoardingButton(context);
+
                     },
                     title: cubit.currentIndex == 2
                         ? S.of(context).getStarted

@@ -1349,6 +1349,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Face ID`
+  String get faceId {
+    return Intl.message(
+      'Face ID',
+      name: 'faceId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember Me`
+  String get rememberMe {
+    return Intl.message(
+      'Remember Me',
+      name: 'rememberMe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Touch ID`
+  String get touchId {
+    return Intl.message(
+      'Touch ID',
+      name: 'touchId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Google Authenticator`
+  String get googleAuthenticator {
+    return Intl.message(
+      'Google Authenticator',
+      name: 'googleAuthenticator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Password`
+  String get changePassword {
+    return Intl.message(
+      'Change Password',
+      name: 'changePassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -157,5 +157,6 @@ class AuthCubit extends Cubit<AuthState> {
     await _repo.logout(appPrefs.getToken()!);
     appPrefs.logout();
     appPrefs.removeToken();
+    appPrefs.removeUserInfo();
   }
 }

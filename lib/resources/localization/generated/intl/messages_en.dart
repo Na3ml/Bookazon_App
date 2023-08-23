@@ -48,6 +48,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "canceled": MessageLookupByLibrary.simpleMessage("Canceled"),
         "canceledBookingTitle":
             MessageLookupByLibrary.simpleMessage("You canceled this booking"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("Change Password"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "childrenAgesCheckout":
             MessageLookupByLibrary.simpleMessage("Children’s age at check-out"),
@@ -82,6 +84,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email Verification"),
         "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Please, enter your phone number"),
+        "faceId": MessageLookupByLibrary.simpleMessage("Face ID"),
         "facilites": MessageLookupByLibrary.simpleMessage("Facilites"),
         "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
         "filter": MessageLookupByLibrary.simpleMessage("Filter"),
@@ -92,6 +95,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "glamping": MessageLookupByLibrary.simpleMessage("Glamping"),
         "goingTo": MessageLookupByLibrary.simpleMessage("Going to"),
+        "googleAuthenticator":
+            MessageLookupByLibrary.simpleMessage("Google Authenticator"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "hint_email": MessageLookupByLibrary.simpleMessage("Enter your email"),
@@ -157,6 +162,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "I have read and accepted the terms of use\nand privacy policy "),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "rememberMe": MessageLookupByLibrary.simpleMessage("Remember Me"),
         "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
@@ -190,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_signup":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
+        "touchId": MessageLookupByLibrary.simpleMessage("Touch ID"),
         "update": MessageLookupByLibrary.simpleMessage("Update"),
         "username": MessageLookupByLibrary.simpleMessage("User Name"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
