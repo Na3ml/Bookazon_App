@@ -1339,6 +1339,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Continue Without Sign Up`
+  String get continueWithoutSignUp {
+    return Intl.message(
+      'Continue Without Sign Up',
+      name: 'continueWithoutSignUp',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

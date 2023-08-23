@@ -30,7 +30,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
       appPrefs.setOnBoardingViewed();
       Navigator.pushReplacementNamed(
         context,
-        AppRoutes.login,
+        AppRoutes.welcome,
       );
     } else {
       increaseIndex();

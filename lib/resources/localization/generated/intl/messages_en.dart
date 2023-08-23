@@ -60,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Deletion"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "continueWithoutSignUp":
+            MessageLookupByLibrary.simpleMessage("Continue Without Sign Up"),
         "darkTheme": MessageLookupByLibrary.simpleMessage("Dark Theme"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),

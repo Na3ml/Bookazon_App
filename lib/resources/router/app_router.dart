@@ -14,6 +14,7 @@ import '../../view/screens/hotel_details/hotel_details_page.dart';
 import '../../view/screens/layouts/layouts_page.dart';
 import '../../view/screens/login/login_page.dart';
 import '../../view/screens/reset_password/reset_password_page.dart';
+import '../../view/screens/welcome/welcome_screen.dart';
 
 class AppRoutes {
   AppRoutes._private();
@@ -23,6 +24,7 @@ class AppRoutes {
   static const String onBoarding = "onBoarding";
 
   /// Auth
+  static const String welcome = "welcome";
   static const String login = "login";
   static const String signUp = "signUp";
   static const String forgotPassword = "forgot password";
@@ -54,6 +56,10 @@ class RouteGenerate {
         );
 
       /// Auth
+      case AppRoutes.welcome:
+        return MaterialPageRoute(
+          builder: (_) => const WelcomePage(),
+        );
       case AppRoutes.login:
         return MaterialPageRoute(
           builder: (_) => const LoginPage(),

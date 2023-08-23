@@ -40,7 +40,7 @@ class _SplashPageState extends State<SplashPage> {
     //   } else {
     //     Navigator.pushReplacementNamed(
     //       context,
-    //       AppRoutes.login,
+    //       AppRoutes.welcome,
     //     );
     //   }
     // } else {

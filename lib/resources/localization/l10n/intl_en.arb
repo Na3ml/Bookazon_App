@@ -127,5 +127,6 @@
     "canceledBookingTitle": "You canceled this booking",
     "other": "Other",
     "address": "Address",
-    "paymentCvv" : "Payment CVV"
+    "paymentCvv" : "Payment CVV",
+    "continueWithoutSignUp":"Continue Without Sign Up"
 }
