@@ -1,4 +1,5 @@
 import 'package:bookazon/resources/extensions/extensions.dart';
+import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/view/widgets/public_button.dart';
 import 'package:bookazon/view/widgets/public_switch_list_tile.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
@@ -49,7 +50,10 @@ class SecuritySettingsPage extends StatelessWidget {
               20.ph,
               PublicButton(
                 title: S.of(context).changePassword,
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(
+                  context,
+                  AppRoutes.changePassword,
+                ),
               )
             ],
           ),

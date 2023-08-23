@@ -133,5 +133,7 @@
     "rememberMe": "Remember Me",
     "touchId": "Touch ID",
     "googleAuthenticator": "Google Authenticator",
-    "changePassword": "Change Password"
+    "changePassword": "Change Password",
+    "cancelBookingSubtitle": "Are you sure you want to cancel your hotel booking ?",
+    "yesContinue": "Yes, Continue"
 }

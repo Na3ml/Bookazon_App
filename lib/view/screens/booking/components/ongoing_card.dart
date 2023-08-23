@@ -89,7 +89,7 @@ class OngoingCard extends StatelessWidget {
                 child: PublicButton(
                   title: S.of(context).viewTicket,
                   titleSize: 15.sp,
-                  onPressed: () {},
+                  onPressed: ()=> Navigator.pushNamed(context, AppRoutes.ticket),
                 ),
               ),
               20.pw,
@@ -97,7 +97,14 @@ class OngoingCard extends StatelessWidget {
                 child: PublicOutlineButton(
                   title: S.of(context).cancelBooking,
                   titleSize: 15.sp,
-                  onPressed: () {},
+                  onPressed: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (builder) {
+                        return const CancelBookingBottomSheet();
+                      },
+                    );
+                  },
                 ),
               ),
             ],

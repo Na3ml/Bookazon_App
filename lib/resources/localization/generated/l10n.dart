@@ -1399,6 +1399,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Are you sure you want to cancel your hotel booking ?`
+  String get cancelBookingSubtitle {
+    return Intl.message(
+      'Are you sure you want to cancel your hotel booking ?',
+      name: 'cancelBookingSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes, Continue`
+  String get yesContinue {
+    return Intl.message(
+      'Yes, Continue',
+      name: 'yesContinue',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

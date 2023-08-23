@@ -1,3 +1,5 @@
+import 'package:bookazon/view/screens/cancel_booking/cancel_booking_page.dart';
+import 'package:bookazon/view/screens/change_password/change_password_page.dart';
 import 'package:bookazon/view/screens/delete_account/confirm_delete_account_page.dart';
 import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
 import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
@@ -6,6 +8,7 @@ import 'package:bookazon/view/screens/privacy_policy/privacy_policy_page.dart';
 import 'package:bookazon/view/screens/security_settings/security_settings_page.dart';
 import 'package:bookazon/view/screens/signup/signup_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
+import 'package:bookazon/view/screens/ticket/ticket_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../view/screens/delete_account/delete_account_page.dart';
@@ -44,6 +47,9 @@ class AppRoutes {
   static const String deleteAccount = "delete account";
   static const String confirmDeleteAccount = "confirm delete account";
   static const String securitySettings = "security settings";
+  static const String changePassword = "change password";
+  static const String cancelBooking = "cancel booking";
+  static const String ticket = "ticket";
 }
 
 class RouteGenerate {
@@ -126,6 +132,18 @@ class RouteGenerate {
       case AppRoutes.securitySettings:
         return MaterialPageRoute(
           builder: (_) => const SecuritySettingsPage(),
+        );
+      case AppRoutes.changePassword:
+        return MaterialPageRoute(
+          builder: (_) => const ChangePasswordPage(),
+        );
+      case AppRoutes.cancelBooking:
+        return MaterialPageRoute(
+          builder: (_) => const CancelBookingPage(),
+        );
+      case AppRoutes.ticket:
+        return MaterialPageRoute(
+          builder: (_) => const TicketPage(),
         );
       default:
         return MaterialPageRoute(

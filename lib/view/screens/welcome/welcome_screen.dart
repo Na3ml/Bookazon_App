@@ -33,7 +33,7 @@ class WelcomePage extends StatelessWidget {
             14.ph,
             PublicOutlineButton(
               title: S.of(context).continueWithoutSignUp,
-              onPressed: () => Navigator.pushNamed(context, AppRoutes.layouts),
+              onPressed: () => Navigator.pushReplacementNamed(context, AppRoutes.layouts),
             ),
             30.ph,
           ],

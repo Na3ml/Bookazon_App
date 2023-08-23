@@ -45,6 +45,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Can you please share to us what was\nnot working? We are fixing bugs as soon\nas we spot them. If something slipped\nthrough our fingers, we’d be so grateful\nto be aware of it and fix it."),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancelBooking": MessageLookupByLibrary.simpleMessage("Cancel Booking"),
+        "cancelBookingSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to cancel your hotel booking ?"),
         "canceled": MessageLookupByLibrary.simpleMessage("Canceled"),
         "canceledBookingTitle":
             MessageLookupByLibrary.simpleMessage("You canceled this booking"),
@@ -207,6 +209,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "why_delete_account": MessageLookupByLibrary.simpleMessage(
             "Why do you want to delete your\naccount?"),
         "wifi": MessageLookupByLibrary.simpleMessage("Wifi"),
+        "yesContinue": MessageLookupByLibrary.simpleMessage("Yes, Continue"),
         "your_explanation":
             MessageLookupByLibrary.simpleMessage("Your explanation.....")
       };
