@@ -2,6 +2,7 @@ import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,34 +21,32 @@ class NotificationsPage extends StatelessWidget {
         width: double.infinity,
         child: ListView.builder(
           itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 24),
+            padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 12.h),
             child: Container(
-              height:86.h ,
+              height: 86.h,
               width: 394.w,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.sp),
-                color: AppColors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.grey.withOpacity(0.5),
-                    spreadRadius: 0.6,
-                    blurRadius: 4,
-                  )
-                ]
-              ),
+                  borderRadius: BorderRadius.circular(20.sp),
+                  color: AppColors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.grey.withOpacity(0.5),
+                      spreadRadius: 0.6,
+                      blurRadius: 4,
+                    )
+                  ]),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset(
-                    Assets.imageFacebook,
-                    width: 40.w,
-                    height: 40.h,
+                  Icon(
+                    CupertinoIcons.exclamationmark_circle,
+                    color: AppColors.purple,
+                    size: 30.w,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Row(
-
                         children: [
                           PublicText(
                             txt: 'Payment Successful!',

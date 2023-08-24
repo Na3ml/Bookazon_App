@@ -15,9 +15,7 @@ class FavouritePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions:const[
-          Icon(Icons.share)
-        ],
+        actions: const [Icon(Icons.share)],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -26,7 +24,11 @@ class FavouritePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                PublicText(txt: 'Hurghada',fw: FontWeight.bold,size: 20.sp,),
+                PublicText(
+                  txt: 'Hurghada',
+                  fw: FontWeight.bold,
+                  size: 20.sp,
+                ),
                 // container map
                 Container(
                   width: 78.w,
@@ -39,12 +41,12 @@ class FavouritePage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      const Icon(Icons.map,color: AppColors.purple),
+                      const Icon(Icons.map, color: AppColors.purple),
                       PublicText(
                         txt: S.of(context).map,
                         size: 18.sp,
                         fw: FontWeight.w400,
-                        color:AppColors.purple,
+                        color: AppColors.purple,
                       ),
                     ],
                   ),
@@ -55,23 +57,29 @@ class FavouritePage extends StatelessWidget {
             // icon favourite
             Row(
               children: [
-               const Icon(Icons.favorite,color: Colors.red,),
-                 10.pw,
-                 PublicText(
-                     txt: '2 properties',
-                     color: AppColors.black,
-                     size: 16.sp,
-                     fw: FontWeight.w400,
-                 ),
+                const Icon(
+                  Icons.favorite,
+                  color: Colors.red,
+                ),
+                10.pw,
+                PublicText(
+                  txt: '2 properties',
+                  color: AppColors.black,
+                  size: 16.sp,
+                  fw: FontWeight.w400,
+                ),
               ],
             ),
             17.ph,
             Row(
               children: [
-              const  Icon(Icons.date_range,color: AppColors.purple,),
+                const Icon(
+                  Icons.date_range,
+                  color: AppColors.purple,
+                ),
                 10.pw,
                 PublicText(
-                    txt: 'Aug 19 - Aug 21 (2nights)',
+                  txt: 'Aug 19 - Aug 21 (2nights)',
                   size: 16.sp,
                   color: AppColors.purple,
                   fw: FontWeight.w400,
@@ -81,7 +89,10 @@ class FavouritePage extends StatelessWidget {
             17.ph,
             Row(
               children: [
-                const  Icon(Icons.person,color: AppColors.purple,),
+                const Icon(
+                  Icons.person,
+                  color: AppColors.purple,
+                ),
                 10.pw,
                 PublicText(
                   txt: '1 adult, 1 child',
@@ -96,9 +107,10 @@ class FavouritePage extends StatelessWidget {
               child: ListView.builder(
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20,horizontal:5 ),
+                    padding:
+                        EdgeInsets.symmetric(vertical: 15.h, horizontal: 5.w),
                     child: Container(
-                      height: 298.h,
+                      height: 335.h,
                       width: 374.w,
                       decoration: BoxDecoration(
                         color: AppColors.white,
@@ -112,13 +124,14 @@ class FavouritePage extends StatelessWidget {
                         ],
                       ),
                       child: Column(
-            
                         children: [
                           Image.asset(
-                            Assets.imageFacebook,
+                            Assets.imageHotel1,
                             width: 374.w,
-                            height: 119.h,
+                            height: 140.h,
+                            fit: BoxFit.fitWidth,
                           ),
+                          10.ph,
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             child: Column(
@@ -126,9 +139,10 @@ class FavouritePage extends StatelessWidget {
                               children: [
                                 Row(
                                   children: [
-                                   const Icon(Icons.star),
+                                   ...generateStars(4),
+                                   10.pw,
                                     PublicText(
-                                        txt:S.of(context).hotel,
+                                      txt: S.of(context).hotel,
                                       size: 14.sp,
                                       color: AppColors.black,
                                       fw: FontWeight.w400,
@@ -150,7 +164,7 @@ class FavouritePage extends StatelessWidget {
                                       fw: FontWeight.w400,
                                     ),
                                     10.pw,
-                                   const Icon(Icons.location_on),
+                                    const Icon(Icons.location_on),
                                     PublicText(txt: 'cairo')
                                   ],
                                 ),
@@ -163,13 +177,13 @@ class FavouritePage extends StatelessWidget {
                             width: 342.w,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6.sp),
-                                color: AppColors.purple.withOpacity(0.38)
-                            ),
+                                color: AppColors.purple.withOpacity(0.38)),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: [
                                   PublicText(
                                     txt: 'Hotel site',
@@ -178,7 +192,8 @@ class FavouritePage extends StatelessWidget {
                                     color: AppColors.black,
                                   ),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       PublicText(
                                         txt: '260\$',
@@ -190,11 +205,12 @@ class FavouritePage extends StatelessWidget {
                                         height: 24.h,
                                         width: 86.w,
                                         decoration: BoxDecoration(
-                                          color: AppColors.purple,
-                                          borderRadius: BorderRadius.circular(6.sp)
-                                        ),
+                                            color: AppColors.purple,
+                                            borderRadius:
+                                                BorderRadius.circular(6.sp)),
                                         child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
                                           children: [
                                             PublicText(
                                               txt: 'View Deal',
@@ -202,7 +218,10 @@ class FavouritePage extends StatelessWidget {
                                               size: 12.sp,
                                               fw: FontWeight.w600,
                                             ),
-                                           Icon(Icons.arrow_forward_ios,size: 12.sp,)
+                                            Icon(
+                                              Icons.arrow_forward_ios,
+                                              size: 12.sp,
+                                            )
                                           ],
                                         ),
                                       ),
@@ -212,6 +231,7 @@ class FavouritePage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          10.ph,
                         ],
                       ),
                     ),
@@ -223,5 +243,23 @@ class FavouritePage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  //* helper methods
+  List<Widget> generateStars(double rate) {
+    return [
+      for (var i = 0; i < rate.round(); i++)
+        Icon(
+          Icons.star,
+          size: 25.w,
+          color: AppColors.orange,
+        ),
+      for (var i = 0; i < (5 - rate.round()); i++)
+        Icon(
+          Icons.star_border_outlined,
+          size: 25.w,
+          color: AppColors.orange,
+        ),
+    ];
   }
 }
