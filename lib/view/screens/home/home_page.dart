@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   5.pw,
                   InkWell(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pushNamed(context, AppRoutes.search);
                     },
                     child: Container(
@@ -162,7 +162,9 @@ class _HomePageState extends State<HomePage> {
                   )
                 ],
               ),
-              PublicTitleTile(title: S.of(context).sections),
+              PublicTitleTile(
+                title: S.of(context).sections,
+              ),
               SizedBox(
                 height: 120.h,
                 child: ListView.separated(
@@ -174,7 +176,11 @@ class _HomePageState extends State<HomePage> {
                   separatorBuilder: (_, __) => 8.pw,
                 ),
               ),
-              PublicTitleTile(title: S.of(context).offer),
+              PublicTitleTile(
+                title: S.of(context).offer,
+                seeAllOnTap: () =>
+                    Navigator.pushNamed(context, AppRoutes.offer),
+              ),
               SizedBox(
                 height: 160.h,
                 child: ListView.separated(

@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "acceptTermsErrorMessage": MessageLookupByLibrary.simpleMessage(
             "You have to accept terms of use and privacy policy before you sign up"),
+        "accommodationType":
+            MessageLookupByLibrary.simpleMessage("Accommodation Type"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "adults": MessageLookupByLibrary.simpleMessage("Adults"),
         "ages17": MessageLookupByLibrary.simpleMessage("Ages 0 - 17"),
@@ -38,7 +40,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "answer_delete_account4":
             MessageLookupByLibrary.simpleMessage("I have a privacy concern"),
         "answer_delete_account5": MessageLookupByLibrary.simpleMessage("Other"),
+        "apartment": MessageLookupByLibrary.simpleMessage("Apartments"),
         "appartment": MessageLookupByLibrary.simpleMessage("Appartment"),
+        "applyFilter": MessageLookupByLibrary.simpleMessage("Apply Filter"),
         "bookNow": MessageLookupByLibrary.simpleMessage("Book now!"),
         "booking": MessageLookupByLibrary.simpleMessage("Booking"),
         "can_you_share": MessageLookupByLibrary.simpleMessage(
@@ -66,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "continueWithoutSignUp":
             MessageLookupByLibrary.simpleMessage("Continue Without Sign Up"),
+        "country": MessageLookupByLibrary.simpleMessage("Country"),
         "darkTheme": MessageLookupByLibrary.simpleMessage("Dark Theme"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),
@@ -90,16 +95,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "facilites": MessageLookupByLibrary.simpleMessage("Facilites"),
         "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
         "filter": MessageLookupByLibrary.simpleMessage("Filter"),
+        "filterHotels": MessageLookupByLibrary.simpleMessage("Filter Hotels"),
         "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
         "forget_password":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "from": MessageLookupByLibrary.simpleMessage("From"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "glamping": MessageLookupByLibrary.simpleMessage("Glamping"),
+        "glampings": MessageLookupByLibrary.simpleMessage("Glampings"),
         "goingTo": MessageLookupByLibrary.simpleMessage("Going to"),
         "googleAuthenticator":
             MessageLookupByLibrary.simpleMessage("Google Authenticator"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
+        "heigestPopularity":
+            MessageLookupByLibrary.simpleMessage("Heigest Popularity"),
+        "heigestRating": MessageLookupByLibrary.simpleMessage("Heigest Rating"),
+        "heigestReviews":
+            MessageLookupByLibrary.simpleMessage("Heigest Reviews"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "hint_email": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "hint_new_password":
@@ -110,11 +122,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(" Eenter your name"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "hotel": MessageLookupByLibrary.simpleMessage("Hotel"),
+        "hotels": MessageLookupByLibrary.simpleMessage("Hotels"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "logoutWarning": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to Log out?"),
+        "lowestPrice": MessageLookupByLibrary.simpleMessage("Lowest Price"),
         "map": MessageLookupByLibrary.simpleMessage("Map"),
         "meetingRoom": MessageLookupByLibrary.simpleMessage("Meeting Room"),
         "message_error_email": MessageLookupByLibrary.simpleMessage(
@@ -161,11 +175,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "planTrip": MessageLookupByLibrary.simpleMessage("Plan your trip"),
         "pool": MessageLookupByLibrary.simpleMessage("Pool"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
+        "priceRangePerNight":
+            MessageLookupByLibrary.simpleMessage("Price Range Per Night"),
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "I have read and accepted the terms of use\nand privacy policy "),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember Me"),
         "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
+        "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
         "restaurant": MessageLookupByLibrary.simpleMessage("Restaurant"),
@@ -183,6 +200,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "signup": MessageLookupByLibrary.simpleMessage("Signup"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "sort": MessageLookupByLibrary.simpleMessage("Sort"),
+        "sortResult": MessageLookupByLibrary.simpleMessage("Sort Result"),
+        "starRating": MessageLookupByLibrary.simpleMessage("Star Rating"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "test": MessageLookupByLibrary.simpleMessage("test"),
         "title_delete_account":
@@ -204,6 +223,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
         "viewTicket": MessageLookupByLibrary.simpleMessage("View Ticket"),
         "villa": MessageLookupByLibrary.simpleMessage("Villa"),
+        "villas": MessageLookupByLibrary.simpleMessage("Villas"),
         "whereWantGo":
             MessageLookupByLibrary.simpleMessage("Where do you want to go ?"),
         "why_delete_account": MessageLookupByLibrary.simpleMessage(

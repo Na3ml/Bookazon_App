@@ -55,7 +55,6 @@ class AppConstants {
     ];
   }
 
-
   static List<ContainerServices> sections = [
     ContainerServices(
       nameAsset: Assets.imageSection1,
@@ -73,5 +72,40 @@ class AppConstants {
       nameAsset: Assets.imageSection4,
       nameServices: S.current.villa,
     ),
+  ];
+
+  static List<String> countries = [
+    "Egypt",
+    "Frinch",
+    "Germany",
+    "England",
+    "America",
+    "Mexico",
+    "spanish",
+    "Iceland",
+    "Russia",
+    "Egypt",
+    "Frinch",
+    "Germany",
+    "England",
+    "America",
+    "Mexico",
+    "spanish",
+    "Iceland",
+    "Russia",
+  ];
+
+  static List<String> sortingsType = [
+    S.current.heigestPopularity,
+    S.current.lowestPrice,
+    S.current.heigestRating,
+    S.current.heigestReviews,
+  ];
+  static List<String> stars = [
+    "⭐ 5",
+    "⭐ 4",
+    "⭐ 3",
+    "⭐ 2",
+    "⭐ 1",
   ];
 }

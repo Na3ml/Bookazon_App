@@ -1,5 +1,6 @@
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
+import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:bookazon/view/widgets/public_text_form_field.dart';
@@ -77,19 +78,22 @@ class _SearchPageState extends State<SearchPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
-                      height: 30.h,
-                      width: 76.w,
-                      child: Row(
-                        children: [
-                          const Icon(Icons.sort),
-                          PublicText(
-                            txt: S.of(context).sort,
-                            size: 20.sp,
-                            fw: FontWeight.w400,
-                            color: AppColors.black,
-                          ),
-                        ],
+                    InkWell(
+                      onTap: () => Navigator.pushNamed(context, AppRoutes.sort),
+                      child: SizedBox(
+                        height: 30.h,
+                        width: 76.w,
+                        child: Row(
+                          children: [
+                            const Icon(Icons.sort),
+                            PublicText(
+                              txt: S.of(context).sort,
+                              size: 20.sp,
+                              fw: FontWeight.w400,
+                              color: AppColors.black,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Container(
@@ -97,19 +101,23 @@ class _SearchPageState extends State<SearchPage> {
                       height: 46.h,
                       width: 1.w,
                     ),
-                    SizedBox(
-                      height: 30.h,
-                      width: 76.w,
-                      child: Row(
-                        children: [
-                          const Icon(Icons.filter_list_rounded),
-                          PublicText(
-                            txt: S.of(context).filter,
-                            size: 20.sp,
-                            fw: FontWeight.w400,
-                            color: AppColors.black,
-                          ),
-                        ],
+                    InkWell(
+                      onTap: () =>
+                          Navigator.pushNamed(context, AppRoutes.filter),
+                      child: SizedBox(
+                        height: 30.h,
+                        width: 76.w,
+                        child: Row(
+                          children: [
+                            const Icon(Icons.filter_list_rounded),
+                            PublicText(
+                              txt: S.of(context).filter,
+                              size: 20.sp,
+                              fw: FontWeight.w400,
+                              color: AppColors.black,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],

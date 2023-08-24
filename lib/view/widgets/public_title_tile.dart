@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -8,9 +7,11 @@ import 'public_text.dart';
 
 class PublicTitleTile extends StatelessWidget {
   final String title;
+  final VoidCallback? seeAllOnTap;
   const PublicTitleTile({
     super.key,
     required this.title,
+    this.seeAllOnTap,
   });
 
   @override
@@ -23,7 +24,7 @@ class PublicTitleTile extends StatelessWidget {
         fw: FontWeight.w600,
       ),
       trailing: InkWell(
-        onTap: () {},
+        onTap: seeAllOnTap,
         child: PublicText(
           txt: S.of(context).seeMore,
           size: 14.sp,
