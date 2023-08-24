@@ -135,5 +135,21 @@
     "googleAuthenticator": "Google Authenticator",
     "changePassword": "Change Password",
     "cancelBookingSubtitle": "Are you sure you want to cancel your hotel booking ?",
-    "yesContinue": "Yes, Continue"
+    "yesContinue": "Yes, Continue",
+    "filterHotels": "Filter Hotels",
+    "country": "Country",
+    "sortResult": "Sort Result",
+    "heigestPopularity": "Heigest Popularity",
+    "lowestPrice": "Lowest Price",
+    "heigestRating": "Heigest Rating",
+    "heigestReviews": "Heigest Reviews",
+    "priceRangePerNight": "Price Range Per Night",
+    "starRating": "Star Rating",
+    "accommodationType": "Accommodation Type",
+    "hotels": "Hotels",
+    "villas": "Villas",
+    "apartment": "Apartments",
+    "glampings": "Glampings",
+    "applyFilter": "Apply Filter",
+    "reset": "Reset"
 }

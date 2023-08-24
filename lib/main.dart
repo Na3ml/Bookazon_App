@@ -15,6 +15,7 @@ import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:bookazon/view_model/auth/auth_cubit.dart';
 import 'package:bookazon/view_model/booking/booking_cubit.dart';
 import 'package:bookazon/view_model/delete_account/delete_account_cubit.dart';
+import 'package:bookazon/view_model/filter/filter_cubit.dart';
 import 'package:bookazon/view_model/home/home_cubit.dart';
 import 'package:bookazon/view_model/onboarding/onboarding_cubit.dart';
 import 'package:bookazon/view_model/profile/profile_cubit.dart';
@@ -75,6 +76,9 @@ class MyApp extends StatelessWidget {
             ),
             BlocProvider(
               create: (context) => BookingCubit(),
+            ),
+            BlocProvider(
+              create: (context) => FilterCubit(),
             ),
           ],
           child: MaterialApp(

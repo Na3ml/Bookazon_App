@@ -2,11 +2,13 @@ import 'package:bookazon/view/screens/cancel_booking/cancel_booking_page.dart';
 import 'package:bookazon/view/screens/change_password/change_password_page.dart';
 import 'package:bookazon/view/screens/delete_account/confirm_delete_account_page.dart';
 import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
+import 'package:bookazon/view/screens/filter/filter_page.dart';
 import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
 import 'package:bookazon/view/screens/onboarding/onboarding_page.dart';
 import 'package:bookazon/view/screens/privacy_policy/privacy_policy_page.dart';
 import 'package:bookazon/view/screens/security_settings/security_settings_page.dart';
 import 'package:bookazon/view/screens/signup/signup_page.dart';
+import 'package:bookazon/view/screens/sort/sort_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:bookazon/view/screens/ticket/ticket_page.dart';
 import 'package:flutter/material.dart';
@@ -50,6 +52,9 @@ class AppRoutes {
   static const String changePassword = "change password";
   static const String cancelBooking = "cancel booking";
   static const String ticket = "ticket";
+  static const String sort = "sort";
+  static const String filter = "filter";
+  static const String offer = "offer";
 }
 
 class RouteGenerate {
@@ -144,6 +149,18 @@ class RouteGenerate {
       case AppRoutes.ticket:
         return MaterialPageRoute(
           builder: (_) => const TicketPage(),
+        );
+      case AppRoutes.sort:
+        return MaterialPageRoute(
+          builder: (_) => const SortPage(),
+        );
+      case AppRoutes.filter:
+        return MaterialPageRoute(
+          builder: (_) => const FilterPage(),
+        );
+      case AppRoutes.offer:
+        return MaterialPageRoute(
+          builder: (_) => const FilterPage(),
         );
       default:
         return MaterialPageRoute(

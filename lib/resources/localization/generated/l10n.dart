@@ -1419,6 +1419,166 @@ class S {
       args: [],
     );
   }
+
+  /// `Filter Hotels`
+  String get filterHotels {
+    return Intl.message(
+      'Filter Hotels',
+      name: 'filterHotels',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Country`
+  String get country {
+    return Intl.message(
+      'Country',
+      name: 'country',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sort Result`
+  String get sortResult {
+    return Intl.message(
+      'Sort Result',
+      name: 'sortResult',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Heigest Popularity`
+  String get heigestPopularity {
+    return Intl.message(
+      'Heigest Popularity',
+      name: 'heigestPopularity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lowest Price`
+  String get lowestPrice {
+    return Intl.message(
+      'Lowest Price',
+      name: 'lowestPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Heigest Rating`
+  String get heigestRating {
+    return Intl.message(
+      'Heigest Rating',
+      name: 'heigestRating',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Heigest Reviews`
+  String get heigestReviews {
+    return Intl.message(
+      'Heigest Reviews',
+      name: 'heigestReviews',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price Range Per Night`
+  String get priceRangePerNight {
+    return Intl.message(
+      'Price Range Per Night',
+      name: 'priceRangePerNight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Star Rating`
+  String get starRating {
+    return Intl.message(
+      'Star Rating',
+      name: 'starRating',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accommodation Type`
+  String get accommodationType {
+    return Intl.message(
+      'Accommodation Type',
+      name: 'accommodationType',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hotels`
+  String get hotels {
+    return Intl.message(
+      'Hotels',
+      name: 'hotels',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Villas`
+  String get villas {
+    return Intl.message(
+      'Villas',
+      name: 'villas',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apartments`
+  String get apartment {
+    return Intl.message(
+      'Apartments',
+      name: 'apartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Glampings`
+  String get glampings {
+    return Intl.message(
+      'Glampings',
+      name: 'glampings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply Filter`
+  String get applyFilter {
+    return Intl.message(
+      'Apply Filter',
+      name: 'applyFilter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset`
+  String get reset {
+    return Intl.message(
+      'Reset',
+      name: 'reset',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
