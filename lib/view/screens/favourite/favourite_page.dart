@@ -34,17 +34,17 @@ class FavouritePage extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(6.sp),
                     color: AppColors.white,
-                    border: Border.all(color: AppColors.orange),
+                    border: Border.all(color: AppColors.purple),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      const Icon(Icons.map,color: AppColors.orange),
+                      const Icon(Icons.map,color: AppColors.purple),
                       PublicText(
                         txt: S.of(context).map,
                         size: 18.sp,
                         fw: FontWeight.w400,
-                        color:AppColors.orange,
+                        color:AppColors.purple,
                       ),
                     ],
                   ),
@@ -68,12 +68,12 @@ class FavouritePage extends StatelessWidget {
             17.ph,
             Row(
               children: [
-              const  Icon(Icons.date_range,color: AppColors.orange,),
+              const  Icon(Icons.date_range,color: AppColors.purple,),
                 10.pw,
                 PublicText(
                     txt: 'Aug 19 - Aug 21 (2nights)',
                   size: 16.sp,
-                  color: AppColors.orange,
+                  color: AppColors.purple,
                   fw: FontWeight.w400,
                 ),
               ],
@@ -81,12 +81,12 @@ class FavouritePage extends StatelessWidget {
             17.ph,
             Row(
               children: [
-                const  Icon(Icons.person,color: AppColors.orange,),
+                const  Icon(Icons.person,color: AppColors.purple,),
                 10.pw,
                 PublicText(
                   txt: '1 adult, 1 child',
                   size: 16.sp,
-                  color: AppColors.orange,
+                  color: AppColors.purple,
                   fw: FontWeight.w400,
                 ),
               ],
@@ -163,7 +163,7 @@ class FavouritePage extends StatelessWidget {
                             width: 342.w,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6.sp),
-                                color: AppColors.orange.withOpacity(0.38)
+                                color: AppColors.purple.withOpacity(0.38)
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -182,7 +182,7 @@ class FavouritePage extends StatelessWidget {
                                     children: [
                                       PublicText(
                                         txt: '260\$',
-                                        color: AppColors.orange,
+                                        color: AppColors.purple,
                                         size: 14.sp,
                                         fw: FontWeight.w600,
                                       ),
@@ -190,7 +190,7 @@ class FavouritePage extends StatelessWidget {
                                         height: 24.h,
                                         width: 86.w,
                                         decoration: BoxDecoration(
-                                          color: AppColors.orange,
+                                          color: AppColors.purple,
                                           borderRadius: BorderRadius.circular(6.sp)
                                         ),
                                         child: Row(
