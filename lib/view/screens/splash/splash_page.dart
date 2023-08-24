@@ -26,29 +26,25 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _goNext() {
-    Navigator.pushReplacementNamed(
-      context,
-      AppRoutes.onBoarding,
-    );
-    // AppPrefs appPrefs = getIt<AppPrefs>();
-    // if (appPrefs.isOnBoardingViewed()) {
-    //   if (appPrefs.isUserLoggedIn()) {
-    //     Navigator.pushReplacementNamed(
-    //       context,
-    //       AppRoutes.layouts,
-    //     );
-    //   } else {
-    //     Navigator.pushReplacementNamed(
-    //       context,
-    //       AppRoutes.welcome,
-    //     );
-    //   }
-    // } else {
-    //   Navigator.pushReplacementNamed(
-    //     context,
-    //     AppRoutes.onBoarding,
-    //   );
-    // }
+    AppPrefs appPrefs = getIt<AppPrefs>();
+    if (appPrefs.isOnBoardingViewed()) {
+      if (appPrefs.isUserLoggedIn()) {
+        Navigator.pushReplacementNamed(
+          context,
+          AppRoutes.layouts,
+        );
+      } else {
+        Navigator.pushReplacementNamed(
+          context,
+          AppRoutes.welcome,
+        );
+      }
+    } else {
+      Navigator.pushReplacementNamed(
+        context,
+        AppRoutes.onBoarding,
+      );
+    }
   }
 
   @override
