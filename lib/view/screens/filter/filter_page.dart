@@ -1,16 +1,16 @@
 import 'package:bookazon/resources/constants/app_constants.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
-import 'package:bookazon/view/widgets/public_title_tile.dart';
+import 'package:bookazon/view/widgets/public/public_title_tile.dart';
 import 'package:bookazon/view_model/filter/filter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../resources/localization/generated/l10n.dart';
-import '../../widgets/public_button.dart';
-import '../../widgets/public_outline_button.dart';
-import '../../widgets/public_text.dart';
+import '../../widgets/public/public_button.dart';
+import '../../widgets/public/public_outline_button.dart';
+import '../../widgets/public/public_text.dart';
 
 class FilterPage extends StatelessWidget {
   const FilterPage({super.key});

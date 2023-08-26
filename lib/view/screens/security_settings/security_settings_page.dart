@@ -1,8 +1,8 @@
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/router/app_router.dart';
-import 'package:bookazon/view/widgets/public_button.dart';
-import 'package:bookazon/view/widgets/public_switch_list_tile.dart';
-import 'package:bookazon/view/widgets/public_text.dart';
+import 'package:bookazon/view/widgets/public/public_button.dart';
+import 'package:bookazon/view/widgets/public/public_switch_list_tile.dart';
+import 'package:bookazon/view/widgets/public/public_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

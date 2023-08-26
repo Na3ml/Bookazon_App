@@ -4,16 +4,16 @@ import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
-import 'package:bookazon/view/widgets/public_button.dart';
-import 'package:bookazon/view/widgets/public_text.dart';
+import 'package:bookazon/view/widgets/public/public_button.dart';
+import 'package:bookazon/view/widgets/public/public_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 import '../../../view_model/home/home_cubit.dart';
-import '../../widgets/public_text_form_field.dart';
-import '../../widgets/public_title_tile.dart';
+import '../../widgets/public/public_text_form_field.dart';
+import '../../widgets/public/public_title_tile.dart';
 
 part 'components/popular_card.dart';
 part 'components/date_menu_container.dart';

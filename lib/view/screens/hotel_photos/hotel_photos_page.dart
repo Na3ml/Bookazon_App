@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../resources/localization/generated/l10n.dart';
-import '../../widgets/public_text.dart';
+import '../../widgets/public/public_text.dart';
 
 class HotelPhotosPage extends StatelessWidget {
   const HotelPhotosPage({super.key});
@@ -15,7 +15,7 @@ class HotelPhotosPage extends StatelessWidget {
         appBar: AppBar(
           title: PublicText(
             txt: S.of(context).hotelPhotos,
-            size: 20.sp,
+            size: 25.sp,
             fw: FontWeight.bold,
           ),
           leading: IconButton(
@@ -24,7 +24,7 @@ class HotelPhotosPage extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 18.w),
+          padding: EdgeInsets.symmetric(horizontal: 18.w,vertical: 20.h),
           child: GridView.builder(
             itemCount: 20,
             gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(

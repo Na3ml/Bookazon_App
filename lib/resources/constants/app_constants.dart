@@ -2,7 +2,7 @@ import 'package:bookazon/data/models/facilite_model.dart';
 import 'package:bookazon/data/models/onboarding_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 
-import '../../view/widgets/custom_containe_sections_services.dart';
+import '../../view/widgets/private/custom_containe_sections_services.dart';
 import '../localization/generated/l10n.dart';
 
 class AppConstants {

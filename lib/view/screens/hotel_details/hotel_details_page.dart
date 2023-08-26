@@ -3,10 +3,10 @@ import 'package:bookazon/resources/constants/app_constants.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:bookazon/resources/router/app_router.dart';
-import 'package:bookazon/view/widgets/public_button.dart';
-import 'package:bookazon/view/widgets/public_divider.dart';
-import 'package:bookazon/view/widgets/public_outline_button.dart';
-import 'package:bookazon/view/widgets/public_text.dart';
+import 'package:bookazon/view/widgets/public/public_button.dart';
+import 'package:bookazon/view/widgets/public/public_divider.dart';
+import 'package:bookazon/view/widgets/public/public_outline_button.dart';
+import 'package:bookazon/view/widgets/public/public_text.dart';
 import 'package:bookazon/view_model/hotel_details/hotel_details_cubit.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +16,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../data/models/facilite_model.dart';
 import '../../../resources/style/app_colors.dart';
-import '../../widgets/public_title_tile.dart';
+import '../../widgets/public/public_title_tile.dart';
 
 part 'components/facilite_container.dart';
-part 'components/review_card.dart';
+part '../../widgets/private/review_card.dart';
 
 class HotelDetailsPage extends StatefulWidget {
   const HotelDetailsPage({super.key});
@@ -305,7 +305,7 @@ class _HotelDetailsPageState extends State<HotelDetailsPage> {
                       color: AppColors.subTitleGrey,
                       max: 10,
                     ),
-                    PublicTitleTile(title: S.of(context).reviews),
+                    PublicTitleTile(title: S.of(context).reviews,seeAllOnTap: ()=>Navigator.pushNamed(context, AppRoutes.reviews),),
                     ListView.separated(
                       physics: const ClampingScrollPhysics(),
                       shrinkWrap: true,

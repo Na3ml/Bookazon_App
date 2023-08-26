@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../resources/localization/generated/l10n.dart';
-import '../../resources/style/app_colors.dart';
+import '../../../resources/localization/generated/l10n.dart';
+import '../../../resources/style/app_colors.dart';
 import 'public_text.dart';
 
 class PublicTitleTile extends StatelessWidget {

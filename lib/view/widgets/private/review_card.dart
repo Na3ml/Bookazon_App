@@ -1,4 +1,4 @@
-part of '../hotel_details_page.dart';
+part of '../../screens/hotel_details/hotel_details_page.dart';
 
 class ReviewCard extends StatelessWidget {
   const ReviewCard({

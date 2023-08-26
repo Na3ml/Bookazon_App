@@ -1,10 +1,10 @@
 import 'package:bookazon/data/data_source/local/app_prefs.dart';
 import 'package:bookazon/resources/service_locator/service_locator.dart';
-import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../resources/style/app_colors.dart';
+import '../../../resources/style/app_colors.dart';
+import 'public_text.dart';
 
 enum Switchers {
   darkMode,
