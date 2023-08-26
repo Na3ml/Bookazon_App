@@ -252,22 +252,28 @@ class _HotelDetailsPageState extends State<HotelDetailsPage> {
                                       ),
                                       10.pw,
                                       Expanded(
-                                        child: CarouselSlider(
-                                          items: List.filled(
-                                              4, const RoomViewContainer()),
-                                          carouselController:
-                                              carouselController,
-                                          options: CarouselOptions(
-                                            height: 340.h,
-                                            aspectRatio: 16 / 9,
-                                            viewportFraction: 1,
-                                            initialPage: 0,
-                                            enableInfiniteScroll: true,
-                                            reverse: false,
-                                            autoPlay: false,
-                                            enlargeCenterPage: true,
-                                            enlargeFactor: 0.4,
-                                            scrollDirection: Axis.horizontal,
+                                        child: InkWell(
+                                          onTap: () => Navigator.pushNamed(
+                                              context, AppRoutes.roomInfo),
+                                          child: CarouselSlider(
+                                            items: List.filled(
+                                              4,
+                                              const RoomViewContainer(),
+                                            ),
+                                            carouselController:
+                                                carouselController,
+                                            options: CarouselOptions(
+                                              height: 340.h,
+                                              aspectRatio: 16 / 9,
+                                              viewportFraction: 1,
+                                              initialPage: 0,
+                                              enableInfiniteScroll: true,
+                                              reverse: false,
+                                              autoPlay: false,
+                                              enlargeCenterPage: true,
+                                              enlargeFactor: 0.4,
+                                              scrollDirection: Axis.horizontal,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -305,7 +311,11 @@ class _HotelDetailsPageState extends State<HotelDetailsPage> {
                       color: AppColors.subTitleGrey,
                       max: 10,
                     ),
-                    PublicTitleTile(title: S.of(context).reviews,seeAllOnTap: ()=>Navigator.pushNamed(context, AppRoutes.reviews),),
+                    PublicTitleTile(
+                      title: S.of(context).reviews,
+                      seeAllOnTap: () =>
+                          Navigator.pushNamed(context, AppRoutes.reviews),
+                    ),
                     ListView.separated(
                       physics: const ClampingScrollPhysics(),
                       shrinkWrap: true,

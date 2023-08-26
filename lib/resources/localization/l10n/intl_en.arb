@@ -153,5 +153,7 @@
     "applyFilter": "Apply Filter",
     "reset": "Reset",
     "selectRoom" : "Select Room",
-    "book" : "Book"
+    "book" : "Book",
+    "roomInfo": "Room Information",
+    "reserveRoom" : "Reserve This Room"
 }

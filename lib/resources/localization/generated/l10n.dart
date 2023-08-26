@@ -1599,6 +1599,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Room Information`
+  String get roomInfo {
+    return Intl.message(
+      'Room Information',
+      name: 'roomInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reserve This Room`
+  String get reserveRoom {
+    return Intl.message(
+      'Reserve This Room',
+      name: 'reserveRoom',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

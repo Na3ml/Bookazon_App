@@ -184,11 +184,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember Me"),
         "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
+        "reserveRoom":
+            MessageLookupByLibrary.simpleMessage("Reserve This Room"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
         "restaurant": MessageLookupByLibrary.simpleMessage("Restaurant"),
         "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
+        "roomInfo": MessageLookupByLibrary.simpleMessage("Room Information"),
         "rooms": MessageLookupByLibrary.simpleMessage("Rooms"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
