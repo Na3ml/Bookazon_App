@@ -129,6 +129,10 @@ class Assets {
   /// assets/image/room.png
   static const String imageRoom = "assets/image/room.png";
 
+  /// Assets for imageRoom2
+  /// assets/image/room2.png
+  static const String imageRoom2 = "assets/image/room2.png";
+
   /// Assets for imageSection1
   /// assets/image/section1.png
   static const String imageSection1 = "assets/image/section1.png";

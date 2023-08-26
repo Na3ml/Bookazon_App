@@ -32,6 +32,7 @@ import 'firebase_options.dart';
 import 'resources/service_locator/service_locator.dart';
 import 'view/screens/home/home_page.dart';
 import 'view/screens/layouts/layouts_page.dart';
+import 'view_model/hotel_details/hotel_details_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -79,6 +80,9 @@ class MyApp extends StatelessWidget {
             ),
             BlocProvider(
               create: (context) => FilterCubit(),
+            ),
+            BlocProvider(
+              create: (context) => HotelDetailsCubit(),
             ),
           ],
           child: MaterialApp(

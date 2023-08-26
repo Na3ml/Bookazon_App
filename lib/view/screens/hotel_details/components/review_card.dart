@@ -52,7 +52,7 @@ class ReviewCard extends StatelessWidget {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
                 decoration: BoxDecoration(
-                  color: AppColors.orange,
+                  color: AppColors.purple,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(

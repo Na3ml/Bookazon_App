@@ -115,7 +115,7 @@
     "update": "Update",
     "logoutWarning": "Are you sure you want to Log out?",
     "cancel": "Cancel",
-    "roomsPhotos": "Rooms Photos",
+    "hotelPhotos": "Hotel Photos",
     "myBooking": "My Booking",
     "ongoing": "Ongoing",
     "completed": "Completed",
@@ -151,5 +151,7 @@
     "apartment": "Apartments",
     "glampings": "Glampings",
     "applyFilter": "Apply Filter",
-    "reset": "Reset"
+    "reset": "Reset",
+    "selectRoom" : "Select Room",
+    "book" : "Book"
 }

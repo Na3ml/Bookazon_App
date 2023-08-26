@@ -55,6 +55,7 @@ class AppRoutes {
   static const String sort = "sort";
   static const String filter = "filter";
   static const String offer = "offer";
+  static const String hotelPhotos = "Hotel Photos";
 }
 
 class RouteGenerate {
@@ -159,6 +160,10 @@ class RouteGenerate {
           builder: (_) => const FilterPage(),
         );
       case AppRoutes.offer:
+        return MaterialPageRoute(
+          builder: (_) => const FilterPage(),
+        );
+      case AppRoutes.hotelPhotos:
         return MaterialPageRoute(
           builder: (_) => const FilterPage(),
         );
