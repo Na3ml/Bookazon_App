@@ -17,6 +17,7 @@ import '../../view/screens/delete_account/delete_account_page.dart';
 import '../../view/screens/edit_profile/edit_profile.dart';
 import '../../view/screens/home/home_page.dart';
 import '../../view/screens/hotel_details/hotel_details_page.dart';
+import '../../view/screens/hotel_photos/hotel_photos_page.dart';
 import '../../view/screens/layouts/layouts_page.dart';
 import '../../view/screens/login/login_page.dart';
 import '../../view/screens/reset_password/reset_password_page.dart';
@@ -165,7 +166,7 @@ class RouteGenerate {
         );
       case AppRoutes.hotelPhotos:
         return MaterialPageRoute(
-          builder: (_) => const FilterPage(),
+          builder: (_) => const HotelPhotosPage(),
         );
       default:
         return MaterialPageRoute(

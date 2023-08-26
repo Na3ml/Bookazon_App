@@ -186,7 +186,11 @@ class _HotelDetailsPageState extends State<HotelDetailsPage> {
                       width: double.infinity,
                       color: AppColors.grey,
                     ),
-                    PublicTitleTile(title: S.of(context).hotelPhotos),
+                    PublicTitleTile(
+                      title: S.of(context).hotelPhotos,
+                      seeAllOnTap: () =>
+                          Navigator.pushNamed(context, AppRoutes.hotelPhotos),
+                    ),
                     SizedBox(
                       height: 100.h,
                       child: ListView.separated(

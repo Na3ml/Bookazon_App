@@ -22,9 +22,10 @@ class DeleteAccountPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: PublicText(
-              txt: S.of(context).title_delete_account,
-              size: 20.sp,
-              fw: FontWeight.bold),
+            txt: S.of(context).title_delete_account,
+            size: 20.sp,
+            fw: FontWeight.bold,
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -68,8 +69,9 @@ class DeleteAccountPage extends StatelessWidget {
               PublicButton(
                 title: S.of(context).delete,
                 onPressed: () {
-                  if(cubit.currentIndex > -1){
-                    Navigator.pushNamed(context, AppRoutes.confirmDeleteAccount);
+                  if (cubit.currentIndex > -1) {
+                    Navigator.pushNamed(
+                        context, AppRoutes.confirmDeleteAccount);
                   }
                 },
               ),
