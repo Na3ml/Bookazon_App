@@ -1,7 +1,7 @@
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
-import 'package:bookazon/view/widgets/public_text.dart';
+import 'package:bookazon/view/widgets/public/public_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';

@@ -2,10 +2,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:flutter/material.dart';
 
-import '../../resources/style/app_colors.dart';
+import '../../../resources/style/app_colors.dart';
 import 'public_text.dart';
 
-class PublicOutlineButton extends StatelessWidget {
+class PublicButton extends StatelessWidget {
   final String title;
   final void Function()? onPressed;
   final double? width;
@@ -15,15 +15,15 @@ class PublicOutlineButton extends StatelessWidget {
   final Color backgroundColor;
   final double? verticalpadding;
 
-  const PublicOutlineButton({
+  const PublicButton({
     Key? key,
     required this.onPressed,
     this.titleSize,
     this.title = "",
     this.width,
     this.borderRadius = 12,
-    this.titleColor = AppColors.purple,
-    this.backgroundColor = AppColors.white,
+    this.titleColor = Colors.white,
+    this.backgroundColor = AppColors.purple,
     this.verticalpadding,
   }) : super(key: key);
 
@@ -31,12 +31,10 @@ class PublicOutlineButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? 306.w,
-      child: OutlinedButton(
+      child: ElevatedButton(
         onPressed: onPressed,
-        style: OutlinedButton.styleFrom(
+        style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor,
-          foregroundColor: titleColor,
-          side: BorderSide(color: titleColor),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),

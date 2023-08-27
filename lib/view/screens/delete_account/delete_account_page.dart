@@ -3,8 +3,8 @@ import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
 import 'package:bookazon/view/screens/delete_account/components/consts.dart';
-import 'package:bookazon/view/widgets/public_button.dart';
-import 'package:bookazon/view/widgets/public_text.dart';
+import 'package:bookazon/view/widgets/public/public_button.dart';
+import 'package:bookazon/view/widgets/public/public_text.dart';
 import 'package:bookazon/view_model/delete_account/delete_account_cubit.dart';
 import 'package:bookazon/view_model/delete_account/delete_account_state.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +22,10 @@ class DeleteAccountPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: PublicText(
-              txt: S.of(context).title_delete_account,
-              size: 20.sp,
-              fw: FontWeight.bold),
+            txt: S.of(context).title_delete_account,
+            size: 20.sp,
+            fw: FontWeight.bold,
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -68,8 +69,9 @@ class DeleteAccountPage extends StatelessWidget {
               PublicButton(
                 title: S.of(context).delete,
                 onPressed: () {
-                  if(cubit.currentIndex > -1){
-                    Navigator.pushNamed(context, AppRoutes.confirmDeleteAccount);
+                  if (cubit.currentIndex > -1) {
+                    Navigator.pushNamed(
+                        context, AppRoutes.confirmDeleteAccount);
                   }
                 },
               ),

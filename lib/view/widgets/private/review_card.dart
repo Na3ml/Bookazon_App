@@ -1,4 +1,4 @@
-part of '../hotel_details_page.dart';
+part of '../../screens/hotel_details/hotel_details_page.dart';
 
 class ReviewCard extends StatelessWidget {
   const ReviewCard({
@@ -52,7 +52,7 @@ class ReviewCard extends StatelessWidget {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
                 decoration: BoxDecoration(
-                  color: AppColors.orange,
+                  color: AppColors.purple,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(

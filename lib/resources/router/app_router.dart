@@ -6,6 +6,8 @@ import 'package:bookazon/view/screens/filter/filter_page.dart';
 import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
 import 'package:bookazon/view/screens/onboarding/onboarding_page.dart';
 import 'package:bookazon/view/screens/privacy_policy/privacy_policy_page.dart';
+import 'package:bookazon/view/screens/reviews/reviews_page.dart';
+import 'package:bookazon/view/screens/room_info/room_info_page.dart';
 import 'package:bookazon/view/screens/security_settings/security_settings_page.dart';
 import 'package:bookazon/view/screens/signup/signup_page.dart';
 import 'package:bookazon/view/screens/sort/sort_page.dart';
@@ -17,6 +19,7 @@ import '../../view/screens/delete_account/delete_account_page.dart';
 import '../../view/screens/edit_profile/edit_profile.dart';
 import '../../view/screens/home/home_page.dart';
 import '../../view/screens/hotel_details/hotel_details_page.dart';
+import '../../view/screens/hotel_photos/hotel_photos_page.dart';
 import '../../view/screens/layouts/layouts_page.dart';
 import '../../view/screens/login/login_page.dart';
 import '../../view/screens/reset_password/reset_password_page.dart';
@@ -55,6 +58,9 @@ class AppRoutes {
   static const String sort = "sort";
   static const String filter = "filter";
   static const String offer = "offer";
+  static const String hotelPhotos = "Hotel Photos";
+  static const String reviews = "reviews";
+  static const String roomInfo = "romm info";
 }
 
 class RouteGenerate {
@@ -161,6 +167,18 @@ class RouteGenerate {
       case AppRoutes.offer:
         return MaterialPageRoute(
           builder: (_) => const FilterPage(),
+        );
+      case AppRoutes.hotelPhotos:
+        return MaterialPageRoute(
+          builder: (_) => const HotelPhotosPage(),
+        );
+      case AppRoutes.reviews:
+        return MaterialPageRoute(
+          builder: (_) => const ReviewsPage(),
+        );
+      case AppRoutes.roomInfo:
+        return MaterialPageRoute(
+          builder: (_) => const RoomInfoPage(),
         );
       default:
         return MaterialPageRoute(

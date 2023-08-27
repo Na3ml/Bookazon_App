@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "apartment": MessageLookupByLibrary.simpleMessage("Apartments"),
         "appartment": MessageLookupByLibrary.simpleMessage("Appartment"),
         "applyFilter": MessageLookupByLibrary.simpleMessage("Apply Filter"),
+        "book": MessageLookupByLibrary.simpleMessage("Book"),
         "bookNow": MessageLookupByLibrary.simpleMessage("Book now!"),
         "booking": MessageLookupByLibrary.simpleMessage("Booking"),
         "can_you_share": MessageLookupByLibrary.simpleMessage(
@@ -122,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(" Eenter your name"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "hotel": MessageLookupByLibrary.simpleMessage("Hotel"),
+        "hotelPhotos": MessageLookupByLibrary.simpleMessage("Hotel Photos"),
         "hotels": MessageLookupByLibrary.simpleMessage("Hotels"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
@@ -182,18 +184,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember Me"),
         "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
+        "reserveRoom":
+            MessageLookupByLibrary.simpleMessage("Reserve This Room"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
         "restaurant": MessageLookupByLibrary.simpleMessage("Restaurant"),
         "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
+        "roomInfo": MessageLookupByLibrary.simpleMessage("Room Information"),
         "rooms": MessageLookupByLibrary.simpleMessage("Rooms"),
-        "roomsPhotos": MessageLookupByLibrary.simpleMessage("Rooms Photos"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "sections": MessageLookupByLibrary.simpleMessage("Sections"),
         "security": MessageLookupByLibrary.simpleMessage("Security"),
         "seeMore": MessageLookupByLibrary.simpleMessage("See More"),
+        "selectRoom": MessageLookupByLibrary.simpleMessage("Select Room"),
         "selectRoomsGuests":
             MessageLookupByLibrary.simpleMessage("Select Rooms and Guests"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),

@@ -1210,11 +1210,11 @@ class S {
     );
   }
 
-  /// `Rooms Photos`
-  String get roomsPhotos {
+  /// `Hotel Photos`
+  String get hotelPhotos {
     return Intl.message(
-      'Rooms Photos',
-      name: 'roomsPhotos',
+      'Hotel Photos',
+      name: 'hotelPhotos',
       desc: '',
       args: [],
     );
@@ -1575,6 +1575,46 @@ class S {
     return Intl.message(
       'Reset',
       name: 'reset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Room`
+  String get selectRoom {
+    return Intl.message(
+      'Select Room',
+      name: 'selectRoom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Book`
+  String get book {
+    return Intl.message(
+      'Book',
+      name: 'book',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Room Information`
+  String get roomInfo {
+    return Intl.message(
+      'Room Information',
+      name: 'roomInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reserve This Room`
+  String get reserveRoom {
+    return Intl.message(
+      'Reserve This Room',
+      name: 'reserveRoom',
       desc: '',
       args: [],
     );

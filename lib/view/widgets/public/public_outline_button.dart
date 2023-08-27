@@ -1,11 +1,11 @@
+import 'package:bookazon/view/widgets/public/public_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:flutter/material.dart';
 
-import '../../resources/style/app_colors.dart';
-import 'public_text.dart';
+import '../../../resources/style/app_colors.dart';
 
-class PublicButton extends StatelessWidget {
+class PublicOutlineButton extends StatelessWidget {
   final String title;
   final void Function()? onPressed;
   final double? width;
@@ -15,15 +15,15 @@ class PublicButton extends StatelessWidget {
   final Color backgroundColor;
   final double? verticalpadding;
 
-  const PublicButton({
+  const PublicOutlineButton({
     Key? key,
     required this.onPressed,
     this.titleSize,
     this.title = "",
     this.width,
     this.borderRadius = 12,
-    this.titleColor = Colors.white,
-    this.backgroundColor = AppColors.purple,
+    this.titleColor = AppColors.purple,
+    this.backgroundColor = AppColors.white,
     this.verticalpadding,
   }) : super(key: key);
 
@@ -31,10 +31,12 @@ class PublicButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? 306.w,
-      child: ElevatedButton(
+      child: OutlinedButton(
         onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
+        style: OutlinedButton.styleFrom(
           backgroundColor: backgroundColor,
+          foregroundColor: titleColor,
+          side: BorderSide(color: titleColor),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),

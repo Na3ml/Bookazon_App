@@ -1,7 +1,7 @@
 import 'package:bookazon/resources/constants/app_constants.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/localization/generated/l10n.dart';
-import 'package:bookazon/view/widgets/public_button.dart';
+import 'package:bookazon/view/widgets/public/public_button.dart';
 import 'package:bookazon/view_model/onboarding/onboarding_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,7 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../data/models/onboarding_model.dart';
 import '../../../resources/router/app_router.dart';
 import '../../../resources/style/app_colors.dart';
-import '../../widgets/public_text.dart';
+import '../../widgets/public/public_text.dart';
 
 part 'components/custom_dots.dart';
 part 'components/onboarding_item.dart';

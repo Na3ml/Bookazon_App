@@ -1,9 +1,9 @@
 import 'package:another_flushbar/flushbar.dart';
+import 'package:bookazon/view/widgets/public/public_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:flutter/material.dart';
 
-import 'public_text.dart';
 
 // ignore: must_be_immutable
 class MySnackBar extends Flushbar {

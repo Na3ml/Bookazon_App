@@ -1,8 +1,8 @@
-import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
-import 'package:bookazon/view/widgets/public_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../public/public_text.dart';
 
 // ignore: must_be_immutable
 class ContainerServices extends StatefulWidget {

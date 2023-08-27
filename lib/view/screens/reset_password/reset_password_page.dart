@@ -2,9 +2,9 @@ import 'package:bookazon/data/models/requests/auth_requests_model.dart';
 import 'package:bookazon/resources/constants/app_assets.dart';
 import 'package:bookazon/resources/extensions/extensions.dart';
 import 'package:bookazon/resources/style/app_colors.dart';
-import 'package:bookazon/view/widgets/public_button.dart';
-import 'package:bookazon/view/widgets/public_text.dart';
-import 'package:bookazon/view/widgets/public_text_form_field.dart';
+import 'package:bookazon/view/widgets/public/public_button.dart';
+import 'package:bookazon/view/widgets/public/public_text.dart';
+import 'package:bookazon/view/widgets/public/public_text_form_field.dart';
 import 'package:bookazon/view_model/auth/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +13,7 @@ import 'package:bookazon/resources/localization/generated/l10n.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../../resources/router/app_router.dart';
-import '../../widgets/public_snack_bar.dart';
+import '../../widgets/public/public_snack_bar.dart';
 
 class ResetPasswordPage extends StatefulWidget {
   final String email;
