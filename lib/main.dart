@@ -4,13 +4,10 @@ import 'package:bookazon/resources/router/app_router.dart';
 import 'package:bookazon/view/screens/delete_account/delete_account_page.dart';
 import 'package:bookazon/view/screens/delete_account/confirm_delete_account_page.dart';
 import 'package:bookazon/resources/style/app_theme.dart';
-
 import 'package:bookazon/view/screens/email_verification/email_verification_page.dart';
 import 'package:bookazon/view/screens/favourite/favourite_page.dart';
 import 'package:bookazon/view/screens/reset_password/reset_password_page.dart';
 import 'package:bookazon/view/screens/search/search_page.dart';
-// import 'package:bookazon/view/screens/forget%20password/forgetpassword_page.dart';
-// import 'package:bookazon/view/screens/reset%20password/reset_password_page.dart';
 import 'package:bookazon/view/screens/splash/splash_page.dart';
 import 'package:bookazon/view_model/auth/auth_cubit.dart';
 import 'package:bookazon/view_model/booking/booking_cubit.dart';
@@ -23,10 +20,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'data/data_source/local/app_prefs.dart';
 import 'firebase_options.dart';
 import 'resources/service_locator/service_locator.dart';
