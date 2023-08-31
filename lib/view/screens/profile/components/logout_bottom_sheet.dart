@@ -43,7 +43,7 @@ class LogoutBottomSheet extends StatelessWidget {
                 cubit.logout();
                 Navigator.pushNamedAndRemoveUntil(
                   context,
-                  AppRoutes.login,
+                  AppRoutes.welcome,
                   (_) => false,
                 );
               },

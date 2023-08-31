@@ -51,7 +51,7 @@ class RoomInfoPage extends StatelessWidget {
 
               // TODO: "ui" - need to arrange chips horizontal
               SizedBox(
-                height: 240.h,
+                height: 200.h,
                 width: double.infinity,
                 child: ChipList(
                   listOfChipNames: const [
@@ -70,9 +70,14 @@ class RoomInfoPage extends StatelessWidget {
                   inactiveBgColorList: const [AppColors.white],
                   activeBorderColorList: const [AppColors.purple],
                   inactiveBorderColorList: const [AppColors.purple],
-                  axis: Axis.vertical,
+                  axis: Axis.horizontal,
                   shouldWrap: true,
                 ),
+              ),
+              PublicText(
+                txt: S.of(context).description,
+                fw: FontWeight.w600,
+                size: 22.sp,
               ),
               15.ph,
               PublicText(

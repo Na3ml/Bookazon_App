@@ -70,7 +70,7 @@ class AuthCubit extends Cubit<AuthState> {
       }
     } catch (e) {
       if (e is CustomException) {
-        emit(AuthnErrorState("cubit Error ${e.message}"));
+        emit(AuthnErrorState(e.message));
       }
     }
   }
@@ -152,7 +152,9 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   Future<void> logout() async {
-    await _repo.logout(appPrefs.getToken()!);
+    if (appPrefs.getToken() != null) {
+      await _repo.logout(appPrefs.getToken()!);
+    }
     appPrefs.logout();
     appPrefs.removeToken();
     appPrefs.removeUserInfo();
